@@ -1,0 +1,9 @@
+{
+  "label": "Roles & Permission",
+  "position": 11,
+  "link": {
+    "type": "generated-index",
+    "description": "Control who can access the admin panel, what they can do and which store they belong to.",
+    "slug": "roles-permission"
+  }
+}

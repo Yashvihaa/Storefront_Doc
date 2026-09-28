@@ -1,0 +1,9 @@
+{
+  "label": "Configurators",
+  "position": 10,
+  "link": {
+    "type": "generated-index",
+    "description": "Choose which options appear in each product configurator.",
+    "slug": "configurators"
+  }
+}

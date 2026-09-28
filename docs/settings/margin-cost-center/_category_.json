@@ -1,0 +1,9 @@
+{
+  "label": "Margin (Cost Center)",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Set margins, diamond ranges, duties, rounding, metal and ring size rules used in pricing.",
+    "slug": "margin-cost-center"
+  }
+}

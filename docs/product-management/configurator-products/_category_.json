@@ -1,0 +1,9 @@
+{
+  "label": "Configurator Products",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Products and designs created through each product configurator.",
+    "slug": "configurator-products"
+  }
+}

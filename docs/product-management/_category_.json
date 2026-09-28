@@ -1,0 +1,9 @@
+{
+  "label": "Product Management",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "description": "Manage products, configurator products, diamond group pricing and offers.",
+    "slug": "product-management"
+  }
+}
