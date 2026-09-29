@@ -127,7 +127,6 @@ Customers who added products to their cart but did not check out during the sele
 | **Order Number** | Unique order reference |
 | **Date** | Order date |
 | **Customer Name** | Name of the customer |
-| **Guest Account** | **Yes** for guest checkout, **No** for signed-in customers |
 | **Email** | Customer email address |
 | **Total** | Order amount |
 | **Order Status** | Current order status (e.g. Pending, Confirmed, Delivered) |

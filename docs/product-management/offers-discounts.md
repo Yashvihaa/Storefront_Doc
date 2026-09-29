@@ -7,7 +7,7 @@ sidebar_label: Offers & Discounts
 
 # Offers & Discounts
 
-**Offers & Discounts** lets you create promotions that customers redeem with a discount code or that apply automatically. Offers can target specific products, order totals, buy-x-get-y deals or free gifts, and can be limited by usage and schedule.
+**Offers & Discounts** lets you create promotions that customers redeem with a discount code or that apply automatically. Offers can target order totals, buy-x-get-y deals or free gifts, and can be limited by usage and schedule.
 
 ---
 

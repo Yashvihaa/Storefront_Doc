@@ -16,7 +16,6 @@ The **Diamond Group Master** stores the price per carat for each stone combinati
 | Action | Description |
 | ------ | ----------- |
 | **Export Excel** | Downloads all diamond group records as an Excel file. A progress bar shows the export status. |
-| **Info** | Click the **info** icon next to Export Excel to see how the export and upload work together. |
 | **Upload Excel** | Select an Excel file (.xlsx or .xls) to upload diamond group records in bulk. A progress bar shows the upload status. |
 | **Filter** | Click the **filter** icon to show or hide the filter row. See [Filter](#filter). |
 | **History** | Opens the **Diamond History** popup. See [History](#history). |

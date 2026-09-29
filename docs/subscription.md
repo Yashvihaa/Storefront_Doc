@@ -119,13 +119,3 @@ Click **Done** to close. An incorrect PIN is rejected and you can try again.
 | **History entries** | Purchases and changes made after your plan started, each with a date and the amount added per month (`--` for changes with no charge). |
 
 ---
-
-## Payment Details
-
-The purchase popup shows the items being bought, the amount **Added to monthly total**, and a choice of payment method.
-
-| Payment Method | Fields |
-| -------------- | ------ |
-| **Card** | Cardholder Name, Card Number, Expiry Date, CVV |
-| **UPI** | UPI ID (a payment request is sent to your UPI app) |
-| **Net Banking** | Select your bank from the list |
