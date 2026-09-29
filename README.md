@@ -18,6 +18,14 @@ npm run start
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
+Search does not work in this mode: the search index is only created by a production build. To try search locally, build and serve the site:
+
+```bash
+npm run preview
+```
+
+This opens the built site at http://localhost:3000. Run it again after editing the docs to update the search index.
+
 ## Adding a page
 
 1. Create a Markdown file in the `docs/` folder, for example `docs/dashboard.md`.

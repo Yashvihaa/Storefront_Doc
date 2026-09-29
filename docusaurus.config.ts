@@ -24,6 +24,14 @@ const config: Config = {
     locales: ['en'],
   },
 
+  headTags: [
+    {tagName: 'link', attributes: {rel: 'preconnect', href: 'https://fonts.googleapis.com'}},
+    {tagName: 'link', attributes: {rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous'}},
+  ],
+  stylesheets: [
+    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
+  ],
+
   presets: [
     [
       'classic',
@@ -32,6 +40,7 @@ const config: Config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: './sidebars.ts',
+          showLastUpdateTime: true,
         },
         blog: false,
         theme: {
@@ -41,16 +50,51 @@ const config: Config = {
     ],
   ],
 
+  // Offline search: the index is built from the docs at build time, no external service.
+  themes: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        indexDocs: true,
+        indexBlog: false,
+        indexPages: false,
+        docsRouteBasePath: '/',
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+        searchResultLimits: 8,
+        searchBarShortcutHint: true,
+      },
+    ],
+  ],
+
   themeConfig: {
     image: 'img/logo.png',
+    metadata: [
+      {name: 'keywords', content: 'storefront, admin panel, jewelry configurator, documentation'},
+      {name: 'theme-color', content: '#0f1115'},
+    ],
     colorMode: {
+      defaultMode: 'light',
       respectPrefersColorScheme: true,
+    },
+    docs: {
+      sidebar: {
+        hideable: true,
+        autoCollapseCategories: true,
+      },
+    },
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 3,
     },
     navbar: {
       title: 'Storefront Docs',
       logo: {
-        alt: 'Storefront Docs',
+        alt: 'TCC Store logo',
         src: 'img/logo.png',
+        width: 32,
+        height: 32,
       },
       items: [
         {
@@ -59,15 +103,89 @@ const config: Config = {
           position: 'left',
           label: 'Docs',
         },
+        {
+          type: 'dropdown',
+          label: 'Modules',
+          position: 'left',
+          items: [
+            {label: 'Dashboard', to: '/dashboard'},
+            {label: 'Analytics', to: '/analytics'},
+            {label: 'Subscription & Billing', to: '/subscription'},
+            {label: 'Order Management', to: '/order-management'},
+            {label: 'Customer Management', to: '/customer-management'},
+            {label: 'Product Management', to: '/product-management'},
+            {label: 'Sales Funnel', to: '/sales-funnel'},
+            {label: 'Settings', to: '/settings'},
+            {label: 'Configurators', to: '/configurators'},
+            {label: 'Roles & Permission', to: '/roles-permission'},
+          ],
+        },
+        {
+          type: 'search',
+          position: 'right',
+        },
+        {
+          to: '/#getting-started',
+          label: 'Get Started',
+          position: 'right',
+          className: 'navbar-cta',
+        },
       ],
     },
     footer: {
       style: 'dark',
-      copyright: `Copyright © ${new Date().getFullYear()} Storefront. Built with Docusaurus.`,
+      logo: {
+        alt: 'TCC Store logo',
+        src: 'img/logo.png',
+        href: '/',
+        width: 56,
+        height: 56,
+      },
+      links: [
+        {
+          title: 'Getting Started',
+          items: [
+            {label: 'Introduction', to: '/'},
+            {label: 'Dashboard', to: '/dashboard'},
+            {label: 'Analytics', to: '/analytics'},
+            {label: 'Subscription & Billing', to: '/subscription'},
+          ],
+        },
+        {
+          title: 'Store Operations',
+          items: [
+            {label: 'Orders', to: '/order-management/orders'},
+            {label: 'Customers', to: '/customer-management/customers'},
+            {label: 'Cart Products', to: '/sales-funnel/cart-products'},
+            {label: 'Wishlist Products', to: '/sales-funnel/wishlist-products'},
+          ],
+        },
+        {
+          title: 'Catalog & Pricing',
+          items: [
+            {label: 'All Products', to: '/product-management/all-products'},
+            {label: 'Configurator Products', to: '/configurator-products'},
+            {label: 'Diamond Group Master', to: '/product-management/diamond-group-master'},
+            {label: 'Metal Rate Settings', to: '/settings/metal-rate-setting'},
+          ],
+        },
+        {
+          title: 'Administration',
+          items: [
+            {label: 'Roles', to: '/roles-permission/roles'},
+            {label: 'User Management', to: '/roles-permission/user-management'},
+            {label: 'Stores', to: '/roles-permission/stores'},
+            {label: 'Settings', to: '/settings'},
+          ],
+        },
+      ],
+      copyright: `<div class="footer__brand">Storefront Docs</div>
+        <div class="footer__tagline">Guides for the TCC Storefront admin panel</div>
+        <div>© ${new Date().getFullYear()} TechCore Creations. All rights reserved.</div>`,
     },
     prism: {
       theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      darkTheme: prismThemes.oneDark,
     },
   } satisfies Preset.ThemeConfig,
 };
