@@ -22,6 +22,10 @@ The **Metal Rate Settings** page sets the base rate for each metal and the margi
 | **Save** | Saves the rate and margin settings for the selected metal. |
 | **Rate Cards** | Show the base rate, margin and final rate calculated from the saved settings. |
 
+:::note
+**Save** and **Fetch** are disabled for users without **Edit** permission.
+:::
+
 ---
 
 ### Metal Rate

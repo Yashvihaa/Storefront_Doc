@@ -29,11 +29,15 @@ The list shows the following columns:
 | **Type** | Margin type used by the rule. |
 | **Value** | Tariff value set on the rule. |
 
+:::note Permissions
+The **Add Tariff Rule** button is disabled if you do not have **Add** permission. The **Edit** icon and the status toggle need **Edit** permission, and the **Delete** icon needs **Delete** permission.
+:::
+
 ---
 
 ### Steps to Add a New Tariff Rule
 
-Click **Add Tariff Rule**. The **Add New Tariff Rule** popup opens. Fill in the fields and click **Save** (or **Edit** when changing an existing rule). Click **Cancel** to close the popup without saving.
+Click **Add Tariff Rule**. The **Add New Tariff Rule** popup opens (**Edit Tariff Rule** when editing). Fill in the fields and click **Save** (or **Edit** when changing an existing rule). Click **Cancel** to close the popup without saving.
 
 | Field | Required | Remarks |
 | ----- | -------- | ------- |

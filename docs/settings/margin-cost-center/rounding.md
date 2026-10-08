@@ -28,6 +28,12 @@ The list shows the following columns:
 | **Round Off Value** | Value the rounded price ends with. |
 | **Rounding Type** | Rounding direction used by the rule. |
 
+The list has no search box or paging.
+
+:::note Permissions
+The **Edit** icon and the status toggle need **Edit** permission, and the **Delete** icon needs **Delete** permission.
+:::
+
 ---
 
 ### Steps to Add a New Rounding Rule
@@ -38,8 +44,8 @@ Click **Add Product Rounding**, fill in the fields below, and click **Save** (or
 | ----- | -------- | ------- |
 | Rounding Type | ✅ | Choose **Nearest Up**, **Nearest Down** or **Automatic (Standard Rounding)**. **Nearest Up** is selected by default. Hover over the info icon next to each option to see an example. |
 | Allow Decimals | - | Turn on to round to a decimal ending instead of a whole-number ending. |
-| Rounding Value | ✅ | The value the rounded price ends with. With **Allow Decimals** off, enter a whole number from 0 to 9. With **Allow Decimals** on, enter 0.1–0.9 for 1 decimal place or 0.01–0.99 for 2 decimal places. |
-| Number of Decimal Places (max 2) | ✅ | Shown only when **Allow Decimals** is on. Enter 1 or 2. |
+| Rounding Value | ✅ | The value the rounded price ends with. The field label shows the allowed range. With **Allow Decimals** off, enter a whole number from 0 to 9. With **Allow Decimals** on, enter 0.1–0.9 for 1 decimal place or 0.01–0.99 for 2 decimal places. |
+| Number of Decimal Places (max 2) | ✅ | Shown only when **Allow Decimals** is on. Enter 1 or 2; the default is 1. |
 | Select Rounding category | ✅ | Choose the product type: Dynamic Product, Setting Product, Ring Configurator, Three Stone Configurator, Eternity Band Configurator, Bracelet Configurator, Stud Configurator, Pendant Configurator or Cart Order Product. |
 
 :::note
@@ -62,4 +68,4 @@ The examples below use a rounding value of **9** with **Allow Decimals** off.
 
 ## Rounding Preview
 
-Click **Preview** to check a rule before saving it. The button becomes available once the rounding type, rounding value and rounding category are filled in. A **Rounding Preview** card applies your settings to a sample price and shows the **Original Price**, **Rounding Type**, **Rounding Value**, **Decimal Places** and the resulting **Rounded Price**.
+Click **Preview** to check a rule before saving it. The button becomes available once the rounding type, rounding value and rounding category are filled in. A **Rounding Preview** card applies your settings to a sample price of $ 123.456 and shows the **Original Price**, **Rounding Type**, **Rounding Value**, **Decimal Places** and the resulting **Rounded Price**.

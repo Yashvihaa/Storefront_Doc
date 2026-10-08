@@ -30,6 +30,10 @@ The list shows the following columns:
 | **Stone Type** | Stone origin the rule applies to. |
 | **Margin** | Margin value set on the rule. |
 
+:::note Permissions
+The **Add Product Margin** button is disabled if you do not have **Add** permission. The **Edit** icon and the status toggle need **Edit** permission, and the **Delete** icon needs **Delete** permission.
+:::
+
 ---
 
 ### Steps to Add a New Diamond Margin
@@ -54,8 +58,8 @@ Click **Add Product Margin**, fill in the sections below, and click **Save Rule*
 | Field | Required | Remarks |
 | ----- | -------- | ------- |
 | Select Stone Type | ✅ | Choose the stone the rule applies to. |
-| Select Stone origin | - | Choose lab grown, natural or both. |
-| Apply To | ✅ | Choose **All Items** to apply the rule to every matching diamond, or **Attribute** to limit it to selected attributes. |
+| Select Stone origin | - | Choose **labgrown**, **natural** or **both**. **labgrown** is selected by default. |
+| Apply To | ✅ | Choose **All Items** to apply the rule to every matching diamond, or **Attribute** to limit it to selected attributes. **Attribute** is selected by default. |
 | Apply Margin On | - | Shown when **Apply To** is **Attribute**. Tick **Shape**, **Color**, **Clarity**, **Cut** and/or **Carat Range**, or tick **All** to select every attribute at once. |
 | Select Shape | ✅ | Shown when **Shape** is ticked. |
 | Select Color | ✅ | Shown when **Color** is ticked. |
@@ -63,9 +67,9 @@ Click **Add Product Margin**, fill in the sections below, and click **Save Rule*
 | Select Cut | ✅ | Shown when **Cut** is ticked. |
 | Min Carat Range | ✅ | Shown when **Carat Range** is ticked. Lower carat limit. |
 | Max Carat Range | ✅ | Shown when **Carat Range** is ticked. Upper carat limit; must be greater than **Min Carat Range**. |
-| Select Pricing Type | ✅ | Choose **Margin**, **Markup** or **Multiplier**. |
-| Select Margin Type / Select Markup Type | - | Shown for **Margin** and **Markup** pricing only. For **Margin**, choose **Percentage (%)**. For **Markup**, choose **Flat Amount** or **Percentage (%)**. |
-| Value | ✅ | Enter the margin value. Negative values are not allowed. When the pricing type is **Margin**, the value must be less than 100. A **%** sign is shown next to the field for percentage margins. |
+| Select Pricing Type | ✅ | Choose **Margin**, **Markup** or **Multiplier**. **Markup** is selected by default. |
+| Select Margin Type / Select Markup Type | - | Shown for **Margin** and **Markup** pricing only. For **Margin**, choose **Percentage (%)**. For **Markup**, choose **Flat Amount** or **Percentage (%)**. **Percentage (%)** is selected by default. |
+| Value | ✅ | Enter the margin value. Negative values are not allowed. When the pricing type is **Margin**, the value must be less than 100. A **%** sign is shown next to the field for percentage margins, and a **₹** sign otherwise. |
 
 :::note Example
 **Apply To:** Attribute, **Apply Margin On:** Shape and Carat Range, **Select Shape:** Round, **Min Carat Range:** 1, **Max Carat Range:** 2. The rule applies only to round diamonds between 1 and 2 carats.

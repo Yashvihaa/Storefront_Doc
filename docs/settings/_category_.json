@@ -3,7 +3,7 @@
   "position": 9,
   "link": {
     "type": "generated-index",
-    "description": "Store-wide settings for metal rates, tax, price display and gift charges.",
+    "description": "Store-wide settings for metal rates, tax, price display, gift charges, company info, audit log and SKU format.",
     "slug": "settings"
   }
 }

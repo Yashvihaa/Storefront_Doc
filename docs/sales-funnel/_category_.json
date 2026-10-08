@@ -3,7 +3,7 @@
   "position": 8,
   "link": {
     "type": "generated-index",
-    "description": "See the products customers have added to their carts and wishlists.",
+    "description": "See the products customers have added to their carts.",
     "slug": "sales-funnel"
   }
 }

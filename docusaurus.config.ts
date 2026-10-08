@@ -118,6 +118,7 @@ const config: Config = {
             {label: 'Settings', to: '/settings'},
             {label: 'Configurators', to: '/configurators'},
             {label: 'Roles & Permission', to: '/roles-permission'},
+            {label: 'Location Master', to: '/location-master'},
           ],
         },
         {
@@ -157,13 +158,14 @@ const config: Config = {
             {label: 'Orders', to: '/order-management/orders'},
             {label: 'Customers', to: '/customer-management/customers'},
             {label: 'Cart Products', to: '/sales-funnel/cart-products'},
-            {label: 'Wishlist Products', to: '/sales-funnel/wishlist-products'},
+            {label: 'Customer Reports', to: '/customer-management/customer-reports'},
           ],
         },
         {
           title: 'Catalog & Pricing',
           items: [
             {label: 'All Products', to: '/product-management/all-products'},
+            {label: 'Masters', to: '/product-management/masters'},
             {label: 'Configurator Products', to: '/configurator-products'},
             {label: 'Diamond Group Master', to: '/product-management/diamond-group-master'},
             {label: 'Metal Rate Settings', to: '/settings/metal-rate-setting'},
@@ -175,7 +177,8 @@ const config: Config = {
             {label: 'Roles', to: '/roles-permission/roles'},
             {label: 'User Management', to: '/roles-permission/user-management'},
             {label: 'Stores', to: '/roles-permission/stores'},
-            {label: 'Settings', to: '/settings'},
+            {label: 'Location Master', to: '/location-master'},
+            {label: 'Audit Log', to: '/settings/audit-log'},
           ],
         },
       ],

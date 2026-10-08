@@ -15,7 +15,7 @@ The **Dashboard** is the first page you see after signing in. It gives a one-scr
 
 | Action | Description |
 | ------ | ----------- |
-| **Date Range** | Choose the period the Dashboard reports on. The page updates as soon as you pick an end date. |
+| **Date Range** | Click the date box (or its calendar icon) at the top right to choose the period the Dashboard reports on. The page updates as soon as you pick an end date. |
 | **View Documentation** | Opens the help page for the Dashboard in a new browser tab. |
 | **View Details** | Click the **eye** icon in **Top Selling Products** or **Recent Orders** to open the product or order details. |
 | **Quick Actions** | One-click shortcuts to common tasks, opened in a new browser tab. |
@@ -54,7 +54,7 @@ Eight cards show the number of orders in each status, with the percentage change
 
 ---
 
-### Web Analytics
+### Web analytics
 
 A bar chart of website visitors per period, with the line *"Total number of website visitors is …"* showing the total for the selected range. Hover over a bar to see its exact value.
 
@@ -104,19 +104,21 @@ An area chart of revenue for each period in the selected range. Amounts on the a
 | **Product Name** | Name of the product |
 | **SKU** | Product SKU code |
 | **Order Count** | Number of orders that included the product |
-| **Action** | **View** icon to open the product |
+| **Action** | **View Details** icon to open the product |
+
+This table is not paged.
 
 ---
 
 ### Abandoned Carts
 
-Customers who added products to their cart but did not check out during the selected period.
+Customers who added products to their cart but did not check out during the selected period. If there are none, the card shows **Data Not Available**.
 
 | Column | Description |
 | ------ | ----------- |
 | **CUSTOMER** | Customer name |
 | **ITEMS** | Number of items left in the cart |
-| **VALUE** | Total cart value |
+| **VALUE** | Total cart value, for example `$1250.00` |
 
 ---
 
@@ -127,11 +129,12 @@ Customers who added products to their cart but did not check out during the sele
 | **Order Number** | Unique order reference |
 | **Date** | Order date |
 | **Customer Name** | Name of the customer |
+| **Guest Account** | **Yes** if the order was placed without a customer account, otherwise **No** |
 | **Email** | Customer email address |
 | **Total** | Order amount |
-| **Order Status** | Current order status (e.g. Pending, Confirmed, Delivered) |
+| **Order Status** | Current order status: **Pending**, **Confirmed**, **Processing**, **Out For Delivery**, **Delivered**, **Returned**, **Failed** or **Cancelled** |
 | **Payment Status** | **Pending**, **Paid** or **Failed** |
-| **Action** | **View** icon to open the order details |
+| **Action** | **View Details** icon to open the order details |
 
 The table shows 50 orders per page by default; change it to 25, 50, 75 or 100 from the rows-per-page menu.
 
@@ -139,7 +142,7 @@ The table shows 50 orders per page by default; change it to 25, 50, 75 or 100 fr
 
 ### Table Tools
 
-**Top Selling Products** and **Recent Orders** share a toolbar with **Filter**, **Columns** (show/hide), **Density** and **Full screen** options.
+**Top Selling Products** and **Recent Orders** share a toolbar with **Filter**, **Columns** (show/hide), **Density** and **Full screen** options. An empty table shows **No records to display**.
 
 ---
 

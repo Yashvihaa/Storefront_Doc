@@ -1,0 +1,9 @@
+{
+  "label": "Masters",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Master data used to build products: shapes, stones, metals, sizes, settings, brands, collections and tags.",
+    "slug": "product-management/masters"
+  }
+}

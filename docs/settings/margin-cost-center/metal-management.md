@@ -13,7 +13,7 @@ The **Metal Management** page lets you set the base rate for a metal, either ent
 
 ## Metal Management Settings
 
-This is a settings page with a single form. Fill in the fields below and click **Save**. After a successful save, you are taken to the **Metal Rate Setting** page.
+This is a settings page with a single form. Fill in the fields below and click **Save**. After a successful save, you are taken to the [Metal Rate Settings](../metal-rate-setting.md) page. Click **Back** to return to the previous page without saving.
 
 ### Metal and Rate Source
 
@@ -45,7 +45,7 @@ Set a different margin for each metal weight range. **Range-wise Margin** is sel
 | Select Margin Type | ✅ | Choose **Percentage (%)** or **Fixed Price**. Required once any field in the row is filled. |
 | Value | ✅ | Margin value for the slab. Must be a number. Required once any field in the row is filled. |
 
-Click **Add** to add another slab row. Click the red **Delete** icon to remove a row.
+Click **Add** to add another slab row. Click the red **Delete** icon to remove a row. Rows left completely empty are ignored when you save.
 
 ### Overall Margin
 
@@ -54,4 +54,4 @@ Apply one margin to every weight.
 | Field | Required | Remarks |
 | ----- | -------- | ------- |
 | Select Margin Type | ✅ | Choose **Percentage (%)** or **Fixed Price**. |
-| Margin Value | ✅ | Margin value to add. Must be a number. A **%** sign is shown next to the field for percentage margins. |
+| Margin Value | ✅ | Margin value to add. Must be a number. A **%** sign is shown next to the field for percentage margins, and a **₹** sign for fixed prices. |

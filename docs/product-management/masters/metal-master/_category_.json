@@ -1,0 +1,9 @@
+{
+  "label": "Metal Master",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "The metals, metal tones and metal karats used in your products.",
+    "slug": "product-management/masters/metal-master"
+  }
+}

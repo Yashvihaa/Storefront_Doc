@@ -1,0 +1,9 @@
+{
+  "label": "Location Master",
+  "position": 12,
+  "link": {
+    "type": "generated-index",
+    "description": "Manage the countries, states, cities and store locations used across the admin panel.",
+    "slug": "location-master"
+  }
+}

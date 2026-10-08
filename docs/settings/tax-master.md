@@ -24,6 +24,10 @@ sidebar_label: Tax Master
 
 The list shows the **Name**, **Rate (%)** and **Status** of each tax, and can be sorted and paged.
 
+:::note
+**Add Tax** is disabled for users without **Add** permission. The **Edit** icon and the **Status Toggle** are disabled without **Edit** permission, and the **Delete** icon is disabled without **Delete** permission.
+:::
+
 ---
 
 ### Steps to Add a New Tax
@@ -34,3 +38,5 @@ Click **Add Tax**, fill in the fields below and click **SUBMIT**. When editing, 
 | ----- | -------- | ------- |
 | **Tax name** | ✅ | Name used to identify the tax, for example GST, IGST or VAT. |
 | **Rate (%)** | ✅ | Tax percentage. Must be a number from 0 to 100. For example, 18 means 18% tax. |
+
+When editing, the drawer opens with the tax's saved name and rate.

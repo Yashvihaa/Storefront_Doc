@@ -31,11 +31,15 @@ The list shows the following columns:
 | **Min Diamond Range** | Lower carat limit of the range. |
 | **Max Diamond Range** | Upper carat limit of the range. |
 
+:::note Permissions
+The **Add Diamond Range**, **Download**, **upload** and **Apply** buttons are disabled if you do not have **Add** permission. The **Edit** icon and the status toggle need **Edit** permission, and the **Delete** icon needs **Delete** permission.
+:::
+
 ---
 
 ### Steps to Add a New Diamond Range
 
-Click **Add Diamond Range**. The **Add Diamond Range Management** panel opens on the right. Fill in the fields and click **SUBMIT** (or **EDIT** when changing an existing range). Click **Cancel** to close the panel without saving.
+Click **Add Diamond Range**. The **Add Diamond Range Management** panel opens on the right (**Edit Diamond Range Management** when editing). Fill in the fields and click **SUBMIT** (or **EDIT** when changing an existing range). Click **Cancel** to close the panel without saving.
 
 | Field | Required | Remarks |
 | ----- | -------- | ------- |
@@ -53,7 +57,7 @@ Use the buttons above the list to add or update several ranges from an Excel fil
 | Button | Description |
 | ------ | ----------- |
 | **Download** | Downloads a sample Excel file with the required column headings. |
-| **upload** | Select the completed Excel file. The selected file name appears next to the button. |
+| **upload** | Select the completed Excel file (.xlsx or .xls). The selected file name appears next to the button. |
 | **Apply** | Processes the selected file and updates the list. |
 
 If any rows in the file cannot be imported, a table appears above the list showing the **Row Id** and **Error Message** for each rejected row. Correct those rows and upload the file again.

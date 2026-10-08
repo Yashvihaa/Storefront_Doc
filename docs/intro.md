@@ -55,7 +55,7 @@ Your sales team can also install the storefront on an iPad as an app, with your 
 
 1. **You set up the catalog.** Add products in [Product Management](/product-management), choose the options each configurator offers in [Configurators](/configurators), and set your metal rates, margins and tax in [Settings](/settings).
 2. **A customer designs a piece.** On the website they choose a design and go through the configurator steps. The price updates with each choice. The [Price Display](./settings/price-display.md) setting decides which price customers see, or hides prices completely.
-3. **The customer saves it or orders it.** Items added to a cart or wishlist appear under [Sales Funnel](/sales-funnel), so you can follow up on designs that were not bought. Placed orders appear under [Orders](./order-management/orders.md).
+3. **The customer saves it or orders it.** Items added to a cart appear under [Sales Funnel](/sales-funnel), and wishlisted items appear in [Customer Reports](./customer-management/customer-reports.md), so you can follow up on designs that were not bought. Placed orders appear under [Orders](./order-management/orders.md).
 4. **You choose who makes it.** On each order, compare the manufacturing cost from TCC Tech with your own manufacturers, share the Product Details Worksheet, and order from the manufacturer you choose.
 5. **You track the results.** The [Dashboard](./dashboard.md) shows orders, website visitors, revenue and best sellers for the period you choose. [Analytics](./analytics.md) goes further into customers, designs and sales.
 
@@ -85,8 +85,9 @@ After your first sign-in, work through these pages in order:
 | 3 | Add users and give each one a role | [User Management](./roles-permission/user-management.md) |
 | 4 | Assign user licences to your team | [Subscription & Billing](./subscription.md#users--licences) |
 | 5 | Set metal rates, tax, margins and price display | [Settings](/settings) |
-| 6 | Choose the options each configurator offers | [Configurators](/configurators) |
-| 7 | Add your products | [Product Management](/product-management) |
+| 6 | Set up the master data your products use (shapes, stones, metals, sizes) | [Masters](/product-management/masters) |
+| 7 | Choose the options each configurator offers | [Configurators](/configurators) |
+| 8 | Add your products | [Product Management](/product-management) |
 
 ---
 
@@ -132,11 +133,12 @@ The guide follows the admin panel's side menu.
 | [Subscription & Billing](./subscription.md) | Your plan, enabled configurators, user licences and billing history. |
 | [Order Management](/order-management) | Orders, the manufacturing comparison and manufacturer charge templates. |
 | [Customer Management](/customer-management) | Customer accounts and customer reports. |
-| [Product Management](/product-management) | Products, configurator products (including birthstone products), diamond prices and offers. |
-| [Sales Funnel](/sales-funnel) | Products customers have added to carts and wishlists. |
-| [Settings](/settings) | Metal rates, tax, price display, gift charges and margin rules. |
+| [Product Management](/product-management) | Products, masters, configurator products (including birthstone products), diamond prices and offers. |
+| [Sales Funnel](/sales-funnel) | Products customers have added to their carts. |
+| [Settings](/settings) | Metal rates, tax, price display, gift charges, margin rules, company info, audit log and SKU builder. |
 | [Configurators](/configurators) | The options customers can choose in each configurator. |
 | [Roles & Permission](/roles-permission) | Roles, users and stores. |
+| [Location Master](/location-master) | Countries, states, cities and store addresses. |
 
 ### How Each Page Is Laid Out
 

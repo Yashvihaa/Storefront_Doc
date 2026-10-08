@@ -31,6 +31,10 @@ The list shows the following columns:
 | **Margin Type** | Type of margin calculation used by the rule. |
 | **Margin Value** | Margin value set on the rule. |
 
+:::note Permissions
+The **Add Product Margin** button is disabled if you do not have **Add** permission. The **Edit** icon and the status toggle need **Edit** permission, and the **Delete** icon needs **Delete** permission.
+:::
+
 ---
 
 ### Steps to Add a New Product Margin
@@ -43,7 +47,7 @@ Click **Add Product Margin**, fill in the fields below, and click **Save**. When
 | Select Product Type | ✅ | Choose the product type the rule applies to: Dynamic single product, Variant single product, Ring Configurator, Three stone configurator, Eternity band configurator, Bracelet configurator, Birthstone configurator, Stud configurator or Pendant configurator. |
 | Description | ✅ | Enter a short description of the rule. |
 | Select Pricing Type | ✅ | Choose **Margin**, **Markup** or **Multiplier**. **Markup** is selected by default. |
-| Select Margin Type / Select Markup Type | ✅ | Shown for **Margin** and **Markup** pricing only. For **Margin**, choose **Percentage (%)**. For **Markup**, choose **Flat Amount** or **Percentage (%)**. Not shown for **Multiplier**. |
+| Select Margin Type / Select Markup Type | ✅ | Shown for **Margin** and **Markup** pricing only. For **Margin**, choose **Percentage (%)**. For **Markup**, choose **Flat Amount** or **Percentage (%)**; **Flat Amount** is selected by default. Not shown for **Multiplier**. |
 | Margin Value | ✅ | Enter the margin value. When the pricing type is **Margin**, the value must be less than 100. |
 | Margin Apply Type | ✅ | Shown only for **Dynamic single product** and **Variant single product**. Choose **All**, **Products**, **Category**, **Collection** or **Brand**. Other product types always apply the rule to all items. |
 | Select Products | ✅ | Shown when **Margin Apply Type** is **Products**. Select one or more products by SKU. |

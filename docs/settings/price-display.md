@@ -28,7 +28,7 @@ A short description of the active option is shown below the list.
 ## Changing the Setting
 
 1. Click an option, or turn on its switch.
-2. The change is saved immediately and a **Saved** confirmation appears. There is no separate Save button.
+2. The change is saved immediately and a "Saved -- *option name*" confirmation appears. There is no separate Save button.
 
 :::note
 Clicking the option that is already active does nothing. To change the setting, select a different option.

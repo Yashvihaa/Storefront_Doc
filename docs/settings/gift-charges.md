@@ -37,5 +37,6 @@ The charge value is required only while **Gift Chargeable Provision** is on.
 
 ## Saving Changes
 
-- The **Save** button becomes active once you change any setting. Click it to apply the changes; a confirmation message appears.
+- The **Save** button becomes active once you change any setting. Click it to apply the changes; the message "Saved -- Gift charge settings updated" appears.
+- If the charge value is missing or out of range while **Gift Chargeable Provision** is on, saving is blocked with "Enter a percentage between 0 and 100" or "Enter a valid amount".
 - Click **Cancel** (shown only when there are unsaved changes) to discard them and return to the saved settings.
