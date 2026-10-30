@@ -7,182 +7,175 @@ sidebar_label: Orders
 
 # Orders
 
-The **Orders** module lets you review every order, compare its manufacturing cost across manufacturers, and open the full order details and invoice.
+The **Orders** module (page title **ORDER HISTORY**, *Track and review all order status details*) lets you review every order, change its status, compare its manufacturing cost across manufacturers, send it to a manufacturer or to CAD design, and open the order's invoice and Product Details Worksheet.
 
 ---
 
 ## Order History Screen List
 
-The **Order History** page (*Track and review all order status details*) shows one card per order. Each card shows:
+The page shows one card per order, newest first, 10 orders per page. Page numbers appear at the bottom right when there is more than one page (changing page closes any open order). If there are no orders, the page shows **No orders found**.
 
-- The **order number** and a **status** badge
-- The **order date**, the **number of items** and the **manufacturer** the order was placed with
-- The **order amount**
+Each collapsed card shows:
+
+- A package icon, the **order number** and the **status** badge
+- The **order date**, the **number of items**, **Manufacturer** (or **Not assigned** if none was chosen yet), and, when available, the **Store** and the shipping method
+- The **order amount** on the right, with an arrow showing whether the card is open
 
 | Action | Description |
 | ------ | ----------- |
-| **Expand / Collapse** | Click an order card to expand it and see the manufacturing comparison, the ordered items and the order total. Click it again to collapse it. Only one order is expanded at a time. |
+| **Expand / Collapse** | Click an order card (or press **Enter** or **Space** on it) to expand it. Click it again to collapse it. Only one order is open at a time, and details load when you first open the order. |
+| **Status badge** | Click the status badge to change the order's status (see [Updating the Order Status](#updating-the-order-status)). |
 | **Select Manufacturer** | In the comparison table, click a manufacturer's column header to highlight that manufacturer. |
-| **Order Now** | Opens the checkout and payment page for the order with the chosen manufacturer. |
-| **Share** | Click the **Share** icon next to **Order Now** to open the Product Details Worksheet **without prices**, ready to share with a manufacturer. |
-| **DOWNLOAD PDW** | Opens the Product Details Worksheet **with the price breakdown**. |
-| **SHARE PDW** | Opens the Product Details Worksheet **without prices**. |
+| **Order Now** | Sends the product to a manufacturer, or to CAD design, after you confirm in a popup. |
+| **Save** | Saves the metal and diamond amounts you edited for one manufacturer. |
+| **VIEW INVOICE** | Opens the order's invoice in a preview. |
+| **DOWNLOAD PDW** | Opens the Product Details Worksheet **with prices**. |
+| **SHARE PDW** | Opens the Product Details Worksheet **without prices**, ready to give to a manufacturer. |
+| **View Documentation** | Opens the help page for this screen in a new browser tab. |
+
+If an order cannot be opened, the card shows **Could not load this order's details.**
 
 ---
 
 ### Order Statuses
 
-The status badge on each card has its own color and icon. The statuses are **Pending**, **Confirmed**, **Processing**, **Shipped** (out for delivery), **Delivered**, **Returned**, **Failed** and **Cancelled**.
+The status badge on each card has its own colour and icon, and shows the status name your system reports for the order.
 
----
-
-### Manufacturing Option Comparison
-
-When you expand an order, the **Manufacturing Option Comparison** table compares **TCC Tech** with your local manufacturers, line by line.
-
-| Column | Description |
-| ------ | ----------- |
-| **CAD** | The **CAD DESIGN** fee for the order. The **Order Now** button at the bottom of this column orders from TCC Tech. |
-| **COST COMPONENT** | The cost line being compared (see below). |
-| **WT** | The weight for metal and diamond lines (for example grams or carats). |
-| **Manufacturer columns** | One column per manufacturer with its amount for each cost line. **TCC Tech** is always the first column and carries the **BENCHMARK** badge. Each column ends with an **Order Now** button and a **Share** icon. |
-
-The cost lines are:
-
-| Cost Component | Description |
-| -------------- | ----------- |
-| **Metal** and **Diamond** lines | The material cost for each metal and diamond in the design. |
-| **Labour**, **Setting Charges**, **Other Charges** | Manufacturing charges. |
-| **Subtotal** | Total of the lines above. |
-| **Duty**, **Tariff**, **Tax** | Applicable duties and taxes. The rate is shown in green above the amount. |
-| **Shipping** | Shipping cost. |
-| **Landed Cost** | Total cost including duties, taxes and shipping. |
-| **Margin** | Your margin on the landed cost, with its percentage. |
-| **Retail Price** | The final selling price. |
-
-:::tip
-The manufacturer the order was placed with is highlighted in amber when you open the order. Click another manufacturer's header to highlight that column instead. The table scrolls sideways while the **CAD** and **COST COMPONENT** columns stay in place.
-:::
-
-Below the table, each **ordered item** is listed with its image, name, quantity and price, followed by the **TOTAL** for the order.
-
----
-
-### Product Details Worksheet (PDW)
-
-**DOWNLOAD PDW**, **SHARE PDW** and the **Share** icons open the **Product Details Worksheet (PDW)** in a new browser tab, and the print dialog opens automatically. Use it to print the worksheet or save it as a PDF. You can also click **Print Worksheet / Save PDF** at the top of the worksheet.
-
-The worksheet header shows the order number and date. Each item is listed with its image, quantity, **Diamond Details**, **Metal Details** and **Product Specifications**. When opened with **DOWNLOAD PDW**, it also shows the item prices and a breakdown of **Diamond Price**, **Metal Price**, **Labour Price**, **Other Prices** and **Total Price**.
-
-:::note
-The worksheet opens in a new tab. If your browser blocks it, the message *Please allow popups to open the PDW.* appears. Allow pop-ups for the admin panel and try again.
-:::
-
----
-
-### Checkout and Payment
-
-Click **Order Now** under a manufacturer's column to open the checkout page for that order and manufacturer. The page opens without the admin menu. Click the close (X) icon at the top right to return to **Order History**.
-
-| Section | Description |
-| ------- | ----------- |
-| **Order Details** | **ORDER ID**, **MANUFACTURER** (with the **BENCHMARK** badge for TCC Tech) and the **ITEMS** with their quantity. Click the **Edit** icon to go back to **Order History** and choose a different order or manufacturer. |
-| **Price Details** | **Manufacturing Subtotal**, then **Duty**, **Tariff**, **Tax** and **Shipping** where they apply to the chosen manufacturer, and the **TOTAL** (landed cost). |
-| **Select Payment Method** | Choose **CARD**, **UPI** or **NET BANKING**. **CARD** asks for **CARDHOLDER NAME**, **CARD NUMBER**, **EXPIRY DATE** and **CVV**; **UPI** asks for the **UPI ID**; **NET BANKING** asks you to **SELECT YOUR BANK**. |
-
-Click **Proceed to Payment** to continue, or **Back** to return to **Order History**. If the order cannot be found, the page shows *Order not found.*
-
----
-
-## Order Details
-
-The **Order details** page shows the complete record of a single order. Open it by clicking the **View** (eye) icon next to an order in **Recent Orders** on the [Dashboard](../dashboard.md). The **View** icon is shown only if your role has the **View** permission for orders.
-
-The page header shows the order number, its status badge and the order date. The buttons on the right of the header are described below.
-
-| Action | Description |
-| ------ | ----------- |
-| **Download Excel** | Click the Excel icon to download `order_details.xlsx`. It has two sheets: **Order Details** (the catalogue product data) and **Diamond Group Master** (the diamond rates). Shown only when the order contains catalogue products. |
-| **Sync Product** | Opens the **Sync Product Configuration** dialog (see below). Shown only for the CADCO company. |
-| **print Invoice** | Opens the printable invoice and starts the print dialog. Enabled only when the order's payment status is **Paid**. |
-| **View Invoice** | Opens the [Invoice](#invoice) page. Enabled only when the order's payment status is **Paid**. |
-| **Certificate View** | Opens the diamond's certificate in a new tab. Shown only for diamonds that have a certificate. |
-| **Product SKU** | Click the SKU chip of a catalogue product in **Product Details** to open the **Product Price Details** popup. |
-| **Order Status** | Change the order's status from the dropdown in **Shipping info**. |
-
-The rest of the page is divided into the following sections.
-
-| Section | Description |
-| ------- | ----------- |
-| **Items** | Each product in the order with its image, name, short description, **SKU** and price. |
-| **Order Summary** | **Sub Total (items added)**, **Shipping**, **Discount**, each applicable tax with its rate, and the order **Total**. |
-| **Product Details** | For each item: its name, and expandable panels such as **Diamond Details**, **Metal Details**, **Stone Details**, **Design Specifications** and **Engraving Details**, depending on the product type. Diamond and setting products also show the **Setting Price** and **Diamond Price**. |
-| **Remark/Note** | The note the customer added at checkout. Shown only if the customer left a note. |
-| **Customer Info** | The customer's name, email and phone number. |
-| **Shipping info** | **Payment Status** (**Pending**, **Paid** or **Failed**), **Shipping Method** (**Pick up at showroom** or **Ship to my address**), **Delevery Status** (the current order status) and the **Order Status** dropdown. |
-| **Shipping Address** / **Showroom Address** | For delivery orders: **Name**, **Phone**, **Address**, **Area Name**, **City**, **State**, **Zip Code** and **Country**. For showroom pickup: the showroom **Address** and **Branch Name**, with a **View in map** link that opens the address in Google Maps. |
-| **Billing Address** | **Name**, **Phone**, **Address**, **Area Name**, **City**, **State**, **Zip Code** and **Country**. |
+| Status | Meaning |
+| ------ | ------- |
+| **Pending** | Order received, not yet confirmed |
+| **Confirmed** | Order confirmed |
+| **Processing** | Order is being prepared |
+| **Out For Delivery** | Order is on its way to the customer |
+| **Delivered** | Order delivered |
+| **Returned** | Order returned by the customer |
+| **Failed** | Order failed |
+| **Cancelled** | Order cancelled |
+| **Archived** | Order archived |
 
 ---
 
 ### Updating the Order Status
 
-1. In the **Shipping info** section, open the **Order Status** dropdown.
-2. Select the new status: **Pending**, **Confirmed**, **Processing**, **Out For Delivery**, **Delivered**, **Returned**, **Failed** or **Cancelled**.
-3. The status is saved as soon as you select it and a confirmation message appears.
+1. Click the status badge next to the order number. A menu lists all the statuses above, with the current one highlighted.
+2. Select the new status. Choosing the current status does nothing.
+3. The status is saved as soon as you select it, with the message **Order status updated successfully**. There is no confirmation popup, and the badge is disabled for a moment while it saves.
 
 :::note
-The **Order Status** dropdown is available only for **paid** orders, or for orders placed without online payment.
+Clicking the status badge does not open or close the order card.
 :::
 
 ---
 
-### Product Price Details
+### Manufacturing Option Comparison
 
-Click the SKU chip of a catalogue product to open the **Product Price Details** popup. It has two tabs:
+When you expand an order, each product in it is listed (image, name, **Qty** and price) with a **Manufacturing Option Comparison** table below it: *TCC Tech vs your local manufacturing options, compared line by line.* The table is shown only when the order has a cost breakdown; otherwise only the product lines appear.
 
-- **Price Breakdown**: the **Cost Calculation** (ending in the landed cost), the **Margin Cost** and the **Retail Calculation** with the **Final Retail Price**.
-- **Specifications**: the product's specifications.
+| Column | Description |
+| ------ | ----------- |
+| **CAD** | The **CAD DESIGN** fee for the product. The **Order Now** button at the bottom of this column sends the product for CAD design. |
+| **COST COMPONENT** | The cost line being compared. |
+| **WT** | The weight for metal and diamond lines (for example grams or carats), or a dash. |
+| **Manufacturer columns** | One column per manufacturer with its amount for each cost line. **TCC Tech** is always the first column and carries the **BENCHMARK** badge. A dash means the manufacturer has no amount for that line. |
 
-Click **Download pdf** to save the details as a PDF, or the close icon to close the popup.
+The cost lines come from your pricing and manufacturer charge templates. They cover the metal, each diamond, the manufacturing charges, subtotals, duty, tariff, tax, shipping, the landed cost, your margin and the retail price. Where a rate applies, it is shown in green above the amount. Subtotal and total rows are shaded and bold.
+
+:::tip
+The manufacturer the order was placed with is highlighted in amber when you open the order. Click another manufacturer's header to highlight that column instead (this is only a highlight; it does not change the order). The table scrolls sideways while the **CAD** and **COST COMPONENT** columns stay in place.
+:::
+
+#### Editing Metal and Diamond Amounts
+
+In every manufacturer column except the **TCC Tech** benchmark, the metal and diamond amounts are shown as editable `$` boxes. Use this to record the price a manufacturer actually quoted.
+
+1. Type the new amount in the box (digits and one decimal point, up to two decimals).
+2. Click **Save** at the bottom of that manufacturer's column.
+3. The message **Manufacturing prices saved successfully** appears and the table refreshes with your saved amounts.
+
+| Situation | What happens |
+| --------- | ------------ |
+| No box was changed | **No changes to save** appears |
+| A box is cleared and saved | The amount you saved before for that line is removed |
+| The product was already ordered from that manufacturer | The boxes are read-only and **Save** is disabled |
+| **TCC Tech** (benchmark) | Amounts are not editable and there is no **Save** button |
+
+#### Order Now
+
+1. Click **Order Now** at the bottom of a manufacturer's column (or of the **CAD** column).
+2. The popup opens with the title **Order from** and the manufacturer's name, or **Order CAD design**, and the order number. For CAD design it explains: *This sends the product for CAD design. You can follow its progress on this order.*
+3. Optionally type a note (**Note for the manufacturer** or **Note for the CAD designer**, up to 500 characters; the counter shows `0/500`).
+4. Click **Place order** (it shows **Placing order…** while sending), or **Cancel**.
+5. On success the message **Order placed successfully** appears and the popup closes.
+
+| Situation | What happens |
+| --------- | ------------ |
+| The product was already sent to that manufacturer | The button reads **Order Sent** and is disabled; its amounts are locked |
+| The manufacturer cannot be ordered from (for example the TCC Tech fallback column has no manufacturer record) | **Order Now** is disabled |
+| The order fails | An error message such as **The order could not be placed. Please try again.** |
+| The server does not answer in time | **The server took too long to respond. Check this order before trying again; it may already be placed.** Check the order before trying again to avoid ordering twice. |
 
 ---
 
-### Sync Product
+### Order Total and Footer
 
-This option is shown only for the CADCO company. Click **Sync Product**, fill in the fields below and click **Sync Products** to sync all products in the order. Click **Cancel** to close without syncing.
+Below the products, the footer has **VIEW INVOICE**, **DOWNLOAD PDW** and **SHARE PDW** on the left and the order **TOTAL** on the right. Amounts are shown in dollars.
 
-| Field | Required | Remarks |
-| ----- | -------- | ------- |
-| **Company Key** | ✅ | The company key to sync the products to. |
-| **Diamond Color** | ✅ | Diamond color used for the sync. |
-| **Diamond Clarity** | ✅ | Diamond clarity used for the sync. |
+---
 
-**Sync Products** stays disabled until all three fields are filled. When the sync finishes, the message *Product sync completed successfully!* appears.
+### Product Details Worksheet (PDW)
+
+**DOWNLOAD PDW** and **SHARE PDW** open the **Product Details Worksheet** in a preview window on the same page (the subtitle shows the order number and **With prices** or **Without prices**). Click **Save PDF** to download it as a PDF named `PDW_` followed by the order number, or the close (X) icon to close it. If the PDF cannot be created, the message **Could not create the PDF. Please try again.** appears.
+
+The worksheet uses your company logo, colours and fonts.
+
+| Part | Download (with prices) | Share (without prices) |
+| ---- | ---------------------- | ---------------------- |
+| Header facts: **Order No.**, **Order Date**, **Status**, **Items**, **Store**, **Delivery**, **Delivery Date**, **Time Slot**, **Gift Package** | ✅ | ✅ |
+| **Payment** status | ✅ | - |
+| **Customer**, **Shipping Address** or **Pickup Store**, **Order Note** (when available) | ✅ | ✅ |
+| Each item: image, **Item N**, name, **SKU**, **Qty**, **Diamond Details**, **Metal Details**, **Product Specifications** | ✅ | ✅ |
+| Item **Price**, price summary (**Sub Total**, **Discount**, **Tax**, **Shipping**) and **Order Total** | ✅ | - |
+| Page 2 **Manufacturing Comparison**: every cost line for every manufacturer, for each item | ✅ | - |
+| Footer note | **With prices** and the date generated | **For manufacturing reference · No prices** |
+
+:::tip
+Use **SHARE PDW** when sending the specification to a manufacturer, so your prices and margins stay private. Use **DOWNLOAD PDW** for your own records.
+:::
 
 ---
 
 ## Invoice
 
-Click **View Invoice** on the Order details page to see the order's invoice.
+### Invoice Preview
+
+Click **VIEW INVOICE** on an open order to preview its invoice. The preview is titled **Invoice** with the order number beneath it. Click **Save PDF** to download it as a PDF named `Invoice_` followed by the order number, or the close (X) icon to close it.
+
+The invoice is branded with your company logo (or company name), colours and fonts, and includes:
+
+- Your company name and address at the top, and your email, website and phone at the bottom when they are filled in your company information
+- The heading **INVOICE** with **Order No.**, **Order Date** and **Status** (marked **(Cancelled)** when the order is cancelled)
+- A box with **Payment**, **Store**, **Delivery**, **Delivery Date** and **Time Slot**
+- **Bill To** (customer name, phone and email), and **Ship To** with the shipping address or **Pickup Store**
+- An item table with **#**, **Product / Description** (with the **SKU** and specifications), **Qty**, **Rate** and **Amount**
+- **Subtotal**, **Discount**, **Shipping Charges**, **Tax** and the **Total**
+- A **Summary** (**Gross Amount**, the same charges and **Total Amount**) and a **Notes** box, which shows the customer's order note and the line *We appreciate your business. This is a computer generated invoice and does not require a signature.*
+
+### Standalone Invoice Page
+
+The older invoice page (opened for a single order) is also available. It is titled **Order Confirmation**.
 
 | Action | Description |
 | ------ | ----------- |
 | **Back** | Returns to the previous page. |
-| **Print** | Opens the printable invoice in a new tab. |
+| **Print** | Opens the printable invoice in a new tab. The browser's print dialog opens automatically after a moment, so you can print the invoice or save it as a PDF. |
+| **View Documentation** | Opens this help section. |
 
-The invoice is titled **Order Confirmation** and includes:
+It includes:
 
 - Your company logo, address, mobile number (**MOB**) and **GSTIN NO**
 - **Order Number**, **Invoice Number**, **Order Date**, **Created** date, **Payment Method** (for example **CashOnDelivery**, **Paypal**, **Affirm**, **YOCO**, **Card** or **Razorpay**), **Transaction ID** and **HSN Code**
-- The **Shipping Address**, or the **Store Address** for showroom pickup
+- The **Shipping Address**, or the store address and branch name for showroom pickup
 - The **Billing Address**
-- An item table with **Sr No**, **Product Name**, **Qty**, **Purity**, **Metal wt.**, **Rate**, **Amount**, **Dia Amount**, **Making Charges**, **Other Charges** and **Total Amount** (amount columns show the order's currency symbol)
+- An item table with **Sr No**, **Product Name**, **Qty**, **Purity**, **Metal wt.**, **Rate**, **Amount**, **Dia Amount**, **Making Charges**, **Other Charges** and **Total Amount**
 - **Sub Total**, **Shipping**, **Discount**, each tax with its rate, and **Grand Total**
 - A **Note** with a declaration and your company email for queries
-
----
-
-### Printing the Invoice
-
-**print Invoice** on the Order details page opens the same invoice on a plain page without the admin menu. The browser's print dialog opens automatically after a moment, so you can print the invoice or save it as a PDF.

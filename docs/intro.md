@@ -55,7 +55,7 @@ Your sales team can also install the storefront on an iPad as an app, with your 
 
 1. **You set up the catalog.** Add products in [Product Management](/product-management), choose the options each configurator offers in [Configurators](/configurators), and set your metal rates, margins and tax in [Settings](/settings).
 2. **A customer designs a piece.** On the website they choose a design and go through the configurator steps. The price updates with each choice. The [Price Display](./settings/price-display.md) setting decides which price customers see, or hides prices completely.
-3. **The customer saves it or orders it.** Items added to a cart appear under [Sales Funnel](/sales-funnel), and wishlisted items appear in [Customer Reports](./customer-management/customer-reports.md), so you can follow up on designs that were not bought. Placed orders appear under [Orders](./order-management/orders.md).
+3. **The customer saves it or orders it.** Items added to a cart appear under [Cart & Wishlist Management](/sales-funnel), and wishlisted items appear in [Customer Reports](./customer-management/customer-reports.md), so you can follow up on designs that were not bought. Placed orders appear under [Orders](./order-management/orders.md).
 4. **You choose who makes it.** On each order, compare the manufacturing cost from TCC Tech with your own manufacturers, share the Product Details Worksheet, and order from the manufacturer you choose.
 5. **You track the results.** The [Dashboard](./dashboard.md) shows orders, website visitors, revenue and best sellers for the period you choose. [Analytics](./analytics.md) goes further into customers, designs and sales.
 
@@ -65,14 +65,18 @@ Your sales team can also install the storefront on an iPad as an app, with your 
 
 ### Create Your Account
 
-Signing up is self-service:
+Signing up is self-service and has three steps, shown as **Products**, **Store & Identity** and **Payment**:
 
-1. **Register** your business at **store.techcorecreations.com** with your business name, email address and a password.
-2. **Choose your configurators** (the jewelry types you want to sell) and the number of stores you need.
-3. **Add your brand.** Upload your logo, choose your brand colors and pick the web address for your storefront.
-4. **Review the order summary and pay** for your monthly subscription.
-5. **Check your email.** When the payment goes through, your account and stores are created and you receive a confirmation email with a link to install your branded app.
-6. **Sign in** with the email address and password you registered with.
+1. **Select your products.** Choose the jewelry types (configurators) you want to sell. You need at least one to continue.
+2. **Enter your store and identity details.** Give the number of branches (up to 100), company name, company logo, CIN number (Corporate Identification Number), email address, a password, phone number and full business address. For India you also give the state, city and a 6-digit postal code.
+3. **Choose your web address and pay.** Check the order summary, enter the web address (subdomain) for your storefront, apply a coupon if you have one, and pay for your monthly subscription in the secure payment window. Two user licences come with the plan; each branch after the first needs one more.
+4. **Check your email.** When the payment goes through, your store is set up and your login details are sent to you. Look in your spam folder if you do not see the email.
+5. **Sign in** on your store's sign-in page (**Welcome Back**) with your email address and password.
+6. **Complete store setup.** The first time you sign in, you are taken through **Branding** (logo, primary color and fonts) and **Margins** (the margin for each product category). Later sign-ins go straight to your storefront.
+
+### Open the Admin Panel
+
+The admin panel is opened from your storefront. After you sign in, click the profile button in the storefront header, then enter your 4-digit PIN on the **Enter PIN** keypad. An incorrect PIN shows "Incorrect PIN. Try again." and you can enter it again. If you are signed out of the admin panel, you are returned to the storefront.
 
 ### Set Up the Admin Panel
 
@@ -82,7 +86,7 @@ After your first sign-in, work through these pages in order:
 | ---- | ---- | ---- |
 | 1 | Add your store locations | [Stores](./roles-permission/stores.md) |
 | 2 | Create roles for your team | [Roles](./roles-permission/roles.md) |
-| 3 | Add users and give each one a role | [User Management](./roles-permission/user-management.md) |
+| 3 | Add users and give each one a role and a store | [User Management](./roles-permission/user-management.md) |
 | 4 | Assign user licences to your team | [Subscription & Billing](./subscription.md#users--licences) |
 | 5 | Set metal rates, tax, margins and price display | [Settings](/settings) |
 | 6 | Set up the master data your products use (shapes, stones, metals, sizes) | [Masters](/product-management/masters) |
@@ -95,8 +99,8 @@ After your first sign-in, work through these pages in order:
 
 Access to the admin panel is controlled by **roles**. A role lists the modules a user can open and the actions they can take in each one, such as **View**, **Add**, **Edit** and **Delete**. Every user has one role.
 
-- You can open only the modules your role has **View** access to.
-- Buttons for actions your role does not allow are hidden or disabled.
+- You can open only the modules your role has **View** access to. Other modules do not appear in the side menu.
+- On most pages, buttons for actions your role does not allow, such as **Add**, **Edit** and **Delete**, are disabled.
 - Roles are created and changed on the [Roles](./roles-permission/roles.md) page.
 
 :::note
@@ -114,6 +118,7 @@ If a page in this guide is missing from your admin panel, or you cannot change a
 | **User** | A team member who can sign in to the admin panel. |
 | **Role** | A named set of permissions given to users, such as Store Manager or Catalog Editor. |
 | **User licence** | A paid seat for one team member, with its own 4-digit PIN. Each user can hold one licence. |
+| **PIN** | The 4-digit code entered on the **Enter PIN** keypad to open the admin panel from the storefront. A PIN is also set for each user on the [User Management](./roles-permission/user-management.md) page. |
 | **Configurator** | A step-by-step design tool for one type of jewelry, such as rings or pendants. |
 | **Configurator product** | A design combination customers can build in a configurator, for example a ring's head, shank and band. |
 | **Cart / Wishlist** | Items a customer has saved on the website: the cart for items they intend to buy, the wishlist for later. |
@@ -130,15 +135,15 @@ The guide follows the admin panel's side menu.
 | ------- | ------ |
 | [Dashboard](./dashboard.md) | Orders, website visitors, revenue, best sellers and store health at a glance. |
 | [Analytics](./analytics.md) | Catalog, customer and sales insights, grouped into tabs. |
-| [Subscription & Billing](./subscription.md) | Your plan, enabled configurators, user licences and billing history. |
-| [Order Management](/order-management) | Orders, the manufacturing comparison and manufacturer charge templates. |
-| [Customer Management](/customer-management) | Customer accounts and customer reports. |
+| [Orders Management](/order-management) | Orders, the manufacturing comparison and manufacturer charge templates. |
 | [Product Management](/product-management) | Products, masters, configurator products (including birthstone products), diamond prices and offers. |
-| [Sales Funnel](/sales-funnel) | Products customers have added to their carts. |
-| [Settings](/settings) | Metal rates, tax, price display, gift charges, margin rules, company info, audit log and SKU builder. |
-| [Configurators](/configurators) | The options customers can choose in each configurator. |
+| [Customer Management](/customer-management) | Customer accounts and customer reports. |
+| [Cart & Wishlist Management](/sales-funnel) | Products customers have added to their carts and wishlists. |
 | [Roles & Permission](/roles-permission) | Roles, users and stores. |
-| [Location Master](/location-master) | Countries, states, cities and store addresses. |
+| [Configurators](/configurators) | The options customers can choose in each configurator. |
+| [Settings](/settings) | Margin rules, metal rates, currency, tax, SKU builder, email and invoice templates and the audit log. |
+| [Subscription & Billing](./subscription.md) | Your plan, enabled configurators, user licences and billing history. |
+| [Front End Setting](./settings/front-end-setting.md) | Website design, gift charges, price display and company info. |
 
 ### How Each Page Is Laid Out
 

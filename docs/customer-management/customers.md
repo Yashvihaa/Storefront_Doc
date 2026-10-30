@@ -7,7 +7,7 @@ sidebar_label: Customers
 
 # Customers
 
-The **Customers List** stores the profiles of your registered customers. You can add, edit, view, activate or deactivate, and delete customer accounts.
+The **Customers List** (page title **CUSTOMERS LIST**, *Manage your client profiles, VIP accounts, and designers*) shows your registered customers with their contact details, the store they belong to, how many orders they have placed, how much they have spent and when they were last active. The list is for review only: customers register themselves on the storefront, and accounts cannot be added, edited, activated, deactivated or deleted from this page.
 
 ---
 
@@ -15,75 +15,50 @@ The **Customers List** stores the profiles of your registered customers. You can
 
 | Action | Description |
 | ------ | ----------- |
-| **Search** | Type in the search box to find customers. The list updates about one second after you stop typing; clear the box to show all customers again. |
-| **Add New Customers** | Click **Add New Customers** to open the **Add Customer** drawer and create a new customer account. |
-| **View** | Click the **View Details** (eye) icon to open the customer's details page. |
-| **Edit** | Click the **Edit Customers** icon to open the **Edit Customer** drawer and update the customer's name, mobile number, country or image. |
-| **Delete** | Click the **Delete Customers** icon and confirm with **YES** to permanently remove the customer. Click **NO** to cancel. |
-| **Status** | Shows whether the customer is **Active** or **Inactive**. |
-| **Status Toggle** | Use the **Enable/Disable** switch to activate or deactivate the customer directly from the list. |
+| **Search** | Type in the **Search** box above the table to find customers. The list updates about one second after you stop typing; clear the box to show all customers again. |
+| **Filter** | Click **Filter** at the top right of the table to show a filter box under each column heading. The filter narrows the rows already loaded on the current page. Click **Filter** again to hide the boxes. |
+| **Sort** | Click a column heading to sort by it; click again to reverse the order. The list opens sorted with the newest customers first. |
+| **Page size** | Use the rows-per-page menu at the bottom of the table to choose 25, 50, 75 or 100 rows (50 by default), and the page arrows to move between pages. |
 | **View Documentation** | Opens the help page for this screen in a new browser tab. |
 
 ### Customers List Columns
 
 | Column | Description |
 | ------ | ----------- |
-| **Action** | **View Details**, **Edit** and **Delete** icons. |
-| **Image** | Customer's profile image. Hover over it to see a larger preview. |
-| **Name** | Customer's full name. |
-| **Email** | Customer's email address. |
-| **Phone No.** | Customer's mobile number. |
-| **Status** | **Active** or **Inactive** badge. |
-| **Status** | **Enable/Disable** switch. |
+| **Image** | The customer's profile image. |
+| **Name** | The customer's full name. |
+| **Email** | The customer's email address. |
+| **Phone No.** | The customer's mobile number. |
+| **Country** | The customer's country. |
+| **Store** | The store the customer registered with. |
+| **Orders** | The total number of orders the customer has placed. |
+| **Lifetime Spend** | The total amount the customer has spent, to two decimal places. A dash is shown when there is none. |
+| **Last Activity** | The date of the customer's last activity. |
 
-You can sort the **Name**, **Email** and **Phone No.** columns. The list is paged; choose 25, 50, 75 or 100 rows per page. The table toolbar also has **Filter**, **Columns** (show/hide), **Density** and **Full screen** options. When there are no customers, the table shows **No records to display**.
-
----
-
-### Steps to Add a New Customer
-
-Click **Add New Customers**, fill in the fields below and click **SUBMIT**. When editing, the drawer title reads **Edit Customer** and the button reads **EDIT**. Click **Cancel** to close without saving.
-
-| Field | Required | Remarks |
-| ----- | -------- | ------- |
-| **Name** | ✅ | Customer's full name. |
-| **Email** | ✅ | Must be a valid email address. Cannot be changed when editing. |
-| **Mobile No.** | ✅ | Digits only, exactly 10 digits (the field accepts at most 10 and needs at least 10). |
-| **Password** | ✅ | Shown only when adding. At least 8 characters, with at least one uppercase letter, one lowercase letter, one number and one special character. |
-| **Select Country** | ✅ | Choose the customer's country from the dropdown. Each option shows the country name and its code. |
-| **Upload Image** | - | Profile image. Drop a file or click to upload. Image files only (.jpg, .jpeg, .png, .gif, .webp, .bmp, .svg, .ico, .tiff, .tif), up to 20 MB. Recommended aspect ratio: 500 x 500. |
+A dash (-) is shown in any cell with no value. Hover over a cell to see its full text. When there are no customers, the table shows **No records to display**.
 
 :::note
-The **Upload Image** label shows an asterisk, but the image is not required. You can save a customer without one.
-:::
-
-:::note
-When editing a customer, the **Email** field is locked and the **Password** field is not shown.
+If the list cannot be loaded, an error message appears briefly at the top of the screen.
 :::
 
 ---
 
 ## Customer Details
 
-Click the **View Details** (eye) icon on a customer to open their details page.
+The **Customer Details** page shows the full profile of a single customer. It has a **Back** button that returns to the previous page and a **View Documentation** link.
 
 | Section | Description |
 | ------- | ----------- |
 | **Profile** | The customer's image and full name. |
-| **Details** | **Username**, **Email**, **Status** (**Active** or **Inactive**) and **Contact** number. |
-| **Recent Search Data** | The customer's recent searches on the storefront, numbered in a single **Search Value** column. Shown only if the customer has searched. |
+| **Details** | **Username** (shown as the customer's full name), **Email**, **Status** (**Active** or **Inactive**) and **Contact** (the mobile number, shown with the +91 country prefix). |
+| **Recent Search Data** | The customer's recent searches on the storefront, numbered in a single **Search Value** column. The section is hidden when the customer has no recent searches. |
 
-Click **Back** to return to the previous page.
+:::note
+The Customers List does not currently have a **View Details** icon, so this page opens only from a direct link to a specific customer.
+:::
 
 ---
 
 ## Permissions
 
-| Action | Requirement | Without it |
-| ------ | ----------- | ---------- |
-| **Add New Customers** | **Add** permission | Button is disabled |
-| **View Details** | **View** permission | Icon is disabled |
-| **Edit** and **Status Toggle** | **Edit** permission | Icon and switch are disabled |
-| **Delete** | **Delete** permission | Icon is disabled |
-
-To change what a user can access, update their role under **Roles & Permission**.
+The Customers List and Customer Details pages are read-only and have no separate **Add**, **Edit** or **Delete** controls. Access to the **Customers** menu itself is controlled by the user's role under **Roles & Permission**.

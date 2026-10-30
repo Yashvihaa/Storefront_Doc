@@ -1,40 +1,38 @@
 /**
  * Storefront Docs theme.
- * Colors follow the TCC Store logo: gold and cream on charcoal.
+ * Black and white only: every color token below is a pure neutral.
  * Infima variables are overridden first, then individual components.
  */
 
 /* ---------- Tokens ---------- */
 
 :root {
-  /* Brand gold, darkened in light mode so links keep a 5:1 contrast on white. */
-  --ifm-color-primary: #8a6516;
-  --ifm-color-primary-dark: #7c5b14;
-  --ifm-color-primary-darker: #755613;
-  --ifm-color-primary-darkest: #61470f;
-  --ifm-color-primary-light: #987018;
-  --ifm-color-primary-lighter: #9f7519;
-  --ifm-color-primary-lightest: #b4841c;
+  --ifm-color-primary: #000000;
+  --ifm-color-primary-dark: #000000;
+  --ifm-color-primary-darker: #000000;
+  --ifm-color-primary-darkest: #000000;
+  --ifm-color-primary-light: #1a1a1a;
+  --ifm-color-primary-lighter: #1a1a1a;
+  --ifm-color-primary-lightest: #333333;
 
-  --sf-gold: #c9a24a;
-  --sf-gold-light: #e8c987;
-  --sf-gold-deep: #b38a36;
-  --sf-border: #e8e3d9;
-  --sf-border-strong: #d9d1c1;
-  --sf-surface: #fbf9f5;
-  --sf-surface-2: #f5f1e9;
-  --sf-accent-soft: rgba(138, 101, 22, 0.08);
-  --sf-accent-ring: rgba(138, 101, 22, 0.18);
-  --sf-text-muted: #5d626d;
+  --sf-accent: #000000;
+  --sf-on-accent: #ffffff;
+  --sf-border: #e6e6e6;
+  --sf-border-strong: #cccccc;
+  --sf-surface: #fafafa;
+  --sf-surface-2: #f2f2f2;
+  --sf-accent-soft: rgba(0, 0, 0, 0.06);
+  --sf-accent-ring: rgba(0, 0, 0, 0.25);
+  --sf-text-muted: #595959;
   --sf-radius: 10px;
-  --sf-shadow-sm: 0 1px 2px rgba(16, 17, 21, 0.04), 0 1px 3px rgba(16, 17, 21, 0.05);
-  --sf-shadow-md: 0 6px 16px -4px rgba(16, 17, 21, 0.1), 0 2px 4px rgba(16, 17, 21, 0.04);
-  --sf-shadow-lg: 0 16px 32px -8px rgba(16, 17, 21, 0.16), 0 4px 8px rgba(16, 17, 21, 0.05);
+  --sf-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.05);
+  --sf-shadow-md: 0 6px 16px -4px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.04);
+  --sf-shadow-lg: 0 16px 32px -8px rgba(0, 0, 0, 0.16), 0 4px 8px rgba(0, 0, 0, 0.05);
 
   --ifm-font-family-base: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --ifm-heading-font-family: var(--ifm-font-family-base);
-  --ifm-font-color-base: #1f2127;
-  --ifm-heading-color: #111318;
+  --ifm-font-color-base: #111111;
+  --ifm-heading-color: #000000;
   --ifm-line-height-base: 1.65;
   --ifm-h1-font-size: 2.25rem;
   --ifm-h2-font-size: 1.6rem;
@@ -66,35 +64,85 @@
   --ifm-breadcrumb-item-background-active: var(--sf-accent-soft);
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.06);
+
+  /* Infima's default grays carry a blue tint; replace the whole scale with pure neutrals. */
+  --ifm-color-emphasis-0: #ffffff;
+  --ifm-color-emphasis-100: #f5f5f5;
+  --ifm-color-emphasis-200: #ebebeb;
+  --ifm-color-emphasis-300: #dcdcdc;
+  --ifm-color-emphasis-400: #c4c4c4;
+  --ifm-color-emphasis-500: #a3a3a3;
+  --ifm-color-emphasis-600: #7a7a7a;
+  --ifm-color-emphasis-700: #595959;
+  --ifm-color-emphasis-800: #333333;
+  --ifm-color-emphasis-900: #1a1a1a;
+  --ifm-color-emphasis-1000: #000000;
+  --ifm-color-content: #111111;
+  --ifm-color-content-inverse: #ffffff;
+  --ifm-color-content-secondary: #4d4d4d;
+
+  --ifm-color-secondary: #666666;
+  --ifm-color-success: #000000;
+  --ifm-color-info: #000000;
+  --ifm-color-warning: #444444;
+  --ifm-color-danger: #000000;
+  --ifm-link-color: #000000;
+  --ifm-link-hover-color: #000000;
+  --ifm-link-hover-decoration: none;
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: #d4af61;
-  --ifm-color-primary-dark: #cda449;
-  --ifm-color-primary-darker: #c99e3e;
-  --ifm-color-primary-darkest: #b08530;
-  --ifm-color-primary-light: #dbba79;
-  --ifm-color-primary-lighter: #dec084;
-  --ifm-color-primary-lightest: #e6cfa3;
+  --ifm-color-primary: #ffffff;
+  --ifm-color-primary-dark: #f2f2f2;
+  --ifm-color-primary-darker: #e6e6e6;
+  --ifm-color-primary-darkest: #cccccc;
+  --ifm-color-primary-light: #ffffff;
+  --ifm-color-primary-lighter: #ffffff;
+  --ifm-color-primary-lightest: #ffffff;
 
-  --sf-border: #262932;
-  --sf-border-strong: #343844;
-  --sf-surface: #14161c;
-  --sf-surface-2: #1a1d24;
-  --sf-accent-soft: rgba(212, 175, 97, 0.12);
-  --sf-accent-ring: rgba(212, 175, 97, 0.25);
-  --sf-text-muted: #a3a8b4;
+  --sf-accent: #ffffff;
+  --sf-on-accent: #000000;
+  --sf-border: #2b2b2b;
+  --sf-border-strong: #404040;
+  --sf-surface: #0a0a0a;
+  --sf-surface-2: #141414;
+  --sf-accent-soft: rgba(255, 255, 255, 0.1);
+  --sf-accent-ring: rgba(255, 255, 255, 0.3);
+  --sf-text-muted: #a6a6a6;
   --sf-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
   --sf-shadow-md: 0 6px 16px -4px rgba(0, 0, 0, 0.5);
   --sf-shadow-lg: 0 16px 32px -8px rgba(0, 0, 0, 0.6);
 
-  --ifm-background-color: #0f1115;
-  --ifm-background-surface-color: #13151a;
-  --ifm-font-color-base: #d9dbe1;
-  --ifm-heading-color: #f4f2ed;
-  --ifm-navbar-background-color: rgba(15, 17, 21, 0.85);
+  --ifm-background-color: #000000;
+  --ifm-background-surface-color: #0a0a0a;
+  --ifm-font-color-base: #e6e6e6;
+  --ifm-heading-color: #ffffff;
+  --ifm-navbar-background-color: rgba(0, 0, 0, 0.85);
 
   --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.08);
+
+  --ifm-color-emphasis-0: #000000;
+  --ifm-color-emphasis-100: #141414;
+  --ifm-color-emphasis-200: #1f1f1f;
+  --ifm-color-emphasis-300: #2e2e2e;
+  --ifm-color-emphasis-400: #474747;
+  --ifm-color-emphasis-500: #666666;
+  --ifm-color-emphasis-600: #8c8c8c;
+  --ifm-color-emphasis-700: #b3b3b3;
+  --ifm-color-emphasis-800: #d1d1d1;
+  --ifm-color-emphasis-900: #ebebeb;
+  --ifm-color-emphasis-1000: #ffffff;
+  --ifm-color-content: #e6e6e6;
+  --ifm-color-content-inverse: #000000;
+  --ifm-color-content-secondary: #b3b3b3;
+
+  --ifm-color-secondary: #a6a6a6;
+  --ifm-color-success: #ffffff;
+  --ifm-color-info: #ffffff;
+  --ifm-color-warning: #bfbfbf;
+  --ifm-color-danger: #ffffff;
+  --ifm-link-color: #ffffff;
+  --ifm-link-hover-color: #ffffff;
 }
 
 /* ---------- Base ---------- */
@@ -106,7 +154,13 @@ body {
 }
 
 ::selection {
-  background: rgba(201, 162, 74, 0.3);
+  background: var(--sf-accent);
+  color: var(--sf-on-accent);
+}
+
+/* Safety net: anything that still carries color (logo, emoji, syntax highlighting) renders in grayscale. */
+html {
+  filter: grayscale(1);
 }
 
 * {
@@ -117,6 +171,28 @@ body {
 :focus-visible {
   outline: 2px solid var(--ifm-color-primary);
   outline-offset: 2px;
+}
+
+/* Links that act as buttons or navigation never get an underline, whether hovered, focused or clicked. */
+:is(
+    .navbar__brand,
+    .navbar__link,
+    .navbar__item,
+    .dropdown__link,
+    .menu__link,
+    .breadcrumbs__link,
+    .table-of-contents__link,
+    .pagination-nav__link,
+    .footer__link-item,
+    .footer__logo,
+    .button,
+    .card,
+    .card a,
+    [class*='cardContainer']
+  ):is(:link, :visited, :hover, :focus, :active),
+.pagination-nav__link *,
+.card[class*='cardContainer'] * {
+  text-decoration: none !important;
 }
 
 /* ---------- Header ---------- */
@@ -196,16 +272,16 @@ body {
   margin-left: 0.5rem;
   padding: 0.45rem 1.05rem;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--sf-gold-light), var(--sf-gold) 55%, var(--sf-gold-deep));
-  box-shadow: 0 1px 2px rgba(16, 17, 21, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.35);
-  color: #1a1407;
+  background: var(--sf-accent);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+  color: var(--sf-on-accent);
   font-weight: 600;
   transition: transform 0.15s, filter 0.15s;
 }
 
 .navbar__item.navbar-cta:hover {
-  color: #1a1407;
-  filter: brightness(1.05);
+  color: var(--sf-on-accent);
+  filter: brightness(1.15);
   transform: translateY(-1px);
 }
 
@@ -252,6 +328,27 @@ body {
 .theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible > .menu__link {
   color: var(--ifm-heading-color);
   font-weight: 600;
+}
+
+/* Top-level menu sections read as headings, like the admin panel's side menu. */
+.theme-doc-sidebar-item-category.sf-section {
+  margin-top: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--sf-border);
+}
+
+.theme-doc-sidebar-item-category.sf-section > .menu__list-item-collapsible > .menu__link {
+  color: var(--sf-text-muted);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.theme-doc-sidebar-item-category.sf-section > .menu__list {
+  margin-left: 0;
+  padding-left: 0;
+  border-left: 0;
 }
 
 /* Guide line for nested pages. */
@@ -415,42 +512,32 @@ body {
 /* ---------- Tips and notes ---------- */
 
 .alert.theme-admonition {
+  --ifm-alert-background-color: var(--sf-surface);
+  --ifm-alert-foreground-color: var(--ifm-font-color-base);
+  --ifm-alert-border-color: var(--sf-border);
   border: 1px solid var(--sf-border);
   border-left-width: 4px;
   padding: 1rem 1.25rem;
 }
 
-.alert.theme-admonition.alert--success {
-  --ifm-alert-background-color: #fbf6ea;
-  --ifm-alert-foreground-color: #4a3a12;
-  border-left-color: var(--sf-gold);
+.alert.theme-admonition.alert--success,
+.alert.theme-admonition.alert--info {
+  border-left-color: var(--sf-accent);
 }
 
 .alert.theme-admonition.alert--secondary {
-  --ifm-alert-background-color: var(--sf-surface);
-  --ifm-alert-foreground-color: var(--ifm-font-color-base);
-  border-left-color: #8d93a0;
-}
-
-.alert.theme-admonition.alert--info {
-  border-left-color: #3b82c4;
+  border-left-color: var(--sf-text-muted);
 }
 
 .alert.theme-admonition.alert--warning {
-  border-left-color: #d68a1f;
+  border-left-style: dashed;
+  border-left-color: var(--sf-accent);
 }
 
 .alert.theme-admonition.alert--danger {
-  border-left-color: #cf3d3d;
-}
-
-[data-theme='dark'] .alert.theme-admonition.alert--success {
-  --ifm-alert-background-color: rgba(212, 175, 97, 0.08);
-  --ifm-alert-foreground-color: #eadcbc;
-}
-
-[data-theme='dark'] .alert.theme-admonition.alert--secondary {
-  --ifm-alert-background-color: var(--sf-surface);
+  border-left-style: double;
+  border-left-width: 6px;
+  border-left-color: var(--sf-accent);
 }
 
 /* ---------- On this page ---------- */
@@ -542,17 +629,17 @@ body {
 /* ---------- Footer ---------- */
 
 .footer--dark {
-  --ifm-footer-background-color: #0c0d11;
-  --ifm-footer-color: #a3a8b4;
-  --ifm-footer-link-color: #c3c7d0;
-  --ifm-footer-link-hover-color: var(--sf-gold-light);
-  --ifm-footer-title-color: var(--sf-gold-light);
+  --ifm-footer-background-color: #000000;
+  --ifm-footer-color: #a6a6a6;
+  --ifm-footer-link-color: #cccccc;
+  --ifm-footer-link-hover-color: #ffffff;
+  --ifm-footer-title-color: #ffffff;
   position: relative;
   padding: 3.5rem var(--ifm-spacing-horizontal) 2.5rem;
-  border-top: 1px solid #1f2229;
+  border-top: 1px solid #2b2b2b;
 }
 
-/* Thin gold rule along the top edge. */
+/* Thin white rule along the top edge. */
 .footer--dark::before {
   content: '';
   position: absolute;
@@ -560,7 +647,7 @@ body {
   right: 0;
   left: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--sf-gold) 30%, var(--sf-gold) 70%, transparent);
+  background: linear-gradient(90deg, transparent, #ffffff 30%, #ffffff 70%, transparent);
   opacity: 0.6;
 }
 
@@ -585,24 +672,24 @@ body {
 .footer__bottom {
   margin-top: 2.5rem;
   padding-top: 2rem;
-  border-top: 1px solid #1f2229;
+  border-top: 1px solid #2b2b2b;
 }
 
-/* The logo is dark on dark here, so a soft gold glow keeps its outline visible. */
+/* The logo is dark on dark here, so a soft white glow keeps its outline visible. */
 .footer__logo {
   width: 56px;
   height: 56px;
-  filter: drop-shadow(0 0 1px rgba(232, 201, 135, 0.55)) drop-shadow(0 4px 14px rgba(201, 162, 74, 0.28));
+  filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.55)) drop-shadow(0 4px 14px rgba(255, 255, 255, 0.2));
 }
 
 .footer__copyright {
-  color: #7d828e;
+  color: #8c8c8c;
   font-size: 0.825rem;
   line-height: 1.8;
 }
 
 .footer__brand {
-  color: #f4f2ed;
+  color: #ffffff;
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: -0.01em;
@@ -610,7 +697,7 @@ body {
 
 .footer__tagline {
   margin-bottom: 0.75rem;
-  color: #a3a8b4;
+  color: #a6a6a6;
   font-size: 0.875rem;
 }
 
@@ -655,6 +742,6 @@ body {
 mark {
   padding: 0 0.15em;
   border-radius: 3px;
-  background-color: rgba(201, 162, 74, 0.28);
-  color: inherit;
+  background-color: var(--sf-accent);
+  color: var(--sf-on-accent);
 }

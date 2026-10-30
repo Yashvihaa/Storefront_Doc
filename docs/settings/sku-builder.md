@@ -24,7 +24,7 @@ sidebar_label: SKU Builder
 | **Separator** | Click the separator to choose a different one. See [Separators](#separators). |
 | **Active** | Switch a segment on or off. Only active segments are part of the SKU. |
 
-The **Select Product Type** list contains **Ring Configurator**, **Three Stone Configurator**, **Eternity Band Configurator**, **Bracelet Configurator**, **Pendant Configurator**, **Earring Configurator** and **Single Treasure Configurator**.
+The **Select Product Type** list contains **Ring Configurator**, **Three Stone Configurator**, **Eternity Band Configurator**, **Bracelet Configurator**, **Pendant Configurator** and **Earring Configurator**.
 
 ---
 
@@ -50,7 +50,7 @@ Each row is one segment of the SKU, such as metal, karat or diamond shape. The s
 | **Segment Name** | Name of the segment. The badge next to it shows how many values the segment has. |
 | **Value Code** | Code of the value currently used in the preview. |
 | **Separator** | Character placed after this segment's code. The last row shows **FINAL** because nothing follows it. |
-| **Active** | Whether the segment is part of the SKU. |
+| **Active** | Whether the segment is part of the SKU. A segment that is switched on appears in the preview; a locked segment cannot be switched off. |
 
 ### Locked Segments
 
@@ -64,9 +64,8 @@ Some segments are always part of the SKU for a product type. Their **Active** sw
 | **Bracelet Configurator** | Side Setting, Metal, Karat, Carat Size, Diamond Shape, Length, Hook Type |
 | **Earring Configurator** | Head, Side Setting, Metal, Karat, Carat Size, Diamond Shape, Stud Type |
 | **Pendant Configurator** | Head, Metal, Karat, Carat Size, Diamond Shape, Pendant Type |
-| **Single Treasure Configurator** | None. All segments can be switched on or off. |
 
-You can still reorder locked segments and change their separators and value codes.
+You can still reorder locked segments and change their separators and value codes. Any other segment of the product type can be switched on or off with its **Active** switch.
 
 ---
 
@@ -167,4 +166,8 @@ The **Save** button is disabled while the segments are loading and when the sele
 
 :::tip
 Each product type is saved separately. Click **Save** before you pick another product type in **Select Product Type**, or your changes are lost.
+:::
+
+:::note
+This page has no separate **Add**, **Edit** or **Delete** permission checks: whoever can open it can change and save the SKU structure. You cannot add or delete segments here; you can only reorder them, switch them on or off, and change their separators and value codes.
 :::

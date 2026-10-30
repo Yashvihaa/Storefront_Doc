@@ -7,40 +7,16 @@ sidebar_label: Collection
 
 # Collection
 
-The **Collection** page manages the collections your products are grouped into. A collection can be linked to a top-level category.
-
----
-
-## Collection Screen List
-
-| Action | Description |
-| ------ | ----------- |
-| **Search** | Use the search box to find collections. The list updates about one second after you stop typing; clear the box to show all collections again. |
-| **Info** | Opens the **Collection Info** drawer showing this module's Title and Description. Click **Submit** to save changes or **Cancel** to close. The Description editor is disabled without **Edit** permission. |
-| **Add Collection** | Click the **Add Collection** button to create a new collection. |
-| **Edit** | Click the **Edit** icon to change a collection's name or category. |
-| **Delete** | Click the **Delete** icon and confirm with **YES** to remove a collection. Click **NO** to keep it. |
-| **Status** | Shows whether the collection is **Active** or **Inactive**. |
-| **Status Toggle** | Switch a collection on or off directly from the list. |
-
-The list shows the **Name**, **Slug** and **Status** of each collection, and can be sorted and paged.
+Collections group your products, for example into a seasonal or themed range.
 
 :::note
-Without **Add** permission the **Add Collection** button is disabled. Without **Edit** permission the **Edit** icon and the **Status Toggle** are disabled. Without **Delete** permission the **Delete** icon is disabled.
+The **Collection** master page is no longer part of the admin panel. There is no screen to search, add, edit, delete or switch collections on or off, so none of the actions that other masters offer are available for collections.
 :::
 
 ---
 
-### Steps to Add a New Collection
+## Where Collections Still Appear
 
-Click **Add Collection**, fill in the fields below and click **SUBMIT**. When editing, the button reads **EDIT**. Click **Cancel** to close without saving.
+The product forms (add product, add variant product and add choose settings product) still have a **Collection Name** field. It accepts several values, so you can place a product in more than one collection.
 
-| Field | Required | Remarks |
-| ----- | -------- | ------- |
-| **Name** | ✅ | Name of the collection. |
-| **Select Category** | - | Category the collection belongs to. Only top-level categories are listed. You can type in the box to filter the list. |
-
-:::note
-The **Select Category** dropdown and the **SUBMIT** button need **Edit** permission, even when you add a new collection.
-:::
-
+The list in this field is filled from the collections already stored for your store. Collections cannot be created or changed from the masters menu, so contact your administrator or support team if the list needs to change.

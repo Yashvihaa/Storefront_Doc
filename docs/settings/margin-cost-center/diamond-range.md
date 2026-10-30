@@ -7,57 +7,22 @@ sidebar_label: Diamond Range
 
 # Diamond Range
 
-The **Diamond Range Management** module lets you define carat ranges for each diamond shape. Each range has a minimum and maximum carat weight and a reference carat value that falls inside it.
-
----
-
-## Diamond Range Screen List
-
-| Action | Description |
-| ------ | ----------- |
-| **Search** | Use the search box to find diamond ranges. The list updates as you type. |
-| **Add Diamond Range** | Click the **Add Diamond Range** button to open the form for a new range. |
-| **Edit** | Click the **Edit** icon to change an existing range. |
-| **Delete** | Click the **Delete** icon to remove a range. Click **YES** in the confirmation popup to delete it, or **NO** to cancel. |
-| **Status** | Shows whether the range is **Active** or **Inactive**. Use the toggle switch to activate or deactivate the range. |
-| **Download / Upload / Apply** | Add or update many ranges at once from an Excel file. See [Bulk Upload](#bulk-upload). |
-
-The list shows the following columns:
-
-| Column | Description |
-| ------ | ----------- |
-| **Diamond Shape** | Shape the range applies to. |
-| **Carat Value** | Reference carat value for the range. |
-| **Min Diamond Range** | Lower carat limit of the range. |
-| **Max Diamond Range** | Upper carat limit of the range. |
-
-:::note Permissions
-The **Add Diamond Range**, **Download**, **upload** and **Apply** buttons are disabled if you do not have **Add** permission. The **Edit** icon and the status toggle need **Edit** permission, and the **Delete** icon needs **Delete** permission.
+:::note Module no longer available
+The separate **Diamond Range Management** page, where carat ranges were defined for each diamond shape, has been removed from the admin panel. There is no **Add Diamond Range** button, list or bulk upload any more.
 :::
 
----
-
-### Steps to Add a New Diamond Range
-
-Click **Add Diamond Range**. The **Add Diamond Range Management** panel opens on the right (**Edit Diamond Range Management** when editing). Fill in the fields and click **SUBMIT** (or **EDIT** when changing an existing range). Click **Cancel** to close the panel without saving.
-
-| Field | Required | Remarks |
-| ----- | -------- | ------- |
-| Carat Value | ✅ | Reference carat value. It must be between the **Min Diamond Range** and **Max Diamond Range** values. |
-| Diamond Shape | ✅ | Choose the shape the range applies to. The shape cannot be changed when editing an existing range. |
-| Min Diamond Range | ✅ | Lower carat limit. Must be greater than 0 and not more than 100. |
-| Max Diamond Range | ✅ | Upper carat limit. Must be greater than **Min Diamond Range** and not more than 100. |
+You can still limit a diamond margin rule by carat weight, directly on the rule.
 
 ---
 
-## Bulk Upload
+## Where to set a carat range
 
-Use the buttons above the list to add or update several ranges from an Excel file.
+Use [Diamond Margin](./diamond-margin.md):
 
-| Button | Description |
-| ------ | ----------- |
-| **Download** | Downloads a sample Excel file with the required column headings. |
-| **upload** | Select the completed Excel file (.xlsx or .xls). The selected file name appears next to the button. |
-| **Apply** | Processes the selected file and updates the list. |
+1. Click **Add Product Margin**.
+2. Under **Diamond Margin Management**, set **Apply To** to **Attribute**.
+3. Under **Apply Margin On**, tick **Carat Range** (or **All**).
+4. Enter **Min Carat Range** and **Max Carat Range**. The maximum must be greater than the minimum.
+5. Choose the pricing type and value, then click **Save Rule**.
 
-If any rows in the file cannot be imported, a table appears above the list showing the **Row Id** and **Error Message** for each rejected row. Correct those rows and upload the file again.
+The rule then applies only to diamonds whose carat weight falls between the two values. You can combine the carat range with **Shape**, **Color**, **Clarity** and **Cut**.

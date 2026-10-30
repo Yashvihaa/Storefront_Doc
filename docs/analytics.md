@@ -7,7 +7,7 @@ sidebar_label: Analytics
 
 # Analytics
 
-The **Analytics** page gives catalog, customer and business intelligence for the jewelry configurator. Information is grouped into tabs, each focused on one area of the business.
+The **Analytics** page gives catalog, customer and business intelligence for the jewelry configurator. Information is grouped into eleven tabs, each focused on one area of the business. The page is read-only: it only reports figures and has nothing to add, edit or delete.
 
 ---
 
@@ -15,11 +15,23 @@ The **Analytics** page gives catalog, customer and business intelligence for the
 
 | Action | Description |
 | ------ | ----------- |
-| **Section Tabs** | Click a tab (icon and label) below the page title to switch sections. The selected tab is underlined. When the tabs do not fit on screen, arrow buttons appear at the ends of the tab bar so you can scroll through them. |
-| **Section Header** | Below the tabs, the selected section's name and a one-line description are shown. The section briefly shows a loading placeholder each time you switch tabs. |
-| **Period Selector** | On **Executive Overview**, choose **Today**, **Week**, **Month** or **Year**. Opens on **Month**. |
+| **Section Tabs** | Click a tab (icon and label) below the page title to switch sections. The selected tab is underlined. When the tabs do not fit on screen, arrow buttons appear at the ends of the tab bar so you can scroll through them. The page always opens on **Executive Overview**. |
+| **Section Header** | Each tab shows its own name and a one-line description at the top. A loading placeholder appears briefly each time you switch tabs. |
+| **Period Selector** | Every tab has its own **Today / Week / Month / Year** selector at the top right of the section. Each tab opens on **Month**, and the choice is remembered separately for each tab only while you stay on the page. |
 | **Chart Tooltips** | Hover over any chart to see exact values. |
+| **Retry** | If a tab cannot load, an error message with a **Retry** button is shown. Click it to try again. |
 | **View Documentation** | Opens the help page for this screen in a new browser tab. |
+
+### Period Selector
+
+| Option | Figures are compared with |
+| ------ | ------------------------- |
+| **Today** | Yesterday |
+| **Week** | The previous week |
+| **Month** | The previous month |
+| **Year** | The previous year |
+
+While another period loads, the previous figures stay on screen, slightly faded. Money values use the currency symbol of your store (a dollar sign if none is set) and large amounts are shortened (for example `$1.2M`).
 
 ---
 
@@ -28,7 +40,7 @@ The **Analytics** page gives catalog, customer and business intelligence for the
 | Tab | Purpose |
 | --- | ------- |
 | **Executive Overview** | How the business is performing right now |
-| **Customer Insights** | Journey and segmentation: how customers move through the catalog and group |
+| **Customer Insights** | Journey and segmentation: how customers move through the catalog and who they are |
 | **Jewelry Preferences** | What categories customers gravitate toward |
 | **Setting Analytics** | Which settings customers view, select and purchase |
 | **Gemstone Analytics** | Color-stone demand across the catalog |
@@ -36,8 +48,8 @@ The **Analytics** page gives catalog, customer and business intelligence for the
 | **Design Intelligence** | Which catalog pages actually convert |
 | **Sales Intelligence** | Where revenue and margin actually come from |
 | **Inventory Intelligence** | Demand forecasting and stock health |
-| **Sales Team Performance** | Per-executive enquiries, conversion and revenue |
-| **Global Trend** | Storefront-wide trends across shapes, settings and full configurations |
+| **Sales Team Performance** | Per-executive orders, conversion and revenue |
+| **Global Trend** | How shapes, settings and full configurations are trending across every storefront visitor |
 
 ---
 
@@ -47,34 +59,36 @@ Store-wide performance for the selected period.
 
 | Card | Shows |
 | ---- | ----- |
-| **Configurations** | Configurations created, with a trend line and % change |
-| **Wishlist Added** | Items added to wishlists |
-| **Orders Placed** | Orders placed, with a trend line and % change |
-| **Conversion Rate** | Percentage of visitors who placed an order |
-| **Revenue Trend** | Gross sales chart for the selected period |
-| **Avg. Config Value** | Average value per saved configuration |
-| **Avg. Session Duration** | Average session length in minutes and the number of catalog sessions |
+| **Configurations** | Configurations created, with the % change against the previous period |
+| **Wishlist Added** | Items added to wishlists, with % change |
+| **Orders Placed** | Orders placed, with % change |
+| **Conversion Rate** | Percentage of visitors who placed an order, with the change in percentage points. Shows `0` when there are no conversions yet. |
+| **Revenue Trend** | Area chart of gross sales for the period. The total revenue and the number of orders in the period are shown at the top right of the card. |
+| **Avg. Config Value** | Average value **per saved configuration**, with % change |
+| **Avg. Session Duration** | Average session length in minutes, with the number of catalog sessions and % change |
+
+Change badges are green for a rise and red for a fall.
 
 ---
 
 ### Customer Insights
 
-The tab has two groups.
-
-**Customer Journey**: where visitors move through the catalog and where they drop off.
+The tab has three summary cards and three panels.
 
 | Card | Shows |
 | ---- | ----- |
-| **Overall Conversion** | Conversion from home page visit to completed purchase |
-| **Biggest Drop-off Stage** | The journey step where most visitors leave, with the % of visitors who leave there |
-| **Journey Funnel** | Visitors at each step: Home, Category, Product, Customize, Wishlist, Appointment, Purchase |
+| **Overall Conversion** | Conversion from the first page of the journey to a completed purchase. Shows `0` when there are no conversions yet. |
+| **Biggest Drop-off** | The pair of journey steps where most visitors leave (for example `Product → Customize`) and the % of visitors who leave there. Shows **None yet** when there are not enough visitors to compare steps. |
+| **Customers** | Total customers, with the split of new and returning customers |
 
-**Customer Segmentation**: who your customers are, grouped by behavior.
+**Customer Journey**: a funnel showing the number of visitors at each step, from the first page to purchase, with the number of visitors who entered at the top right. Each step after the first shows how much of the previous step was lost (for example `-12.5% drop`). If no visitor activity exists, the panel shows **No visitor activity in this period yet.**
+
+**Customer Segmentation**:
 
 | Card | Shows |
 | ---- | ----- |
-| **Pricing Range of Selection** | Share of customers by spend band |
-| **New vs Returning** | Split between new and returning customers |
+| **Pricing Range of Selection** | Customers grouped by what they spent in the period, as bars with the customer count and share for each spend band |
+| **New vs Returning** | Doughnut chart splitting customers into **New** (first order in this period) and **Returning** (an earlier order exists) |
 
 ---
 
@@ -82,9 +96,9 @@ The tab has two groups.
 
 | Card | Shows |
 | ---- | ----- |
-| **Total Combinations** | Every shape, setting, metal and carat pairing available across the configurator |
-| **Configurators** | Product categories covered by the configurator |
-| **Most Selected Category** | Breakdown of products by category |
+| **Total Combinations** | Every shape x setting x metal x carat pairing available across the configurator |
+| **Configurators** | One small card for each product category covered by the configurator. Hover over a card to see its number of combinations. Shows **No configurators on this store yet.** if none exist. |
+| **Most Selected Category** | Doughnut chart of selections by category. Only the five largest categories are named; the rest are grouped together. Shows **No category selections in this period yet.** when empty. |
 
 ---
 
@@ -92,10 +106,10 @@ The tab has two groups.
 
 | Card | Shows |
 | ---- | ----- |
-| **Most Purchased Setting** | Top setting style and its number of purchases |
+| **Most Purchased Setting** | Top setting style and its number of purchases, or **None yet** |
 | **Settings Tracked** | Number of setting styles tracked |
 | **Total Selections** | Total times settings were selected |
-| **Setting Performance** | Table of **Setting**, **Selected**, **Purchased** and **Conversion** (selected to purchased, by setting style) |
+| **Setting Performance** | Table of **Setting**, **Selected**, **Purchased** and **Conversion** (purchased divided by selected, with a small bar) for each setting style, most selected first. Shows **No setting selections in this period yet.** when empty. |
 
 ---
 
@@ -103,8 +117,8 @@ The tab has two groups.
 
 | Card | Shows |
 | ---- | ----- |
-| **Top Gemstone** | Most popular gemstone and its share of gemstone-set pieces |
-| **Gemstone Mix** | Share of each gemstone across gemstone-set catalog pieces |
+| **Top Gemstone** | Most popular gemstone and its % share of gemstone selections, or **None yet** |
+| **Gemstone Mix** | Doughnut chart of the share of each gemstone in the period. The six largest are named; the rest are grouped together. Shows **No gemstone selections in this period yet.** when empty. |
 
 ---
 
@@ -112,14 +126,14 @@ The tab has two groups.
 
 | Card | Shows |
 | ---- | ----- |
-| **Most Selected Metal** | Share of each metal across the catalog |
-| **Metal by Price Band** | Metal mix within each price tier |
+| **Most Selected Metal** | Doughnut chart of the share of each metal in the period (six largest named, the rest grouped). Shows **No metal selections in this period yet.** when empty. |
+| **Metal by Price Band** | Purchased pieces per metal within each price tier, as stacked bars with the total for each tier. Shows **No purchases in this period yet.** when empty. |
 
 ---
 
 ### Design Intelligence
 
-**Top Designs** lists designs ranked by configurations, orders and revenue, with **Design**, **Configs**, **Orders** and **Revenue** columns. Designs that are rising are marked **Trending** and designs that are falling are marked **Cooling**.
+**Top Designs** lists designs ranked by revenue, orders and selections, with **Design**, **Configs**, **Orders** and **Revenue** columns. Designs that are rising are marked **Trending** and designs that are falling are marked **Cooling**; steady designs have no badge. Shows **No design activity in this period yet.** when empty.
 
 ---
 
@@ -127,11 +141,13 @@ The tab has two groups.
 
 | Card | Shows |
 | ---- | ----- |
-| **Highest Margin Category** | Category with the highest average margin |
-| **Highest Selling Diamond Shape** | Best-selling diamond shape |
-| **Highest Selling Metal** | Best-selling metal |
-| **Average Selling Price** | Average selling price across orders |
-| **Revenue by Category** | Each category's share of total revenue |
+| **Highest Margin Category** | Category with the highest average margin in the period, with the % margin |
+| **Highest Selling Diamond Shape** | Best-selling diamond shape and the quantity sold |
+| **Highest Selling Metal** | Best-selling metal and the quantity sold |
+| **Average Selling Price** | Average selling price across the period's orders, with the number of orders. Shows `0` when there are no orders. |
+| **Revenue by Category** | Each category's share of total revenue as a bar, with the total revenue. Shows **No revenue in this period yet.** when empty. |
+
+Cards without data show **No data yet.**
 
 ---
 
@@ -139,8 +155,10 @@ The tab has two groups.
 
 | Card | Shows |
 | ---- | ----- |
-| **Next Month Demand Forecast** | Expected % change in demand by diamond shape, shown with an up or down arrow |
-| **Stock Alerts** | Items needing procurement attention, with days to sell and a status of **Low Stock**, **Fast Moving** or **Dead Inventory** |
+| **Next Month Demand Forecast** | Change in selections by diamond shape compared with the previous period, shown as a % with an up (green) or down (red) arrow. Shows **No shape selections to forecast from yet.** when empty. |
+| **Stock Alerts** | Items needing procurement attention, with the days to sell (for example `12d to sell`) and a status badge of **Low Stock**, **Fast Moving** or **Dead Inventory** |
+
+If stock levels are not tracked in your catalog, **Stock Alerts** shows **Stock levels aren't tracked in the catalog yet.** If they are tracked but nothing needs attention, it shows **No stock alerts right now.**
 
 ---
 
@@ -148,8 +166,8 @@ The tab has two groups.
 
 | Card | Shows |
 | ---- | ----- |
-| **Top Performer** | Sales executive with the highest revenue, plus their conversion rate |
-| **Per-Executive Performance** | Table of **Executive**, **Conversion**, **Average Order Value** and **Revenue** |
+| **Top Performer** | Sales executive with the highest revenue, with their revenue and conversion rate, or **None yet** |
+| **Per-Executive Performance** | Table of **Executive**, **Conversion**, **Average Order Value** and **Revenue** for each sales executive. An executive without a profile name is shown as `User #` followed by their user number. Shows **No executive activity in this period yet.** when empty. |
 
 ---
 
@@ -157,13 +175,15 @@ The tab has two groups.
 
 | Card | Shows |
 | ---- | ----- |
-| **Top Trending Shape** | Most popular diamond shape |
-| **Top Trending Setting** | Most purchased setting |
-| **Top Combination** | Most configured shape + setting + metal combination and its share |
-| **Trending Shapes** | Breakdown of diamond shapes |
-| **Trending Settings** | Table of **Setting**, **Purchased** and **Share of Purchases**, ranked by purchases |
-| **Trending Combinations** | Full shape + setting + metal pairings ranked by share, each marked as trending up, down or steady |
+| **Top Trending Shape** | Most popular diamond shape with its share of selections, or **None yet** |
+| **Top Trending Setting** | Most purchased setting with its share of purchases, or **None yet** |
+| **Top Combination** | Most configured shape, setting and metal combination, its share of selections and its change against the previous period |
+| **Trending Shapes** | Doughnut chart of the share of selections by diamond shape |
+| **Trending Settings** | Table of **Setting**, **Purchased** and **Share**, ranked by purchases |
+| **Trending Combinations** | Full shape, setting and metal pairings ranked by share, each with its selections, the selections in the previous period, and a marker showing whether it is trending up, down or flat |
+
+When a panel has no data, it shows a line such as **No shape selections in this period yet.**, **No setting purchases in this period yet.** or **No combinations selected in this period yet.**
 
 :::note
-If **Most Selected Category** (Jewelry Preferences) or **Trending Shapes** (Global Trend) has no data, the card shows the message **No data yet -- add rows in the master.**
+Several cards show **No data yet -- add rows in the master.** when the related master data (for example categories or shapes) has not been set up. Add the data in the relevant master and the cards fill in.
 :::

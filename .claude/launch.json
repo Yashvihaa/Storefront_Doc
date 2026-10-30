@@ -6,6 +6,18 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "preview", "--", "--port", "3001", "--no-open"],
       "port": 3001
+    },
+    {
+      "name": "storefront-web",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "../storefront-web", "run", "dev"],
+      "port": 9229
+    },
+    {
+      "name": "storefront-api",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "../storefront-api", "run", "dev"],
+      "port": 2526
     }
   ]
 }
