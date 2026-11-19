@@ -25,4 +25,4 @@ Use [Diamond Margin](./diamond-margin.md):
 4. Enter **Min Carat Range** and **Max Carat Range**. The maximum must be greater than the minimum.
 5. Choose the pricing type and value, then click **Save Rule**.
 
-The rule then applies only to diamonds whose carat weight falls between the two values. You can combine the carat range with **Shape**, **Color**, **Clarity** and **Cut**.
+With only **Carat Range** ticked, the rule applies only to stones whose carat weight falls between the two values. If you also tick **Shape**, **Color**, **Clarity** or **Cut**, configurator prices match the rule on those attributes only and do not check the carat range. See [Diamond Margin](./diamond-margin.md#how-rules-are-saved).

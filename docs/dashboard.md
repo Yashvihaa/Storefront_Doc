@@ -7,107 +7,124 @@ sidebar_label: Dashboard
 
 # Dashboard
 
+## Overview
+
 The **Dashboard** is the first page you see after signing in. Under the heading **DASHBOARD OVERVIEW** it gives a one-screen summary of order flow, revenue, store health and your latest orders for the period you choose.
 
-Below the heading you see a welcome line such as *"Welcome back, Your Company Admin. Here's how your store is doing this month."* The company name comes from your company information; if none is set, only **Admin** is shown. The ending of the sentence changes with the period you pick (today, this week, this month, this year).
+Below the heading you see a welcome line such as *Welcome back, Your Company Admin. Here's how your store is doing this month.* The company name comes from your [Company Info](./settings/company-info.md). If none is set, only **Admin** is shown. The end of the sentence changes with the period you pick (*today*, *this week*, *this month* or *this year*). Under it, the line *All displayed prices are in USD* reminds you how amounts are shown.
 
----
+The Dashboard is read-only. It shows figures from your orders but does not change anything.
 
-## Dashboard Screen List
+:::note[Who can use it]
+Every admin user sees the Dashboard. Some parts depend on the user's role:
 
-| Action | Description |
-| ------ | ----------- |
-| **Period selector** | Choose **Today**, **Week**, **Month** or **Year**. The selected period is highlighted. The Dashboard opens on **Today**. |
-| **View Documentation** | Opens the help page for the Dashboard in a new browser tab. |
-| **Recent Orders tabs** | Filter the recent orders by status: **All**, **Pending**, **Processing**, **Shipped** or **Delivered**. |
-| **View all orders** | Opens the full **Orders** list. Shown only if your role can view orders. |
-| **Top Selling Products row** | Click a product row to open that product in view mode. Works only if your role can view products. |
-| **Quick Actions** | One-click shortcuts to common tasks, opened in a new browser tab. |
+| Area | Requirement | Without it |
+| ---- | ----------- | ---------- |
+| Order figures, chart and **Recent Orders** | Only orders the user can see in [Orders](./order-management/orders.md) are counted. The main user of the main store sees every order. Other users see only the orders of their store that are assigned to them. A user with no store sees none. | Cards show **0** and the table is empty |
+| **View all orders** | **View** permission for Orders | The link is hidden |
+| **Top Selling Products** row click | **View** permission for All Products | Rows are not clickable |
+| **Add New Product** shortcut | Access to the All Products menu | The shortcut is hidden |
+| **Create Discount** shortcut | Access to the discount list menu | The shortcut is hidden |
 
----
+To change what a user can access, update their role under [Roles](./roles-permission/roles.md).
+:::
 
-### Period Selector
-
-| Option | Used for |
-| ------ | -------- |
-| **Today** | Default when the page opens |
-| **Week** | Current week |
-| **Month** | Current month |
-| **Year** | Current year |
-
-Every click on a period reloads the figures from the server, even for a period you have already viewed. While the new figures load, the previous figures stay on screen instead of going blank. **Store Health** and **Quick Actions** do not change with the period.
-
----
-
-## Dashboard Sections
-
-### Order Status Summary Cards
-
-Eight cards show the number of orders in each status for the selected period. Each card also has a small badge showing the change compared to the previous period (for example `+12.5%`) with a comparison note beside it (for example `vs last period`, or the wording supplied by the system).
-
-| Card | Counts |
-| ---- | ------ |
-| **Total Orders** | All orders placed in the period |
-| **Confirmed** | Confirmed orders |
-| **In Progress** | Orders being prepared |
-| **Out for Delivery** | Orders out for delivery |
-| **Delivered** | Orders delivered to the customer |
-| **Cancelled** | Cancelled orders |
-| **Returned** | Returned orders |
-| **Failed** | Failed orders |
-
-How to read the badge:
-
-- Green means orders went up, red means they went down and grey means no change.
-- A rise from zero orders is shown as `+100%`.
-- Numbers are rounded to one decimal place (`+12.5%`, not `+12.50%`).
-- While figures are loading, the card shows a small placeholder instead of a number.
-
----
-
-### Web analytics
-
-A bar chart of website visitors with the line *"Total number of website visitors is …"*. At present the Dashboard does not receive visitor data, so this card shows a total of **0** and an empty chart. Use the **Analytics** page for traffic and behaviour insights.
-
----
-
-### Store Health
-
-Checks whether the services behind your store are working. The checks run once when you open the Dashboard; refresh the page to run them again.
-
-| Check | Healthy when the status reads |
-| ----- | ----------------------------- |
-| **Liveness** | Up |
-| **Health** | Up |
-| **Readiness** | Ready |
-| **Deep Health** | Up |
-
-Each row shows the status the service reports, for example **Up** or **Ready**, in green when healthy. While a check is running it shows a grey dash. If the service reports anything else (for example **Degraded**, **Down** or **Not Ready**), the status is shown in orange. If the service cannot be reached, the row shows **Unreachable** in orange.
-
-:::note
-If a check stays orange after refreshing, contact your technical support team with the check name and the status shown.
+:::info[Super admin dashboard]
+A **Super Admin** of the TCC Tech company, signed in through the super admin portal, sees a different page here: the **SUPER ADMIN DASHBOARD**, with platform figures such as clients, subscriptions and payments. This page describes the store Dashboard that every client admin sees.
 :::
 
 ---
 
+## Data Displayed
+
+### Dashboard Screen List
+
+| Action | Description |
+| ------ | ----------- |
+| **Today / Week / Month / Year** | Choose the period the figures cover. The selected period is highlighted. The Dashboard opens on **Today**. See [Periods](#periods). |
+| **View Documentation** | Opens this page in a new browser tab. On a phone, only its icon is shown. |
+| **Recent Orders tabs** | Filter the recent orders by status: **All**, **Pending**, **Processing**, **Shipped** or **Delivered**. |
+| **View all orders** | Opens the full [Orders](./order-management/orders.md) list. On a phone it reads **View all**. |
+| **Top Selling Products row** | Opens that product in view mode. |
+| **Quick Actions** | Shortcuts to common tasks, each opened in a new browser tab. |
+
+### Order Status Summary Cards
+
+Eight cards show the number of orders in each status for the selected period. Each card also has a badge with the change from the previous period of the same length (for example **+12.5%**) and a note beside it, for example *than yesterday*.
+
+| Card | Counts | Example |
+| ---- | ------ | ------- |
+| **Total Orders** | Every order placed in the period, whatever its status | 48 |
+| **Confirmed** | Orders with status **Confirmed** | 6 |
+| **In Progress** | Orders with status **Processing** | 9 |
+| **Out for Delivery** | Orders with status **Out for Delivery** (shown as **Shipped** in Recent Orders) | 4 |
+| **Delivered** | Orders with status **Delivered** | 21 |
+| **Cancelled** | Orders with status **Cancelled** | 3 |
+| **Returned** | Orders with status **Returned** | 2 |
+| **Failed** | Orders with status **Failed** | 3 |
+
+How to read the badge:
+
+| Badge | Meaning |
+| ----- | ------- |
+| Green, for example **+12.5%** | More orders than the previous period |
+| Red, for example **-40%** | Fewer orders than the previous period |
+| Grey, **+0%** | No change |
+
+The comparison note depends on the period:
+
+| Period | Note |
+| ------ | ---- |
+| **Today** | *than yesterday* |
+| **Week** | *than previous 7 days* |
+| **Month** | *than previous 30 days* |
+| **Year** | *than previous 365 days* |
+
+### Web Analytics
+
+A bar chart of website visitors titled **Web analytics**, with the line *Total number of website visitors is …*. At present the Dashboard does not receive visitor data, so this card shows a total of **0** and an empty chart. Use [Analytics](./analytics.md) for traffic and behaviour insights.
+
+### Store Health
+
+Shows whether the services behind your store are working.
+
+| Check | Healthy when the status reads |
+| ----- | ----------------------------- |
+| **Liveness** | **Up** |
+| **Health** | **Up** |
+| **Readiness** | **Ready** |
+| **Deep Health** | **Up** |
+
+| Status color | Meaning | Example |
+| ------------ | ------- | ------- |
+| Grey dash | The check is still running | **—** |
+| Green | The service is healthy | **Up**, **Ready** |
+| Orange | The service reported a problem | **Degraded**, **Down**, **Not Ready** |
+| Orange | The service could not be reached | **Unreachable** |
+
+A **View Store Health** link sits under the checks. It does not open another page.
+
 ### Quick Actions
 
-Shown under the heading **Frequently used**. Clicking a shortcut opens the page in a new browser tab.
+Shown under the heading **Frequently used**.
 
 | Shortcut | Description | Opens |
 | -------- | ----------- | ----- |
-| **Add New Product** | Create a new jewellery product | The product list |
-| **Create Discount** | Set an offer or coupon | The discount configuration page |
-
-A shortcut is shown only if your role has access to that menu item.
-
----
+| **Add New Product** | *Create a new jewellery product* | The [All Products](./product-management/all-products.md) list |
+| **Create Discount** | *Set an offer or coupon* | The discount configuration page in [Offers & Discounts](./product-management/offers-discounts.md) |
 
 ### Revenue Analytics
 
-An area chart of **Gross sales** for the selected period, with the date range of the chart shown under the title and the total gross sales shown at the top right (for example `$9,020.50`). Amounts on the vertical axis are shortened (for example `$800`, `$45K`, `$1.2M`); hover over the chart to see the exact value for a point. Amounts are shown in dollars.
+An area chart of **Gross sales** for the selected period. The date range of the chart is shown under the title, for example *Gross sales · 21 Oct – 19 Nov*, and the total gross sales for the period is shown at the top right, for example **$9,020.50**.
 
----
+| Period | One point per | Point label example |
+| ------ | ------------- | ------------------- |
+| **Today** | Hour | *9AM* |
+| **Week** | Day | *Mon* |
+| **Month** | Day | *19 Nov* |
+| **Year** | Month | *Nov 2026* |
+
+Amounts on the vertical axis are shortened (for example **$800**, **$45K**, **$1.2M**). Hover over the chart to see the exact value for a point.
 
 ### Top Selling Products
 
@@ -117,45 +134,122 @@ An area chart of **Gross sales** for the selected period, with the date range of
 | **SKU** | Product SKU code |
 | **Orders** | Number of orders that included the product |
 
-Clicking a row (the row shows an arrow on the right) opens the product in view mode. The arrow and click are available only if your role can view products. At present the Dashboard does not receive top-selling data, so the card shows **Data Not Available**.
-
----
+At present the Dashboard does not receive top-selling data, so the card shows **Data Not Available**.
 
 ### Recent Orders
 
-Shows up to the 10 most recent orders for the selected period. Tabs above the table filter them; each tab shows how many orders it contains (including 0).
+Shows up to the 10 most recent orders placed in the selected period, newest first.
 
 | Tab | Shows |
 | --- | ----- |
 | **All** | Every recent order |
-| **Pending** | Pending orders |
-| **Processing** | Confirmed and Processing orders |
-| **Shipped** | Shipped orders |
-| **Delivered** | Delivered orders |
+| **Pending** | **Pending** orders |
+| **Processing** | **Confirmed** and **Processing** orders |
+| **Shipped** | **Shipped** (out for delivery) orders |
+| **Delivered** | **Delivered** orders |
 
-| Column | Description |
-| ------ | ----------- |
-| **Order** | Order number |
-| **Customer** | Customer name (the store name is shown if there is no customer name) |
-| **Date** | Order date, for example `Jun 20, 2026` |
-| **Status** | Colour-coded tag: **Pending**, **Confirmed**, **Processing**, **Shipped**, **Delivered**, **Returned**, **Failed** or **Cancelled** |
-| **Amount** | Order total in dollars, for example `$1,250.00` |
+Each tab shows how many of the recent orders it contains, including **0**.
 
-If there are no orders in the selected tab, the table shows **Data Not Available**. The table scrolls sideways when the screen is narrow, and the header row stays in place while you scroll down.
+| Column | Description | Example |
+| ------ | ----------- | ------- |
+| **Order** | Order number | **ORD-10245** |
+| **Customer** | The name on the order, or the full name on the shipping address. If neither is set, the store name. | *Priya Shah* |
+| **Date** | Order date | *Jun 20, 2026* |
+| **Status** | Color-coded tag: **Pending**, **Confirmed**, **Processing**, **Shipped**, **Delivered**, **Returned**, **Failed** or **Cancelled** | **DELIVERED** |
+| **Amount** | Order total | **$1,250.00** |
+
+---
+
+## How It Works
+
+### Periods
+
+Every period is a rolling range that ends today. It is not a calendar week, month or year.
+
+| Option | Covers | Compared with |
+| ------ | ------ | ------------- |
+| **Today** | Today, from midnight | Yesterday |
+| **Week** | Today and the 6 days before (7 days) | The 7 days before that |
+| **Month** | Today and the 29 days before (30 days) | The 30 days before that |
+| **Year** | Today and the 364 days before (365 days) | The 365 days before that |
+
+An order belongs to a period by its order date. The summary cards, the revenue chart and Recent Orders all use the same range.
+
+**Store Health** and **Quick Actions** do not change with the period.
+
+### Steps to Check How Your Store Is Doing
+
+1. Open **Dashboard** from the menu.
+2. Pick **Today**, **Week**, **Month** or **Year**.
+3. Read the summary cards. The badge on each card shows whether that status went up or down since the previous period.
+4. Check **Revenue Analytics** for gross sales over the period. Hover over a point for its exact amount.
+5. Use the **Recent Orders** tabs to look at new (**Pending**) or in-progress (**Processing**) orders.
+6. Click **View all orders** to open, search or update any order in [Orders](./order-management/orders.md).
+
+### How the Figures Are Worked Out
+
+| Figure | How it is calculated |
+| ------ | -------------------- |
+| Card counts | The number of orders placed in the period with that status now. An order counts under its current status, not the status it had during the period. |
+| Change badge | The change from the previous period's count, as a percentage, rounded to one decimal place. A rise from zero orders shows **+100%**. No orders in either period shows **+0%**. |
+| Gross sales | The total of the order totals placed in the period, leaving out **Returned**, **Failed** and **Cancelled** orders. |
+| Chart points | The same gross sales, split by hour, day or month. A point with no orders shows **0**. |
+
+### Loading, Empty and Error States
+
+| State | What you see |
+| ----- | ------------ |
+| First load | Each summary card shows a small placeholder instead of a number. Until the figures arrive, **Revenue Analytics** shows **$0.00** and **Recent Orders** shows **Data Not Available**. |
+| Changing the period | The figures are reloaded. The previous figures stay on screen until the new ones arrive, instead of going blank. |
+| A health check is running | A grey dash beside the check. |
+| No orders in the selected tab | **Data Not Available** |
+| No top-selling data | **Data Not Available** |
+
+The health checks run once when you open the Dashboard. Refresh the page to run them again.
+
+---
+
+## Dependencies and Impact
+
+### Modules It Depends On
+
+| Module | How the Dashboard uses it |
+| ------ | ------------------------- |
+| [Orders](./order-management/orders.md) | Every order card, the revenue chart and Recent Orders are worked out from your orders, their status, date and total. |
+| [Stores](./roles-permission/stores.md) | Decides which orders a user can see. Supplies the store name shown in **Customer** when an order has no customer name. |
+| [User Management](./roles-permission/user-management.md) | A user's store and the orders assigned to them decide which orders they see. |
+| [Roles](./roles-permission/roles.md) | Controls **View all orders**, the product row click and the quick action shortcuts. |
+| [Company Info](./settings/company-info.md) | Supplies the company name in the welcome line. |
+| [All Products](./product-management/all-products.md) | Opened by **Add New Product** and by a top-selling product row. |
+| [Offers & Discounts](./product-management/offers-discounts.md) | Opened by **Create Discount**. |
+
+### Modules That Depend On It
+
+None. The Dashboard only reads data. No other page uses its figures.
+
+### What Changes If…
+
+| Change | Effect on the Dashboard |
+| ------ | ----------------------- |
+| A new order is placed | It is added to **Total Orders** and its status card, to gross sales and to Recent Orders the next time the Dashboard loads. |
+| An order's status changes in Orders | It moves to the card for its new status. If it becomes **Returned**, **Failed** or **Cancelled**, its total is taken out of gross sales. |
+| An order is reassigned or a user's store changes | The orders that user sees on the Dashboard change to match what they see in Orders. |
+| The company name changes in Company Info | The welcome line shows the new name. |
+| A role loses access to Orders or All Products | **View all orders**, the product row click or the matching quick action is hidden. |
+
+---
+
+## Edge Cases / Notes
+
+- **Figures do not refresh on their own.** Pick a period again or reload the page to see new orders.
+- **Only 10 recent orders.** The tabs filter those 10 orders. A tab can show **0** even when older orders of that status exist in the period. Use **View all orders** to see every order.
+- **Out for Delivery and Shipped are the same status.** The summary card says **Out for Delivery**. Recent Orders shows it as **Shipped**.
+- **Confirmed has no tab of its own.** Confirmed orders appear under **Processing** in Recent Orders.
+- **Pending has no card of its own.** Pending orders are counted only in **Total Orders**.
+- **Amounts always show a $ sign.** Gross sales and order amounts are shown with **$**, as the header line *All displayed prices are in USD* says.
+- **The period follows the server's clock.** Today starts at midnight on the server, which may differ from your own time zone.
+- **Web analytics and Top Selling Products are empty.** These cards do not receive data yet.
 
 :::tip
 The Dashboard lists only the latest 10 orders. Click **View all orders** to search, filter and open any order. See [Orders](./order-management/orders.md).
 :::
-
----
-
-## Permissions
-
-| Area | Requirement | Without it |
-| ---- | ----------- | ---------- |
-| **Top Selling Products** row click | Permission to view products | Rows are not clickable |
-| **View all orders** | Permission to view orders | Link is hidden |
-| **Add New Product** shortcut | Access to the product list | Shortcut is hidden |
-| **Create Discount** shortcut | Access to the discount list | Shortcut is hidden |
-
-To change what a user can access, update their role under **Roles & Permission**.

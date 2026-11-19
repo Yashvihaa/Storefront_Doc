@@ -7,74 +7,75 @@ sidebar_label: Bracelet Configurator
 
 # Bracelet Configurator
 
-The **Bracelet Configurator** settings control which options customers can choose for a bracelet on the website. Each tab covers one attribute, such as stone type, carat size, diamond shape or metal. For every option you decide whether it is offered, which one is pre-selected, how it is ordered, and how it links to the options in other tabs.
+## Overview
+
+The **Bracelet Configurator** settings control which options customers can choose for a bracelet in the configurator on the website. Each tab covers one attribute, such as stone type, carat size, diamond shape or metal. For every option you decide whether it is offered, which one is pre-selected, how it is ordered, and how it links to the options in other tabs.
+
+The options themselves are created in the master pages (metals, shapes, carat sizes and so on). This page only picks which of them the bracelet configurator offers. The same master record can be on in one configurator and off in another. Settings are kept separately for each company.
+
+:::note[Who can use it]
+Anyone whose role can open the page can see the settings. Changing them needs the **Edit** permission for this page. Without it, the switches, selections, checkboxes and order boxes are disabled and **Save** cannot be used. The page has no add or delete actions, so the **Add** and **Delete** permissions have no effect here.
+
+For a client company, each tab lists only the options that TCC Tech has switched on in its own Bracelet Configurator. See [Where the Options Come From](#where-the-options-come-from).
+:::
 
 ---
 
-## Configurator Screen
+## Data Displayed
 
-The page title is **BRACELET CONFIGURATOR**, with the line "Control which options appear in the live product configurator" and a help button that opens this guide. The tabs across the top list the settings in a fixed order; click a tab to open it. If there are more tabs than fit on the screen, use the arrows at either end of the tab bar to scroll.
+### Configurator Screen
+
+The tabs across the top list the settings in a fixed order; click a tab to open it. If there are more tabs than fit on the screen, use the arrows at either end of the tab bar to scroll. The page opens on the first tab that has options.
 
 Each tab shows:
 
-- the tab name, with a count on the right such as "4 of 10 shown to customers" (only when the tab has options);
-- a short description of the tab;
-- the table of options. The table scrolls inside the page, the column headings stay in view, and the **Order** and **Option** columns stay in place when you scroll sideways. A table with no options shows **No Data**;
+- the tab name, with a count on the right such as *4 of 10 shown to customers* (only when the tab has options);
+- a short description of the tab, shown in italics under each tab heading below;
+- the table of options. The table scrolls inside the page, the column headings stay in view, and the **Order** and **Option** columns stay in place when you scroll sideways. Inactive rows appear faded;
 - a status line, **Unsaved changes**, **Saving…** or **All changes saved**, with the **Save** button beside it.
-
-The page opens on the first tab that has options.
 
 | Action | Description |
 | ------ | ----------- |
-| **Tabs** | Click a tab to open its settings. |
-| **Active** | Switch on to offer an option; switch off to hide it from customers. Switching off also clears what was set for that option in the tab (its default, mappings, diamond type and order). Inactive rows appear faded and their other controls are disabled. |
+| **Tabs** | Click a tab to open its settings. Opening a tab reloads its saved settings. |
+| **Active** | Switch on to offer an option; switch off to hide it from customers. Switching off also clears what was set for that option in the tab (its default, mappings, diamond type and order), and its other controls are disabled. |
 | **Default** | Select the option that is pre-selected. Only active options can be the default. |
 | **Order** | Sets where the option is shown. See [Order Numbers](#order-numbers). |
-| **Search and Filter** | Available on larger tabs. See [Search and Filter](#search-and-filter). |
-| **Save** | Saves the tab that is currently open. It is available only when that tab has unsaved changes and you have edit permission. |
-
-:::tip Save each tab
-Changes are saved one tab at a time, and only the active options of that tab are saved. Click **Save** before you open another tab. Opening a tab reloads the saved settings, so unsaved changes on the tab you leave are lost, and you are not asked to confirm.
-:::
-
-:::tip Set up in order
-Linked tabs only list options that are active and saved in the tab they link to. Work from the basics outwards: start with **Stone Type Master**, then the stone, carat, shape and metal tabs, and finish with the tabs that link to them (such as karats, side settings and cuts).
-:::
-
-**Permissions:** anyone who can open the page can see the settings. Without the **Edit** permission on this page, the switches, selections, checkboxes and order boxes are disabled and **Save** cannot be used.
-
-### Settings at a Glance
-
-| Setting | What it does | Required |
-| ------- | ------------ | -------- |
-| **Active** | Whether the option is offered. | - |
-| **Default** | The pre-selected option. | - |
-| **Order** | Display position of the option. | - |
-| **Natural** / **Lab Grown** / **Both** | Diamond type the option is offered for. | - |
-| Mapping checkboxes | Links to options in other tabs. | - |
-| Metal checkboxes in **Side Setting Master** | Metals a side setting is offered in. | ✅ (at least one per active side setting) |
-| Pictures in the image upload tabs | Pictures for side settings. | - |
+| **Search Table** / **Filter by** | Available on larger tabs. See [Search and Filter](#search-and-filter). |
+| **Save** | Saves the tab that is currently open. It is available only when that tab has unsaved changes and you have the **Edit** permission. |
+| **View Documentation** | Opens this page. |
 
 ### Configurator Tabs
 
-| Order | Tab |
-| ----- | --- |
-| 1 | [Stone Type Master](#stone-type-master) |
-| 2 | [Stone Master](#stone-master) |
-| 3 | [Carat Master](#carat-master) |
-| 4 | [Diamond Shape](#diamond-shape) |
-| 5 | [Diamond Color and Clarity](#diamond-color-and-clarity) |
-| 6 | [Diamond Cut Master](#diamond-cut-master) |
-| 7 | [Metal Master](#metal-master) |
-| 8 | [Metal Tone Master](#metal-tone-master) |
-| 9 | [Metal Karat Master](#metal-karat-master) |
-| 10 | [Side Setting Master](#side-setting-master) |
-| 11 | [Item Length Master](#item-length-master) |
-| 12 | [Side Setting Image Upload](#side-setting-image-upload) |
+| Order | Tab | What it sets |
+| ----- | --- | ------------ |
+| 1 | [Stone Type Master](#stone-type-master) | Stone types offered, their defaults and the stone positions they can be used for. |
+| 2 | [Stone Master](#stone-master) | Stones offered. |
+| 3 | [Carat Master](#carat-master) | Carat sizes offered, and their diamond type. |
+| 4 | [Diamond Shape](#diamond-shape) | Diamond shapes offered, and their diamond type. |
+| 5 | [Diamond Color and Clarity](#diamond-color-and-clarity) | Color and clarity combinations offered for the center stone. |
+| 6 | [Diamond Cut Master](#diamond-cut-master) | Cuts offered for the center stone, and the stones each cut applies to. |
+| 7 | [Metal Master](#metal-master) | Metals offered. |
+| 8 | [Metal Tone Master](#metal-tone-master) | Metal tones offered. |
+| 9 | [Metal Karat Master](#metal-karat-master) | Karats offered, and the metal tones of each karat. |
+| 10 | [Side Setting Master](#side-setting-master) | Side settings offered, and their shapes, carat sizes and metals. |
+| 11 | [Item Length Master](#item-length-master) | Bracelet lengths offered. |
+| 12 | [Side Setting Image Upload](#side-setting-image-upload) | A picture for each side setting. |
+
+### Settings at a Glance
+
+| Setting | Type | What it does | Required |
+| ------- | ---- | ------------ | -------- |
+| **Active** | Switch | Whether the option is offered. | - |
+| **Default** | Single choice per tab | The pre-selected option. | - |
+| **Order** | Whole number, 1 or more | Display position of the option, for example *1*. | - |
+| **Natural** / **Lab Grown** / **Both** | One choice per row, can be cleared | Diamond type the option is offered for. | - |
+| Mapping checkboxes | Any number per row | Links to options in other tabs. | - |
+| Metal checkboxes in **Side Setting Master** | Any number per row | Metals a side setting is offered in. | ✅ (at least one per active side setting) |
+| Pictures in the image upload tabs | Image file | Pictures for side settings. | - |
 
 ### Order Numbers
 
-Tabs with an **Order** column let you set the position of each option. The box shows the row's current position in grey until you type a number. Type a number, or use the small up and down arrows next to the box (the up arrow stops at 1). The box is disabled for inactive rows. Lower numbers come first. Order numbers are saved with the tab and are cleared when the option is switched off.
+Tabs with an **Order** column let you set the position of each option. The box shows the row's position in the table in grey until you type a number. Type a number, or use the small up and down arrows next to the box (the up arrow stops at 1). The box is disabled for inactive rows. Lower numbers come first. Order numbers are saved with the tab and are cleared when the option is switched off.
 
 ### Diamond Type Columns
 
@@ -84,32 +85,11 @@ Several tabs have **Natural**, **Lab Grown** and **Both** columns. Tick one of t
 
 Some tabs show one column for each active option of another tab (for example, one column per active metal tone in **Metal Karat Master**). Only options that are active and saved in the related tab appear as columns. Tick a column to link the two options. After you save, an option that is switched off no longer appears as a column in the linked tabs.
 
-### Search and Filter
+### Stone Type Master
 
-The **Carat Master**, **Diamond Shape** and **Side Setting Master** tabs have a search and filter bar above the table.
+*Manage stone type options available for your products.*
 
-| Field | Description |
-| ----- | ----------- |
-| **Search Table** | Type to show only options whose name contains the text (placeholder "Search by option..."). |
-| **Filter by** | Select one or more options to show only those rows. The label names the tab, for example **Filter by Carat Size**. Selected values appear under **Active Filters**; click the cross on a value to remove it, or **Clear All** to remove all. |
-
-Search and filter values are remembered in your browser for each tab and apply immediately. They only hide rows and do not change what is saved. Clear them if a row seems to be missing.
-
-### Cannot Disable Popup
-
-Some options cannot be switched off while another tab still uses them. When you switch **Active** off for such an option, a popup explains where it is used and what to remove first. Click **OK**, remove the option from the tab that uses it, save that tab, and then switch the option off. The switch is not changed until the blocking link is removed.
-
-| Popup | When it appears |
-| ----- | --------------- |
-| **Cannot Disable Stone Type** | The stone type is used by an active option in another tab (shape, color and clarity, cuts or carat). |
-| **Cannot Disable Metal Master** | The metal is ticked in **Side Setting Master**. |
-| **Cannot Disable Metal Tone** | The metal tone is ticked in **Metal Karat Master**. |
-
----
-
-## Stone Type Master
-
-Controls which stone types are offered and which one is pre-selected. This tab also decides which diamond types can be chosen in the other tabs.
+Controls which stone types are offered and which one is pre-selected for each stone position. This tab also decides which diamond types can be chosen in the other tabs.
 
 | Column | Description |
 | ------ | ----------- |
@@ -122,13 +102,15 @@ Controls which stone types are offered and which one is pre-selected. This tab a
 
 The default columns are independent of each other: each one has its own selected stone type.
 
-The stone types you activate here decide which of the **Natural**, **Lab Grown** and **Both** columns can be used in the other tabs. Save this tab first, then set up the others.
+The stone types you activate here decide which of the **Natural**, **Lab Grown** and **Both** columns can be used in the other tabs (see [Diamond Type Columns](#diamond-type-columns)). Save this tab first, then set up the others.
 
 A stone type that is still used by an active option in another tab cannot be switched off. The **Cannot Disable Stone Type** popup appears instead (see [Cannot Disable Popup](#cannot-disable-popup)). The "no diamond" stone type is never blocked.
 
-## Stone Master
+### Stone Master
 
-Controls which stones are offered. The active stones become the stone columns in the cut tabs.
+*Manage and configure the stone options available for your products.*
+
+Controls which stones are offered. The active stones become the stone columns in **Diamond Cut Master**.
 
 | Column | Description |
 | ------ | ----------- |
@@ -136,9 +118,11 @@ Controls which stones are offered. The active stones become the stone columns in
 | **Active** | Switch on to offer the stone in this configurator. Switch off to hide it. |
 | **Default** | Select the option that is pre-selected for customers. Only one option per tab can be the default, and only an active option can be selected. |
 
-This tab has no **Order** column. A stone that is ticked in a cut tab can be switched off here without a popup; its column disappears from the cut tab the next time that tab is opened.
+This tab has no **Order** column. A stone that is ticked in a cut tab can be switched off here without a popup. After you save, its column disappears from the cut tab.
 
-## Carat Master
+### Carat Master
+
+*Manage carat size options and their diamond-type mapping.*
 
 Controls which carat sizes are offered.
 
@@ -153,7 +137,9 @@ This tab has no **Order** column. It has a search and filter bar (see [Search an
 
 For bracelets, carat sizes are linked to shapes in **Side Setting Master**, not in **Diamond Shape**.
 
-## Diamond Shape
+### Diamond Shape
+
+*Manage diamond shape options and their carat size and diamond-type mapping.*
 
 Controls which diamond shapes are offered.
 
@@ -169,20 +155,24 @@ This tab has a search and filter bar (see [Search and Filter](#search-and-filter
 
 For bracelets, carat sizes are linked to shapes in **Side Setting Master** instead of in this tab, so there are no carat size columns here.
 
-## Diamond Color and Clarity
+### Diamond Color and Clarity
+
+*Manage the diamond color and clarity combinations available for center stones.*
 
 Controls which diamond color and clarity combinations are offered for the center stone.
 
 | Column | Description |
 | ------ | ----------- |
-| **Option** | Color and clarity combination, shown as color/clarity. |
+| **Option** | Color and clarity combination, shown as color/clarity, for example *F/VS1*. |
 | **Active** | Switch on to offer the combination in this configurator. Switch off to hide it. |
 | **Default** | Select the option that is pre-selected for customers. Only one option per tab can be the default, and only an active option can be selected. |
 | **Natural** / **Lab Grown** / **Both** | Choose which diamond type the option is offered for. See [Diamond Type Columns](#diamond-type-columns). |
 
-This tab has no **Order** column.
+This tab has no **Order** column. The combinations come from the active records in the Diamond Group Master (see [Where the Options Come From](#where-the-options-come-from)).
 
-## Diamond Cut Master
+### Diamond Cut Master
+
+*Manage diamond cut options and map them to the stones and diamond types they support.*
 
 Controls which diamond cuts are offered for the center stone and which stones each cut applies to.
 
@@ -195,7 +185,9 @@ Controls which diamond cuts are offered for the center stone and which stones ea
 | Stone columns | One column per active stone from **Stone Master**. Tick the stones the cut applies to. |
 | **Natural** / **Lab Grown** / **Both** | Choose which diamond type the option is offered for. See [Diamond Type Columns](#diamond-type-columns). |
 
-## Metal Master
+### Metal Master
+
+*Manage and configure the base metal types available for your products.*
 
 Controls which metals are offered.
 
@@ -207,7 +199,9 @@ Controls which metals are offered.
 
 This tab has no **Order** column. A metal that is ticked in **Side Setting Master** cannot be switched off. The **Cannot Disable Metal Master** popup appears instead.
 
-## Metal Tone Master
+### Metal Tone Master
+
+*Manage and configure the metal tone options available for your products.*
 
 Controls which metal tones are offered.
 
@@ -219,7 +213,9 @@ Controls which metal tones are offered.
 
 This tab has no **Order** column. A metal tone that is ticked in **Metal Karat Master** cannot be switched off. The **Cannot Disable Metal Tone** popup appears instead.
 
-## Metal Karat Master
+### Metal Karat Master
+
+*Manage karat options and map them to the metal tones they support.*
 
 Controls which karats are offered and which metal tones each karat is available in.
 
@@ -231,7 +227,9 @@ Controls which karats are offered and which metal tones each karat is available 
 | **Default** | Select the option that is pre-selected for customers. Only one option per tab can be the default, and only an active option can be selected. |
 | Metal tone columns | One column per active tone from **Metal Tone Master**. Tick the tones the karat is offered in. |
 
-## Side Setting Master
+### Side Setting Master
+
+*Manage side setting options and map them to metals, shapes, and sizes.*
 
 Controls which side settings are offered and which metals, diamond shapes and carat sizes each one is available in.
 
@@ -242,32 +240,30 @@ Controls which side settings are offered and which metals, diamond shapes and ca
 | **Active** | Switch on to offer the side setting in this configurator. Switch off to hide it. |
 | **Default** | Select the option that is pre-selected for customers. Only one option per tab can be the default, and only an active option can be selected. |
 | Diamond shape columns | One column per active shape from **Diamond Shape**. Each column lists the active carat sizes from **Carat Master**; tick the carat sizes the side setting supports for that shape. The list scrolls when it is long. |
-| Metal columns | One column per active metal from **Metal Master**. Tick the metals the side setting is offered in. |
+| Metal columns | One column per active metal from **Metal Master**. Tick the metals the side setting is offered in. Required: at least one for each active side setting. |
 
-**At least one metal is required** for every active side setting. If one is missing when you click **Save**, the message "Please select at least one Metal for this active Side Setting." appears under that row and nothing is saved. The message clears when you tick a metal, switch the side setting off or open another tab.
-
-This tab has a search and filter bar (see [Search and Filter](#search-and-filter)); the filter here is **Filter by Side Setting**.
+This tab has a search and filter bar (see [Search and Filter](#search-and-filter)); the filter here is **Filter by Side Setting**. Every active side setting needs at least one metal (see [Side Setting Metals](#side-setting-metals)).
 
 The picture for each side setting is uploaded in [Side Setting Image Upload](#side-setting-image-upload).
 
-## Item Length Master
+### Item Length Master
+
+*Manage the sizes (ring size, or length for bracelets) available for your products.*
 
 Controls which bracelet lengths are offered.
 
 | Column | Description |
 | ------ | ----------- |
 | **Order** | Number that sets where the option is shown. See [Order Numbers](#order-numbers). |
-| **Option** | Bracelet length. The size is shown in every regional size standard it has a value for, for example "3 US · 44 FR · 14 DE" (see [Ring Size](../settings/margin-cost-center/ring-size.md)); hover over a country code to see the country name. If there are no regional values, the plain size is shown. |
+| **Option** | Bracelet length, as named in the Item Length master. |
 | **Active** | Switch on to offer the length in this configurator. Switch off to hide it. |
 | **Default** | Select the option that is pre-selected for customers. Only one option per tab can be the default, and only an active option can be selected. |
 
-## Side Setting Image Upload
+### Side Setting Image Upload
 
-Lets you upload a picture for each side setting for this configurator. Each side setting has its own upload box, labelled with the side setting name and the recommended aspect ratio (**Aspect Ratio: 300 x 300**).
+*Upload and manage side setting images used across your products.*
 
-1. Drop an image on the box, or click the box to choose a file ("Drop files here or click to upload.").
-2. To remove an image, click the **X** icon next to it.
-3. Click **Save** to upload the changes. **Save** becomes available once you have added or removed an image.
+Lets you upload a picture of each side setting for this configurator. Each side setting has its own upload box, labelled with the side setting name and the recommended aspect ratio (**Aspect Ratio: 300 x 300**). There is a box for every active side setting in the [Side Setting Style](../product-management/masters/side-setting.md) master, including side settings that are switched off in this configurator. See [Steps to Upload Images](#steps-to-upload-images).
 
 | Rule | Detail |
 | ---- | ------ |
@@ -276,4 +272,151 @@ Lets you upload a picture for each side setting for this configurator. Each side
 | Maximum size | 20 MB per image |
 | Images per box | One. Dropping a new file replaces the one in the box. |
 
-If the file type is not allowed, the message "Only allowed image file types can be uploaded." followed by the list of allowed types appears. If the file is too large, the message "You can only upload files with a maximum size of 20 MB." appears. After a successful save the page shows the system's confirmation message and reloads the images.
+---
+
+## How It Works
+
+### Where the Options Come From
+
+Each tab lists the records of one master (see [Modules It Depends On](#modules-it-depends-on)). Only active master records appear. A record that is switched off or deleted in its master disappears from the tab, and a new master record appears switched off until you switch it on here.
+
+- **Row order.** Rows are listed in the order the records were added to the master, not by their **Order** number. Carat sizes are listed by their sort code.
+- **Color and clarity.** The color and clarity tabs list one row for each color and clarity pair in your company's [Diamond Group Master](../product-management/diamond-group-master.md). If your company uses TCC Tech's diamond pricing, they come from TCC Tech's Diamond Group Master instead.
+- **Lengths.** **Item Length Master** lists the active lengths of the [Item Length](../product-management/masters/item-length-master.md) master.
+- **Client companies.** For a client company, every tab except the color and clarity tabs and the cut tabs lists only the options that TCC Tech has switched on in its own Bracelet Configurator. TCC Tech sees every active master record.
+
+### Steps to Set Up the Configurator
+
+Linked tabs only list options that are active and saved in the tab they link to, so work from the basics outwards.
+
+1. Open **Stone Type Master**. Switch on the stone types you sell, choose the defaults, tick the stone positions and click **Save**.
+2. Set up **Stone Master**, **Carat Master**, **Diamond Shape**, **Diamond Color and Clarity**, **Metal Master** and **Metal Tone Master**. In each tab switch on the options, choose a default, tick the diamond type where there is one and click **Save**.
+3. Set up the tabs that link to them: **Metal Karat Master**, **Diamond Cut Master** and **Side Setting Master**. Tick the linked options in each row and click **Save**.
+4. Open **Item Length Master**, switch on the lengths you offer, set the order and default, and click **Save**.
+5. Upload the pictures in **Side Setting Image Upload**.
+
+### Steps to Change a Tab
+
+1. Click the tab.
+2. On a large tab, use **Search Table** or **Filter by** to find the rows you want.
+3. Switch **Active** on or off, choose the **Default**, tick the diamond type and the mapping columns, and set the **Order**.
+4. The status line shows **Unsaved changes**.
+5. Click **Save**. The status line shows **Saving…**, then a confirmation message appears, the tab reloads and the status line shows **All changes saved**.
+
+:::tip Save each tab
+Changes are saved one tab at a time. Click **Save** before you open another tab. Opening a tab reloads the saved settings, so unsaved changes on the tab you leave are lost, and you are not asked to confirm.
+:::
+
+### Steps to Upload Images
+
+1. Open **Side Setting Image Upload**.
+2. Drop an image on a box, or click the box to choose a file (*Drop files here or click to upload.*).
+3. To remove an image, click the **X** icon next to it.
+4. Click **Save**. It becomes available once you have added or removed an image. After a successful save the page shows a confirmation message and reloads the images.
+
+If the file type is not allowed, the message *Only allowed image file types can be uploaded.* followed by the list of allowed types appears. If the file is too large, the message *You can only upload files with a maximum size of 20 MB.* appears.
+
+Pictures are kept separately for each configurator, so a side setting can have a different picture here than in another configurator.
+
+### What Saving Does
+
+- Only the open tab is saved, and only its active options are kept on. Every option that is not active is switched off for this configurator, and its default, order and links in that tab are removed.
+- The settings belong to this configurator and your company. Saving here does not change the other configurators or other companies, even though they list the same master records.
+- Saved changes are recorded in [Audit Logs](../settings/audit-log.md).
+
+### Search and Filter
+
+The **Carat Master**, **Diamond Shape** and **Side Setting Master** tabs have a search and filter bar above the table.
+
+| Field | Description |
+| ----- | ----------- |
+| **Search Table** | Type to show only options whose name contains the text (placeholder *Search by option...*). The search is not case-sensitive. |
+| **Filter by** | Select one or more options to show only those rows. The label names the tab, for example **Filter by Carat Size**. Selected values appear under **Active Filters**; click the cross on a value to remove it, or **Clear All** to remove all. |
+
+Search and filter values apply immediately and are remembered in your browser for each tab, so they are still there the next time you open the page. They only hide rows and do not change what is saved. Clear them if a row seems to be missing.
+
+### Cannot Disable Popup
+
+Some options cannot be switched off while another tab still uses them. When you switch **Active** off for such an option, a popup explains where it is used and what to remove first. Click **OK**, remove the option from the tab that uses it, save that tab, and then switch the option off. The switch is not changed until the blocking link is removed.
+
+| Popup | When it appears |
+| ----- | --------------- |
+| **Cannot Disable Stone Type** | The stone type is used by an active option in another tab (shape, color and clarity, cuts or carat). |
+| **Cannot Disable Metal Master** | The metal is ticked in **Side Setting Master**. |
+| **Cannot Disable Metal Tone** | The metal tone is ticked in **Metal Karat Master**. |
+
+### Side Setting Metals
+
+Every active side setting needs at least one metal. If one is missing when you click **Save** in **Side Setting Master**, the message *Please select at least one Metal for this active Side Setting.* appears under that row and nothing is saved. The message clears when you tick a metal, switch the side setting off or open another tab.
+
+### Loading, Empty and Error States
+
+| State | What you see |
+| ----- | ------------ |
+| Loading the settings | The table shows **No Data** and the count is hidden until the settings arrive. |
+| A tab has no options | **No Data** |
+| Search or filter matches nothing | **No Data** |
+| The settings cannot be loaded | An error message with the reason, for example *Failed to fetch master list*. |
+| Saving | The status line shows **Saving…** and the **Save** button shows a loading indicator. |
+| A save fails | An error message with the reason. Your changes stay on screen and the status line still shows **Unsaved changes**. |
+
+---
+
+## Dependencies and Impact
+
+### Modules It Depends On
+
+| Module | How the Bracelet Configurator uses it |
+| ------ | ------------------------- |
+| [Stone Type](../product-management/masters/stone-type.md) | Supplies the rows of **Stone Type Master**. |
+| [Stone Master](../product-management/masters/stone-master.md) | Supplies the rows of **Stone Master**, which become the stone columns in the cut tabs. |
+| [Carat Size](../product-management/masters/carat-size.md) | Supplies the rows of **Carat Master** and their sort order. |
+| [Diamond Shape](../product-management/masters/diamond-shape.md) | Supplies the rows of **Diamond Shape**. |
+| [Diamond Group Master](../product-management/diamond-group-master.md), [Color](../product-management/masters/color.md) and [Clarity](../product-management/masters/clarity.md) | Supply the color and clarity pairs. Switching a Diamond Group Master record on or off changes the rows in the color and clarity tabs. |
+| [Diamond Cut](../product-management/masters/cut.md) | Supplies the rows of the cut tabs. |
+| [Metals](../product-management/masters/metal-master/metals.md) | Supplies the rows of **Metal Master**. |
+| [Metal Tone](../product-management/masters/metal-master/metal-tone.md) | Supplies the rows of **Metal Tone Master**. |
+| [Metal Karat](../product-management/masters/metal-master/metal-karat.md) | Supplies the rows of **Metal Karat Master**. |
+| [Side Setting Style](../product-management/masters/side-setting.md) | Supplies the rows of **Side Setting Master** and the boxes in **Side Setting Image Upload**. |
+| [Item Length](../product-management/masters/item-length-master.md) | Supplies the rows of **Item Length Master**. |
+| TCC Tech's Bracelet Configurator | For a client company, limits each tab to the options TCC Tech has switched on (except the color and clarity tabs and the cut tabs). |
+
+### Modules That Depend On It
+
+| Module | How it uses these settings |
+| ------ | -------------------------- |
+| The bracelet configurator on the website | Customers can choose only the active options. The default option is pre-selected, and options are shown in the set order. The links between tabs decide which options can be combined. |
+| [Bracelet Configurator products](../product-management/configurator-products/bracelet-configurator.md) | The configurator product page in the admin lists its options (such as stones, diamond types, cuts, colors and clarities) from these settings. |
+| Client companies' Bracelet Configurator settings | TCC Tech's settings decide which options a client company sees in its own tabs. |
+| [Audit Logs](../settings/audit-log.md) | Records each saved change. |
+
+### What Changes If…
+
+| Change | Effect |
+| ------ | ------ |
+| You switch an option off and save | Customers can no longer choose it in the bracelet configurator. It is removed from the columns of linked tabs, and its default, order and links in the tab are cleared. |
+| You change the default and save | A different option is pre-selected for customers. |
+| You change the order and save | The options are shown to customers in the new order. The table on this page keeps its own order. |
+| You switch a stone type off in **Stone Type Master** and save | Its **Natural** or **Lab Grown** column (and **Both**) becomes unavailable in the other tabs. |
+| You switch a shape or carat size off and save | Its column (for a shape) or its checkboxes (for a carat size) disappear from **Side Setting Master**. |
+| A record is switched off or deleted in its master | It disappears from the tab and from the configurator. |
+| A new record is added in a master | It appears in the tab switched off. Customers do not see it until you switch it on and save. |
+| A Diamond Group Master record is switched off | Its color and clarity pair may disappear from the color and clarity tabs. |
+| TCC Tech switches an option off in its Bracelet Configurator | The option no longer appears in client companies' tabs (except the color and clarity tabs and the cut tabs). |
+
+---
+
+## Edge Cases / Notes
+
+- **Unsaved changes are lost without warning** when you open another tab or leave the page.
+- **The Order number does not re-sort the table.** It only changes the order customers see.
+- **Switching every option off.** In **Stone Type Master**, **Carat Master**, **Diamond Shape**, **Diamond Color and Clarity** and **Side Setting Master**, at least one option must stay active. If you switch them all off and save, the tab reloads with the options still active.
+- **Carat sizes used in Side Setting Master are not protected.** A carat size ticked under a shape in **Side Setting Master** can still be switched off in **Carat Master**. After you save, its checkboxes disappear from **Side Setting Master**.
+- **Image boxes for switched-off options.** The image upload tabs show a box for every active side setting in the master, even if it is switched off in this configurator.
+- **Filters are remembered.** A search or filter left on a tab is still applied the next time you open the page in the same browser, which can make rows look missing.
+- **Lengths, not ring sizes.** Bracelets are sized by length, so the size tab is **Item Length Master** and lists lengths from the Item Length master. The countries on the Ring Size page do not affect it.
+- **Fewer tabs.** A bracelet has no side stone color and clarity, side stone cuts, shanks or heads, so those tabs are not shown.
+
+:::tip
+If customers cannot see an option in the bracelet configurator, check that it is active in its master, switched on here, and ticked in the tabs that link to it.
+:::

@@ -7,102 +7,180 @@ sidebar_label: Company Info
 
 # Company Info
 
-**Company Info** holds your company's contact details, logo, brand colors and fonts. The storefront uses these values, for example in the footer, in emails and for the look of your store.
+## Overview
 
-These settings live on the **Front-End Setting** page, under the **General Setting** tab. See [Front-End Setting](./front-end-setting.md) for the other tab, **Configurator Design**, and for the technical **Web Settings**.
+**Company Info** covers your company's contact details, logo, brand colours and fonts. They are four sections of the **General Setting** tab on the [Front-End Setting](./front-end-setting.md) page. There is no separate Company Info page in the menu.
+
+Your storefront and the emails sent to customers use these values, for example your name and address in the footer, your logo in emails and your colours and fonts across the store.
+
+:::note[Who can use it]
+Anyone whose role has **View** on **Front-End Setting** can see every section. Without **Edit** permission, all fields and the **Save** button are disabled.
+:::
 
 ---
 
-## Company Info Screen
+## Data Displayed
 
-On **Front-End Setting**, open **General Setting**. A list of sections runs down the left side. Click a section to open it.
+### Company Info Screen
 
-| Section | Description |
-| ------- | ----------- |
-| **Company info** | Company name, contact details, address and copyright text. See [Company info](#company-info-section). |
-| **Logo** | Your company logo. See [Logo](#logo-section). |
-| **Color** | Primary and secondary brand colors. See [Color](#color-section). |
-| **Font Family** | Primary and secondary fonts. See [Font Family](#font-family-section). |
-| **Web Settings** | Technical and integration settings. See [Front-End Setting](./front-end-setting.md#web-settings). |
+On **Front-End Setting**, open **General Setting**. A list of sections runs down the left side (a drop-down on phones). Click a section to open it.
+
+| Section | What it holds |
+| ------- | ------------- |
+| **Company info** | Company name, contact person, email, phone, address, map links and copyright text. See [Company info Section](#company-info-section). |
+| **Logo** | Your company logo. See [Logo Section](#logo-section). |
+| **Color** | Primary and secondary brand colours. See [Color Section](#color-section). |
+| **Font Family** | Primary and secondary fonts. See [Font Family Section](#font-family-section). |
+
+TCC Tech also sees **Pricing** and **Web Settings** in this list. See [Front-End Setting](./front-end-setting.md#web-settings).
 
 Each section has its own **Save** button at the top right of the page, next to the page title. It saves only the section you are viewing.
 
-:::note
-Users without **Edit** permission can view every section, but all fields and the **Save** button are disabled.
-:::
+### Company info Section
 
-:::tip
-Click **Save** before you open another section. Unsaved changes are lost when you switch sections.
-:::
-
----
-
-## Company info Section
-
-Update the fields below and click **Save**. The values are loaded from your saved settings when the section opens.
+The section is titled **Company Info**. It loads your saved details when it opens.
 
 | Field | Required | Remarks |
 | ----- | -------- | ------- |
-| **Company Name** | ✅ | Your company or brand name. |
-| **Company Email** | ✅ | Contact email. Must be a valid email address; otherwise "Enter a valid email address" is shown. |
-| **Company Phone No** | ✅ | Contact number. Digits only, 8 to 10 digits. Otherwise "Phone number must be digits only" or "Phone Number must be between 8 and 10 digits" is shown. |
+| **Company Name** | ✅ | Your company or brand name. Message: *Company Name is required*. |
+| **Contact Person Name** | - | The main contact at your company. Up to 255 characters. Message: *Contact Person Name must be at most 255 characters*. |
+| **Company Email** | ✅ | Contact email. Messages: *Company Email is required*, *Enter a valid email address*. |
+| **Company Phone No** | ✅ | A country code picker (type a country name, code or dial code to search) and the number. Digits only, 8 to 10 digits. Messages: *Company Phone Number is required*, *Phone number must be digits only*, *Phone Number must be between 8 and 10 digits*. |
 | **Company Key** | - | Your company key. Shown for reference and cannot be changed. |
-| **Company Address - Google Map Embed** | ✅ | Google Maps embed link for your address. Must be a valid link; otherwise "Enter a valid Embed Map link" is shown. |
-| **Company Address Link** | ✅ | Link that opens your address in a map. Must be a valid link; otherwise "Enter a valid Address link" is shown. |
-| **Copy Right** | ✅ | Copyright text, for example © 2026 Your Company. All rights reserved. |
-| **Company Address** | ✅ | Full company address. Supports multiple lines. |
+| **Company Address - Google Map Embed** | ✅ | The Google Maps embed link for your address. Messages: *Embed Map is required*, *Enter a valid Embed Map link*. |
+| **Company Address Link** | ✅ | A link that opens your address in a map. Messages: *Address link is required*, *Enter a valid Address link*. |
+| **Copy Right** | ✅ | Copyright text, for example *© 2026 Your Company. All rights reserved.* Message: *Copy Right is required*. |
+| **Company Address** | ✅ | Full company address. Several lines. Message: *Address is required*. |
 
-A required field left empty shows a message such as "Company Name is required". When the save succeeds, the message **Success** appears.
+### Logo Section
 
-:::note
-Enter the phone number without the country code. A **+91** prefix on the saved number is removed when the section loads it.
-:::
-
----
-
-## Logo Section
-
-The **Logo** section holds one image, **Company Logo**. The recommended size is 120px * 120px.
+The section holds one image, **Company Logo** (*Size should be 120px \* 120px*).
 
 | Action | Description |
 | ------ | ----------- |
 | **Upload** | Drag a file onto the upload box, or click **Browse** to pick one. |
-| **Adjust** | After you pick a file, the **Adjust Logo** popup opens. Drag the image or use the arrow keys to position it, use the zoom controls to resize it, then click **Apply**. Click **Reset** to go back to the default position, or **Cancel** to discard the change. |
-| **Adjust again** | Hover over an uploaded logo and click the adjust icon to change its zoom and position. |
-| **Remove** | Hover over an uploaded logo and click the **x** icon to remove it. |
-| **Save** | Saves the logo. |
+| **Adjust** | After you pick a file, the **Adjust Logo** popup opens. Drag the image or use the arrow keys to position it, and use the zoom buttons to resize it. Click **Apply** to keep it. |
+| **Adjust again** | Hover over an uploaded logo and click the adjust icon (*Adjust zoom and position*). |
+| **Remove** | Hover over an uploaded logo and click the **x** icon. |
 
-Accepted file types are .png, .jpg, .jpeg, .gif and .svg. Each file can be up to 10 MB; a larger file is rejected with "You can only upload maximum size of 10 MB." The logo is optional. When the save succeeds, the message **Success** appears.
+| Rule | Value |
+| ---- | ----- |
+| File types | .png, .jpg, .jpeg, .gif and .svg. Another type shows *Invalid file format. Please upload a PNG image.* |
+| Size | Up to 10 MB. A larger file shows *You can only upload maximum size of 10 MB.* |
+| Required | No. You can save without a logo. |
 
----
+### Color Section
 
-## Color Section
-
-The section is titled **Color Setting**. Click a color box to open the color picker, choose a color and click **Save**.
-
-| Field | Required | Remarks |
-| ----- | -------- | ------- |
-| **Primary Color** | ✅ | Main brand color of the storefront. |
-| **Secondary Color** | ✅ | Second brand color of the storefront. |
-
-After a successful save, the new colors are picked up by the admin dashboard and header as well.
-
----
-
-## Font Family Section
-
-Choose the fonts used on your storefront. Both fonts come from Google Fonts.
+The section is titled **Color Setting**.
 
 | Field | Required | Remarks |
 | ----- | -------- | ------- |
-| **Primary font** | ✅ | Used for titles and headlines. Type in the box to search Google Fonts, then pick a font. |
-| **Secondary font** | ✅ | Used for paragraph and label text. Type in the box to search Google Fonts, then pick a font. |
+| **Primary Color** | ✅ | Main brand colour. Type a hex code, or click the colour box. Starts on black (#000000) until a colour is saved. |
+| **Secondary Color** | ✅ | Second brand colour. Type a hex code, or click the colour box. Starts on white (#FFFFFF) until a colour is saved. |
 
-Under each field, a sample line shows how the selected font looks.
+Under each field is a row of colour swatches to pick from, plus a swatch that opens a custom colour picker. The primary row starts with colours taken from your logo and your saved colour. The secondary row starts with white.
 
 | Message | When it appears |
 | ------- | --------------- |
-| Pick both a primary and a secondary font | You clicked **Save** while one of the fonts is empty. |
-| No changes to save | You clicked **Save** without changing either font. |
-| Fonts saved | The fonts were saved. |
-| Couldn't load the Google Fonts list. The saved font is still applied. | The font list could not be loaded, so the fields are disabled. Your saved fonts keep working. |
+| *Enter a color code* | The field is empty when you click **Save**. |
+| *Enter a valid hex code, e.g. #1A2B3C* | The code is not a valid hex colour. |
+
+### Font Family Section
+
+Both fonts come from Google Fonts.
+
+| Field | Required | Remarks |
+| ----- | -------- | ------- |
+| **Primary font** | ✅ | *Titles and headlines*. Type in the box (*Search Google Fonts*) and pick a font. |
+| **Secondary font** | ✅ | *Paragraph and label text*. Type in the box and pick a font. |
+
+Under each field, a sample line (*Handcrafted Diamond Rings in 14K & 18K Gold, from $1,250*) shows how the font looks. A field with nothing picked shows *No font selected*.
+
+---
+
+## How It Works
+
+### Steps to Update Company Details
+
+1. Open **Front-End Setting**, then **General Setting**, then **Company info**.
+2. Change the fields.
+3. Click **Save**. The message **Success** confirms it.
+
+### Steps to Change the Logo
+
+1. Open the **Logo** section.
+2. Drag a file onto the box or click **Browse**.
+3. Position and zoom the logo in **Adjust Logo**, then click **Apply**.
+4. Click **Save**. The message **Success** confirms it.
+
+### Steps to Change the Colours
+
+1. Open the **Color** section.
+2. For each colour, type a hex code, click a swatch, or open the custom picker.
+3. Click **Save**. The message returned by the system confirms it.
+
+The admin dashboard and header pick up the new colours straight away.
+
+### Steps to Change the Fonts
+
+1. Open the **Font Family** section.
+2. Search for and pick a **Primary font** and a **Secondary font**.
+3. Click **Save**.
+
+| Message | When it appears |
+| ------- | --------------- |
+| *Pick both a primary and a secondary font* | One of the fonts is empty. |
+| *No changes to save* | Neither font has changed. |
+| *Fonts saved* | The fonts were saved. |
+| *Couldn't load the Google Fonts list. The saved font is still applied.* | The font list could not be loaded. The fields are disabled, and your saved fonts keep working. |
+
+### Loading and Error States
+
+| State | What you see |
+| ----- | ------------ |
+| Loading **Company info** | Grey placeholder fields. |
+| Loading the font list | The search box shows *Loading fonts…*. |
+| A required field is missing | The message appears in red under the field and nothing is saved. |
+| Save fails | An error message explains why. Your changes stay on screen. |
+
+---
+
+## Dependencies and Impact
+
+### Modules It Depends On
+
+| Module | How Company Info uses it |
+| ------ | ------------------------ |
+| [Front-End Setting](./front-end-setting.md) | These sections live on its **General Setting** tab and share its **Edit** permission. |
+| Google Fonts | The font lists come from Google Fonts. |
+
+### Modules That Depend On It
+
+| Module | How it uses Company Info |
+| ------ | ------------------------ |
+| Storefront | Shows your company name, contact details, address, map, copyright text, logo, colours and fonts. |
+| Emails | Use your company name, logo, primary and secondary colours, email, phone and address. See [Email Template](./email-template.md). |
+| Admin panel | The dashboard and header use your colours. |
+
+### What Changes If…
+
+| Change | Effect |
+| ------ | ------ |
+| The company name, email, phone or address changes | The storefront and new emails show the new details. Emails already sent do not change. |
+| The logo changes | The storefront and new emails show the new logo. |
+| The colours change | The storefront, new emails and the admin dashboard and header use the new colours. |
+| The fonts change | The storefront uses the new fonts. |
+
+---
+
+## Edge Cases / Notes
+
+- **Not in the menu.** Company Info is reached through **Front-End Setting**, not its own menu item.
+- **Save each section.** Unsaved changes are lost when you switch sections.
+- **Company Key is fixed.** It identifies your company and cannot be changed here.
+- **Phone length.** The phone number must be 8 to 10 digits, whatever country code is picked.
+- **Logo message.** The wrong-file-type message mentions PNG, but .jpg, .jpeg, .gif and .svg are accepted too.
+
+:::tip
+Click **Save** before you open another section.
+:::

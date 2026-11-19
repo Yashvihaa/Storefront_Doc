@@ -153,14 +153,52 @@ body {
   font-feature-settings: 'cv11', 'ss01';
 }
 
+/* Selected text: a soft blue highlight that keeps the text readable, instead of solid black. */
 ::selection {
-  background: var(--sf-accent);
-  color: var(--sf-on-accent);
+  background: #cfe0ff;
+  color: #0b1b3f;
 }
 
-/* Safety net: anything that still carries color (logo, emoji, syntax highlighting) renders in grayscale. */
-html {
+[data-theme='dark'] ::selection {
+  background: rgba(96, 165, 250, 0.4);
+  color: #ffffff;
+}
+
+/* The brand stays black and white: the logo and syntax highlighting render in grayscale.
+   Content colors (notes, checkmarks, links) are allowed so they read at a glance. */
+.navbar__logo img,
+.footer__logo,
+.theme-code-block {
   filter: grayscale(1);
+}
+
+/* Accent colors for content only. */
+:root {
+  --sf-link: #1d4ed8;
+  --sf-link-underline: rgba(29, 78, 216, 0.35);
+  --sf-yellow: #ca8a04;
+  --sf-yellow-border: #eab308;
+  --sf-yellow-bg: #fefce8;
+  --sf-green: #16a34a;
+  --sf-green-bg: #f0fdf4;
+  --sf-orange: #ea580c;
+  --sf-orange-bg: #fff7ed;
+  --sf-red: #dc2626;
+  --sf-red-bg: #fef2f2;
+}
+
+[data-theme='dark'] {
+  --sf-link: #60a5fa;
+  --sf-link-underline: rgba(96, 165, 250, 0.4);
+  --sf-yellow: #facc15;
+  --sf-yellow-border: #eab308;
+  --sf-yellow-bg: rgba(234, 179, 8, 0.1);
+  --sf-green: #4ade80;
+  --sf-green-bg: rgba(34, 197, 94, 0.1);
+  --sf-orange: #fb923c;
+  --sf-orange-bg: rgba(249, 115, 22, 0.1);
+  --sf-red: #f87171;
+  --sf-red-bg: rgba(239, 68, 68, 0.1);
 }
 
 * {
@@ -406,8 +444,9 @@ html {
 .markdown p a,
 .markdown li a,
 .markdown td a {
+  color: var(--sf-link);
   text-decoration: underline;
-  text-decoration-color: var(--sf-accent-ring);
+  text-decoration-color: var(--sf-link-underline);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
   transition: text-decoration-color 0.15s;
@@ -520,24 +559,50 @@ html {
   padding: 1rem 1.25rem;
 }
 
-.alert.theme-admonition.alert--success,
+/* Each kind of box gets its own color; the icon takes the same color.
+   note and info use the yellow "i" icon. */
+.alert.theme-admonition.alert--secondary,
 .alert.theme-admonition.alert--info {
-  border-left-color: var(--sf-accent);
+  --sf-admonition: var(--sf-yellow);
+  --sf-admonition-border: var(--sf-yellow-border);
+  --sf-admonition-bg: var(--sf-yellow-bg);
 }
 
-.alert.theme-admonition.alert--secondary {
-  border-left-color: var(--sf-text-muted);
+.alert.theme-admonition.alert--success {
+  --sf-admonition: var(--sf-green);
+  --sf-admonition-border: var(--sf-green);
+  --sf-admonition-bg: var(--sf-green-bg);
 }
 
 .alert.theme-admonition.alert--warning {
-  border-left-style: dashed;
-  border-left-color: var(--sf-accent);
+  --sf-admonition: var(--sf-orange);
+  --sf-admonition-border: var(--sf-orange);
+  --sf-admonition-bg: var(--sf-orange-bg);
 }
 
 .alert.theme-admonition.alert--danger {
-  border-left-style: double;
-  border-left-width: 6px;
-  border-left-color: var(--sf-accent);
+  --sf-admonition: var(--sf-red);
+  --sf-admonition-border: var(--sf-red);
+  --sf-admonition-bg: var(--sf-red-bg);
+}
+
+.alert.theme-admonition[class*='alert--'] {
+  --ifm-alert-background-color: var(--sf-admonition-bg, var(--sf-surface));
+  border-color: var(--sf-admonition-border, var(--sf-border));
+  border-left-color: var(--sf-admonition-border, var(--sf-border));
+  background-color: var(--sf-admonition-bg, var(--sf-surface));
+}
+
+.alert.theme-admonition [class*='admonitionHeading'] {
+  color: var(--sf-admonition, var(--ifm-heading-color));
+}
+
+.alert.theme-admonition [class*='admonitionIcon'] svg {
+  fill: var(--sf-admonition, currentColor);
+}
+
+.alert.theme-admonition a {
+  color: var(--sf-link);
 }
 
 /* ---------- On this page ---------- */

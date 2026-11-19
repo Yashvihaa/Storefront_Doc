@@ -135,24 +135,33 @@ The guide follows the admin panel's side menu.
 | ------- | ------ |
 | [Dashboard](./dashboard.md) | Orders, website visitors, revenue, best sellers and store health at a glance. |
 | [Analytics](./analytics.md) | Catalog, customer and sales insights, grouped into tabs. |
-| [Orders Management](/order-management) | Orders, the manufacturing comparison and manufacturer charge templates. |
+| [Orders Management](/order-management) | Orders, the manufacturing comparison, manufacturer charge templates and, for TCC Tech, the [Enquiry](./enquiry.md) page of requests clients send to TCC Tech. |
 | [Product Management](/product-management) | Products, masters, configurator products (including birthstone products), diamond prices and offers. |
 | [Customer Management](/customer-management) | Customer accounts and customer reports. |
 | [Cart & Wishlist Management](/sales-funnel) | Products customers have added to their carts and wishlists. |
 | [Roles & Permission](/roles-permission) | Roles, users and stores. |
 | [Configurators](/configurators) | The options customers can choose in each configurator. |
-| [Settings](/settings) | Margin rules, metal rates, currency, tax, SKU builder, email and invoice templates and the audit log. |
+| [Settings](/settings) | Margin rules, metal rates, currency, tax, SKU builder, email and invoice templates, the audit log and, for TCC Tech, [Error Logs](./error-logs.md). |
 | [Subscription & Billing](./subscription.md) | Your plan, enabled configurators, user licences and billing history. |
 | [Front End Setting](./settings/front-end-setting.md) | Website design, gift charges, price display and company info. |
 
 ### How Each Page Is Laid Out
 
-Most pages follow the same pattern:
+Every module page has the same five sections:
 
-- A short description of what the page is for.
-- A **Screen List** table of the buttons and actions on the screen.
-- **Steps** for common tasks, each with a table of fields. In the **Required** column, ✅ means the field must be filled in and **-** means it is optional.
-- **Note** and **Tip** boxes for rules that are easy to miss.
+| Section | What it covers |
+| ------- | -------------- |
+| **Overview** | What the page is for and who can use it. |
+| **Data Displayed** | The **Screen List** of buttons and actions, the list columns, the form fields, and the statuses and badges you will see. In the **Required** column, ✅ means the field must be filled in and **-** means it is optional. |
+| **How It Works** | Step-by-step tasks, plus how search, filters, paging and the loading, empty and error states behave. |
+| **Dependencies and Impact** | Which other modules this one relies on, which modules rely on it, and what changes elsewhere when you change it. |
+| **Edge Cases / Notes** | Limits and rules that are easy to miss. |
+
+**Note** and **Tip** boxes highlight rules that are easy to miss.
+
+:::note[TCC Tech pages]
+[Enquiry](./enquiry.md) and [Error Logs](./error-logs.md) are platform pages for TCC Tech's super admins. They do not appear in a client's admin panel.
+:::
 
 :::tip
 Several admin screens have a **View Documentation** button that opens the matching page of this guide in a new tab.

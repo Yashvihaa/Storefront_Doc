@@ -7,7 +7,9 @@ sidebar_label: All Products
 
 # All Products
 
-The **Product List** shows every catalog product in the store. From here you can add Normal, Variant and Choose Settings products, export the catalog, switch products on or off, mark them as trending and manage the **New Arrival** tag.
+## Overview
+
+**All Products** shows every catalog product in the store. From here you add Normal, Variant and Choose Settings products, export the catalog, switch products on or off, mark them as trending and manage the **New Arrival** tag.
 
 There are three kinds of product, and each has its own form:
 
@@ -15,58 +17,61 @@ There are three kinds of product, and each has its own form:
 | ------------ | -------------------- |
 | **Normal Product** | Calculated from the metal weight, the live metal rate and the stones. |
 | **Variant Product** | You type a fixed price for every metal, karat, tone and size combination. |
-| **Setting Product** | A ring setting where the customer picks the center stone. The setting is priced like a variant product. |
+| **Setting Product** | A ring setting where the customer picks the center stone. Created with **Add Choose Settings Product** and priced like a variant product. |
+
+Configurator products (ring, three stone, eternity band, bracelet, stud, pendant) and birthstone products are not listed here. They have their own pages under **Configurator Products**.
+
+:::note[Who can use it]
+Store administrators and users whose role includes **All Products**. The **View**, **Edit** and **Delete** icons need the matching **View**, **Edit** and **Delete** permission; without it the icon is greyed out. The **Status**, **Is Trending** and **Arrival Status** switches need the **Edit** permission. The **Product** and **Export** menus and the bulk action buttons are not switched off by permissions.
+:::
+
+:::info[Pricing lock]
+When the store's [Price Display](../settings/price-display.md) is set to **TCC_TECH Pricing + Margin**, the page shows the notice *Pricing is locked while you use TCC TECH Pricing + Margin. To add or change prices, switch to Own Pricing + Margin first.* with a **Go to Price Display** button. The page then works as if your role had **View** permission only, and the price fields in the product forms are read-only. See [Pricing Lock](#pricing-lock).
+:::
 
 ---
 
-## Product List Screen
+## Data Displayed
 
-The page is titled **PRODUCT LIST**. Products are listed newest first, 50 per page.
+### Product List Screen
 
 | Action | Description |
 | ------ | ----------- |
-| **Search** | Type in the search box to filter the list. The list updates about a second after you stop typing; clear the box to show all products again. |
+| **Search** | Type in the search box to search the list. The list updates about a second and a half after you stop typing and goes back to page 1. Clear the box to show all products again. |
 | **Product** | Opens a menu with **Add Normal Product**, **Add Variant Product** and **Add Choose Settings Product**. |
 | **Export** | Opens a menu with **Normal Product Export** and **Variant Product Export**. A message appears once the export is started. |
 | **Filter** | Shows or hides a filter row under the column headings. It narrows the products already loaded on the current page. |
 | **Add New Arrival** | Button at the top of the page. Opens the **Add New Arrival Tag** popup. See [New Arrival Tag](#new-arrival-tag). |
+| **View Documentation** | Opens this page. |
 | **View** | Click the **View** icon to open the product in read-only mode. |
 | **Edit** | Click the **Edit** icon to open the product in the form it was created with (Normal, Variant or Choose Settings). |
-| **Delete** | Click the **Delete** icon. A popup asks **Are you Sure?**; click **YES** to remove the product or **NO** to cancel. |
-| **Status Toggle** | Switch a product on or off directly from the list. |
+| **Delete** | Click the **Delete** icon. A popup titled **Are you Sure?** asks *Are you Sure You would like to delete ?*. Click **YES** to remove the product or **NO** to cancel. |
+| **Status** (switch) | Switch a product on or off directly from the list. |
 | **Is Trending** | Switch on to mark the product as trending on the storefront. Some stores show this column as **Is Favorite**. |
 | **Arrival Status** | Switch on to apply the New Arrival tag to the product. Disabled when no New Arrival tag exists or the tag is turned off. |
 | **Pagination** | Change the page or the number of rows per page (25, 50, 75 or 100) at the bottom of the table. |
 
-Most columns can be sorted by clicking the column header; **Pricing** and **Arrival Status** cannot be sorted. When there are no products, the table shows **No records to display**. After a switch is changed, the message **Successfully updated** appears and the list reloads.
-
-:::note
-The **View**, **Edit** and **Delete** icons need the matching **View**, **Edit** and **Delete** permission; without it the icon is greyed out. The **Status**, **Is Trending** and **Arrival Status** switches need the **Edit** permission.
-:::
-
 ### Product List Columns
 
-| Column | Description |
-| ------ | ----------- |
-| (checkbox) | Select a row to use the [Bulk Actions](#bulk-actions). |
-| **Action** | **View**, **Edit** and **Delete** icons. |
-| **Image** | Product thumbnail. Hover over it to see a larger preview. |
-| **Name** | Product name. |
-| **Parent SKU** | SKU of the parent product, if the product is grouped under one. |
-| **SKU** | Product SKU. |
-| **Product Type** | **Normal Product**, **Variant Product** or **Setting Product** (a Choose Settings product). |
-| **Category Name** | Category assigned to the product. |
-| **Pricing** | Click **View Details** to open the pricing popup. See [Pricing Details](#pricing-details). |
-| **Status** | Badge showing whether the product is **Active** or **Inactive**. |
-| **Status** (switch) | Turns the product on or off. |
-| **Is Trending** / **Is Favorite** | Marks the product as trending. |
-| **Arrival Status** | Applies or removes the New Arrival tag. |
+| Column | Type | Description | Example |
+| ------ | ---- | ----------- | ------- |
+| (checkbox) | - | Select a row to use the [Bulk Actions](#bulk-actions). | - |
+| **Action** | - | **View**, **Edit** and **Delete** icons. | - |
+| **Image** | Image | Product thumbnail. Hover over it to see a larger preview. | - |
+| **Name** | Text | Product name. | *Classic Solitaire Ring* |
+| **Parent SKU** | Text | SKU of the parent product, if the product is grouped under one. | *RG-1001* |
+| **SKU** | Text | Product SKU. | *RG-1001-14K* |
+| **Product Type** | Text | **Normal Product**, **Variant Product** or **Setting Product**. | **Variant Product** |
+| **Category Name** | Text | Category assigned to the product. | *Rings* |
+| **Pricing** | Link | Click **View Details** to open the pricing popup. See [Pricing Details](#pricing-details). | **View Details** |
+| **Status** | Badge | Whether the product is **Active** or **Inactive**. | **Active** |
+| **Status** (switch) | Switch | Turns the product on or off. | - |
+| **Is Trending** / **Is Favorite** | Switch | Marks the product as trending. | - |
+| **Arrival Status** | Switch | Applies or removes the New Arrival tag. | - |
 
----
+### Bulk Actions
 
-## Bulk Actions
-
-Select one or more products using the checkboxes. The following buttons appear above the table:
+Select one or more products using the checkboxes. These buttons appear above the table:
 
 | Action | Description |
 | ------ | ----------- |
@@ -76,58 +81,66 @@ Select one or more products using the checkboxes. The following buttons appear a
 | **Arrival Enable** | Applies the New Arrival tag to all selected products. |
 | **Arrival Disable** | Removes the New Arrival tag from all selected products. |
 
-:::note
 **Arrival Enable** and **Arrival Disable** are available only when a New Arrival tag exists and is enabled.
-:::
 
----
+### New Arrival Tag
 
-## New Arrival Tag
-
-Click **Add New Arrival** to create or update the store's New Arrival tag. The popup is titled **Add New Arrival Tag**. A store has one New Arrival tag, so reopening the popup shows the existing tag for editing.
+The **Add New Arrival Tag** popup creates or updates the store's New Arrival tag. A store has one New Arrival tag, so reopening the popup shows the existing tag for editing.
 
 | Field | Required | Remarks |
 | ----- | -------- | ------- |
-| **Tag Name** | ✅ | Name shown on tagged products, for example "New Arrival". Minimum 2 characters. Errors: **Tag name is required**, **Tag name must be at least 2 characters**. |
+| **Tag Name** | ✅ | Name shown on tagged products, for example *New Arrival*. Minimum 2 characters. Errors: **Tag name is required**, **Tag name must be at least 2 characters**. |
 | **Duration (Days)** | ✅ | Whole number from 1 to 365. The tag expires automatically after this many days. Errors: **Duration is required**, **Duration must be a whole number**, **Duration must be at least 1 day**, **Duration cannot exceed 365 days**. |
 | **Enable Tag** | - | Turns the tag on or off. On by default. Available only after the tag has been created. |
 
-| Action | Description |
+| Button | Description |
 | ------ | ----------- |
 | **Apply Tag** | Saves the tag. The button reads **Saving...** while the tag is being saved. |
 | **Delete** | Removes the tag after you confirm with **YES**. Shown only when a tag already exists. |
 | **Cancel** | Closes the popup without saving. |
 
-Once the tag exists and is enabled, apply it to products with the **Arrival Status** switch or the **Arrival Enable** / **Arrival Disable** bulk actions.
+### Pricing Details
 
-:::note
+Click **View Details** in the **Pricing** column to open the **Product Price Details** popup, which shows how the product price is built.
+
+| Part | What it shows |
+| ---- | ------------- |
+| **Header** | Product name, **SKU**, created date and **Final Retail Price**, followed by **Metal**, **Metal Weight**, **Stones** and **Total Wt.** |
+| **CONFIGURATION** panel | **Metal**, **Metal Tone**, **Stone Type**, **Color & Clarity** and **Diamond Cut** options. Pick an option to recalculate the price for that combination. **Color & Clarity** is shown for normal products only. |
+| **Price Breakdown** tab | **Cost Calculation**: **Total Diamond Cost**, **Total Setting Cost**, **Labour** and **Duty** (with its percentage), adding up to **= Landed Cost**. **Margin Cost**: **+ Diamond Margin**, **+ Metal Margin** and **+ Product Margin**, adding up to **= Total Margin**. For Variant and Setting products only the product line is shown. **Retail Calculation**: **Subtotal (Landed Cost + Margin)** and the **Final Retail Price**. |
+| **Specifications** tab | The product's stones (type, shape, color, clarity, cut, quantity and weight), with a total row and a summary of the number of entries, stones and total carat weight. For normal products it also shows the price per carat and the stone totals with and without margin. Shows **No diamond entries** when the product has no stones. |
+| **Download pdf** | Saves the pricing breakdown as a PDF named after the product SKU. |
+
+Each margin line is labelled **Margin** or **Markup** according to the pricing type set for it in your store. Hover over the info icon next to the product margin to see that it is added on top after the metal and diamond margins.
+
+---
+
+## How It Works
+
+### Find and Manage Products
+
+- **Search** looks across all products, not just the current page. A new search returns you to page 1.
+- **Filter** boxes only narrow the rows already on the current page.
+- Products are listed newest first, 50 per page by default. Click the **Name**, **Parent SKU**, **SKU**, **Product Type**, **Category Name** or **Is Trending** header to sort; the whole list is re-sorted, not just the current page. **Image**, **Pricing**, the two **Status** columns and **Arrival Status** cannot be sorted.
+- The page number and rows per page are kept in the page address.
+- After a switch is changed, the message **Successfully updated** appears and the list reloads. After a delete, bulk action or tag change, the server's message appears and the list reloads.
+
+### Steps to Apply the New Arrival Tag
+
+1. Click **Add New Arrival**.
+2. Enter the **Tag Name** and **Duration (Days)**, then click **Apply Tag**.
+3. Turn on **Arrival Status** for a product, or select several products and click **Arrival Enable**.
+4. To stop using the tag, reopen the popup and turn **Enable Tag** off, or click **Delete**.
+
 If you turn **Enable Tag** off, the **Arrival Status** switches and the **Arrival Enable** / **Arrival Disable** buttons are disabled until you turn it back on.
-:::
 
----
+### Add Normal Product
 
-## Pricing Details
-
-Click **View Details** in the **Pricing** column to see how the product price is built.
-
-- The top of the popup shows the product name, **SKU**, created date and **Final Retail Price**, followed by **Metal**, **Metal Weight**, **Stones** and **Total Wt.**
-- The **CONFIGURATION** panel lists the **Metal**, **Metal Tone**, **Stone Type**, **Color & Clarity** and **Diamond Cut** options. Pick an option to recalculate the price for that combination. **Color & Clarity** is shown for normal products only.
-- The **Price Breakdown** tab shows:
-  - **Cost Calculation**: **Total Diamond Cost**, **Total Setting Cost**, **Labour** and **Duty** (with its percentage), adding up to the **Landed Cost**.
-  - **Margin Cost**: the diamond margin, metal margin and product margin, adding up to the **Total Margin**. Each line is labelled **Margin** or **Markup** according to the pricing type set for it in your store. For Variant and Setting products only the product line is shown.
-  - **Retail Calculation**: **Subtotal (Landed Cost + Margin)** and the **Final Retail Price**.
-- The **Specifications** tab lists the product's stones (type, shape, color, clarity, cut, quantity and weight), with a total row and a summary of the number of entries, stones and total carat weight. For normal products it also shows the price per carat and the stone totals with and without margin. It shows **No diamond entries** when the product has no stones.
-- Click **Download pdf** to save the pricing breakdown as a PDF named after the product SKU.
-
----
-
-## Add Normal Product
-
-Click **Product → Add Normal Product**. The price of a normal product is calculated from the metal weight, metal rate and stones. The form is a single page made up of the sections below. Click **Submit** at the bottom to save, or **Back** to leave without saving. After a successful save you return to the product list.
+Click **Product → Add Normal Product**. The price of a normal product is calculated from the metal weight, metal rate and stones. The form is a single page made up of the sections below. Click **Submit** at the bottom to save, or **Back** at the top to leave without saving. After a successful save you return to the product list.
 
 When you open a product with **View**, every field is read-only and the **Submit** button is hidden.
 
-### Product Basic information
+#### Product Basic information
 
 | Field | Required | Remarks |
 | ----- | -------- | ------- |
@@ -138,7 +151,7 @@ When you open a product with **View**, every field is read-only and the **Submit
 | **Product Long Description** | ✅ | Rich text. Must be at least 20 characters of text. Error: **Long description must be a 20 to 2000 characters!** |
 | **Tags** | ✅ | Select one or more tags. Error: **Keyword is required**. |
 
-### Product Specification
+#### Product Specification
 
 | Field | Required | Remarks |
 | ----- | -------- | ------- |
@@ -154,15 +167,7 @@ When you open a product with **View**, every field is read-only and the **Submit
 The first category row decides which size or length options the product can have. Products can be listed under several categories by adding more rows.
 :::
 
-### Product SEO
-
-| Field | Required | Remarks |
-| ----- | -------- | ------- |
-| **SEO Title** | - | Title shown in search results and browser tabs. |
-| **SEO Description** | - | Short summary shown in search results. |
-| **SEO Keywords** | - | Type a keyword and press Enter to add it. |
-
-### Other Details
+#### Other Details
 
 Shown after a category is selected.
 
@@ -173,7 +178,7 @@ Shown after a category is selected.
 | **Setting Type** | - | Select one or more setting types. Shown for categories that use setting styles, and for 3D products. |
 | **Select size** / **Select Length** | - | Select one or more sizes for sized categories (for example rings), or lengths for measured categories (for example chains). |
 
-### Metal Details
+#### Metal Details
 
 Tick one or more metals (for example **Gold**, **Silver**, **Platinum**). At least one metal is required; otherwise the form shows **Please select at least one metal**. For 3D products, an **Is Band** switch appears above the metals.
 
@@ -187,9 +192,9 @@ Each ticked metal shows a table:
 | **Metal Weight** | ✅ | Required on every silver and platinum row, and on every gold row that has a tone. Numbers and one decimal point only. Error: **Metal Weight is required**. |
 | **Band Metal Weight** | ✅ (band) | Shown and required when **3D Product** and **Is Band** are on. Error: **Band Metal Weight is required**. |
 | **Rate** / **Price** | - | Read-only. **Rate** is the current metal rate for the weight you entered, and **Price** is the weight multiplied by the rate. **Price** reads **Price (incl. band)** when the band columns are shown, and then uses the metal weight plus the band weight. |
-| **Labour Charge** / **Band Labour Charge** | - | Shown only when a fixed labour charge applies to the metal. **Band Labour Charge** also needs **Is Band** on. |
+| **Labour Charge** / **Band Labour Charge** | - | Shown only when a fixed labour charge applies to the metal. **Band Labour Charge** also needs **Is Band** on. Read-only while pricing is locked. |
 
-### Diamond Details
+#### Diamond Details
 
 Switch on **Center Diamond** and/or **Side Diamond** to add stone rows. Side diamonds can have several rows: use **+** to add a row and **-** to remove one. The **Stone** list contains only stones that have a price set up in the [Diamond Group Master](./diamond-group-master.md).
 
@@ -202,19 +207,17 @@ Switch on **Center Diamond** and/or **Side Diamond** to add stone rows. Side dia
 | **Stone Weight** | ✅ | Required on every stone row. Error: **Stone weight is required**. |
 | **Stone Pieces** | ✅ | Number of stones in the row. Error: **Stone count is required**. |
 
-### Additional Info
+#### Additional Info
 
 | Field | Required | Remarks |
 | ----- | -------- | ------- |
 | **Additional Information** | - | Extra product details (rich text). |
 | **Certificate Link** | - | Link to the product certificate. |
-| **Finding Charge** | - | Added to the product price. |
-| **Other Charge** | - | Added to the product price. |
+| **Finding Charge** | - | Added to the product price. Read-only while pricing is locked. |
+| **Other Charge** | - | Added to the product price. Read-only while pricing is locked. |
 | **Check this box to customize your product** | - | Tick to allow customization of this product. |
 
----
-
-## Add Variant Product
+### Add Variant Product
 
 Click **Product → Add Variant Product**. A variant product has fixed prices that you enter for each metal, karat, tone and size combination. The form has the same sections as the Normal Product form, with the **Back** button at the top and **Submit** at the bottom. The differences are:
 
@@ -226,8 +229,8 @@ Click **Product → Add Variant Product**. A variant product has fixed prices th
 | ----- | -------- | ------- |
 | **Quantity Track** | - | Tick to track stock. Ticked by default. |
 | **Quantity** | ✅ (tracked) | Required and must be greater than 0 when **Quantity Track** is ticked. Error: **Quantity is required**. |
-| **Final Retail Price** | ✅ | Selling price of the product. Error: **Retail price is required**. |
-| **Final Compare Price** | ✅ | Compare-at price shown alongside the retail price. Error: **Compare price is required**. |
+| **Final Retail Price** | ✅ | Selling price of the product. Error: **Retail price is required**. Read-only while pricing is locked. |
+| **Final Compare Price** | ✅ | Compare-at price shown alongside the retail price. Error: **Compare price is required**. Read-only while pricing is locked. |
 | **Select size** / **Select Length** | - | Each selected size or length adds rows to the metal tables. |
 | **Setting Type** | - | Shown for categories that use setting styles. |
 
@@ -242,11 +245,9 @@ The **Quantity**, **Final Retail Price** and **Final Compare Price** values are 
 | **Center Diamond** | Stone, Shape, Stone Weight, Stone Pieces |
 | **Side Diamond** | Stone, Shape |
 
----
+### Add Choose Settings Product
 
-## Add Choose Settings Product
-
-Click **Product → Add Choose Settings Product**. Use this for ring settings where the customer chooses the center stone. The form follows the Variant Product layout. The sections appear in this order: **Product Basic information**, **Product Specification**, **Other Details**, **Diamond Details**, **Metal Details**, **Additional Info** and **Product SEO**.
+Click **Product → Add Choose Settings Product**. Use this for ring settings where the customer chooses the center stone. The form follows the Variant Product layout. The sections appear in this order: **Product Basic information**, **Product Specification**, **Other Details**, **Diamond Details**, **Metal Details** and **Additional Info**.
 
 The differences from the Variant Product form are:
 
@@ -255,7 +256,7 @@ The differences from the Variant Product form are:
 | **is single** | - | Switch in **Product Specification**. |
 | **Select Diamond Shapes** | ✅ | The center stone shapes the customer can choose from. Required when you edit an existing product (**Center diamond shapes is required**). |
 | **Select Diamond Sizes** | - | The center stone sizes the customer can choose from. |
-| **Final Retail Price** / **Final Compare Price** | - | In **Other Details**. Optional for this product type. |
+| **Final Retail Price** / **Final Compare Price** | - | In **Other Details**. Optional for this product type. Read-only while pricing is locked. |
 
 - **Quantity** in **Other Details** is not required.
 - Gold shows one karat at a time. Click a karat button next to **Gold** to work on that karat's rows.
@@ -263,6 +264,77 @@ The differences from the Variant Product form are:
 - A new metal row is saved only when it has both **Metal Weight** and **Retail Price**. If there are no metal rows to save, the form shows **Metal Data is required**.
 - Diamond rows follow the same required fields as the Variant Product.
 
-:::tip
+### Saving a Product
+
 In every product form, if a required field is missing when you click **Submit**, the form shows the error under the field and scrolls to the first field with an error. If the server rejects the product, its message appears as a notification and you stay on the form.
-:::
+
+### Pricing Lock
+
+While the store uses **TCC_TECH Pricing + Margin**:
+
+- The lock notice is shown above the list and above each product form.
+- The **View**, **Edit** and **Delete** icons and the three switches behave as if your role had **View** permission only, so only **View** stays available.
+- In the product forms, these fields are read-only: **Labour Charge**, **Band Labour Charge**, **Finding Charge** and **Other Charge** (normal products), and **Final Retail Price**, **Final Compare Price** and the **Retail Price**, **Compare Price** and **Center Diamond Total Price** columns (variant and setting products).
+
+Switch to **Own Pricing + Margin** on [Price Display](../settings/price-display.md) to unlock them.
+
+### Loading, Empty and Error States
+
+| State | What you see |
+| ----- | ------------ |
+| Loading the list | The table shows a loading indicator. |
+| No products match | **No records to display** |
+| Loading a product form | A loading spinner fills the page. |
+| A list action fails | The server's message, or a general error message, appears as a notification. |
+
+---
+
+## Dependencies and Impact
+
+### Modules It Depends On
+
+| Module | How All Products uses it |
+| ------ | ------------------------ |
+| [Tags](./masters/tags.md) | The **Tags** list in every product form. |
+| [Collection](./masters/collection.md) | The **Collection Name** list. |
+| [Metals](./masters/metal-master/metals.md), [Metal Karat](./masters/metal-master/metal-karat.md), [Metal Tone](./masters/metal-master/metal-tone.md) | The metals you can tick, the gold karat rows and the tones in the metal tables. |
+| [Metal Rate Settings](../settings/metal-rate-setting.md) | Supplies the **Rate** for each metal and weight on normal products, which sets the metal **Price**. |
+| [Labour Management](../settings/margin-cost-center/labour-management.md) | Decides whether a fixed labour charge applies to a metal, which shows the **Labour Charge** columns. |
+| [Stone Master](./masters/stone-master.md), [Diamond Shape](./masters/diamond-shape.md), [MM Size](./masters/mm-size.md), [Color](./masters/color.md), [Clarity](./masters/clarity.md), [Cut](./masters/cut.md) | The stone options in **Diamond Details**. |
+| [Carat Size](./masters/carat-size.md) | The **Setting Diamond Sizes** and **Select Diamond Sizes** options. |
+| [Setting Type / Style](./masters/setting-type-style.md) | The **Setting Type** and **Stone Setting** lists. |
+| [Item Size Master](./masters/item-size-master.md), [Item Length Master](./masters/item-length-master.md) | The **Select size** and **Select Length** options, which also add rows to the variant metal tables. |
+| [Diamond Group Master](./diamond-group-master.md) | Only stones priced there can be picked on a normal product. Stone prices come from the matching record. |
+| [Price Display](../settings/price-display.md) | **TCC_TECH Pricing + Margin** locks the page and the price fields. |
+
+### Modules That Depend On It
+
+| Module | How it uses products |
+| ------ | -------------------- |
+| [Diamond Group Master](./diamond-group-master.md) | **Export Products** exports the products that use the selected diamond records. |
+| Storefront | Shows your catalog products, with the **Is Trending** flag and the New Arrival tag you set here. |
+
+### What Changes If…
+
+| Change | Effect |
+| ------ | ------ |
+| A product is switched off | Its status changes to **Inactive**. |
+| A product is deleted | It is removed from the list. |
+| The New Arrival tag is turned off or deleted | The **Arrival Status** switches and the arrival bulk actions are disabled. |
+| The New Arrival tag's duration passes | The tag expires automatically. |
+| A metal rate changes | The **Rate** and **Price** of normal products change, because they are worked out from the live rate. Variant and setting product prices are fixed and do not change. |
+| A stone's price is removed from the Diamond Group Master | That stone can no longer be picked on a normal product. |
+| A size or length is added to a master | It becomes available in **Select size** or **Select Length**. |
+| Price Display is switched to **TCC_TECH Pricing + Margin** | The page becomes view-only and the price fields lock. |
+
+---
+
+## Edge Cases / Notes
+
+- **Bulk actions are not permission-checked.** **DELETE**, **Enable** and **Disable** above the table are available to anyone who can open the page, including while pricing is locked.
+- **The Product menu stays available while pricing is locked.** You can still open the product forms, but the price fields are read-only.
+- **Filter only covers the current page.** Use **Search** to look across every product.
+- **Is Favorite.** Some stores show the **Is Trending** column as **Is Favorite**. It works the same way.
+- **One New Arrival tag per store.** Reopening **Add New Arrival** edits the existing tag.
+- **View mode.** Opening a product with **View** shows the same form with every field read-only and no **Submit** button.
+- **Variant rows need a weight and a price.** A variant or setting metal row without both **Metal Weight** and **Retail Price** is not saved.

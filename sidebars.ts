@@ -22,10 +22,11 @@ const sidebars: SidebarsConfig = {
       'Orders Management',
       [
         {type: 'doc', id: 'order-management/orders', label: 'Orders'},
+        {type: 'doc', id: 'enquiry', label: 'Enquiry'},
         {type: 'doc', id: 'order-management/manufacturer-charges', label: 'Manufacturer Charges'},
       ],
       'order-management',
-      'View orders, track their status and manage manufacturer charge templates.',
+      'View orders, track their status, follow the requests sent to TCC Tech and manage manufacturer charge templates.',
     ),
 
     section(
@@ -191,9 +192,10 @@ const sidebars: SidebarsConfig = {
         {type: 'doc', id: 'settings/email-template', label: 'Email Template'},
         {type: 'doc', id: 'settings/invoice-template', label: 'Invoice Template'},
         {type: 'doc', id: 'settings/audit-log', label: 'Audit Log'},
+        {type: 'doc', id: 'error-logs', label: 'Error Logs'},
       ],
       'settings',
-      'Store-wide settings for margins, metal rates, tax, currency, SKU format and the audit log.',
+      'Store-wide settings for margins, metal rates, tax, currency, SKU format, the audit log and error logs.',
     ),
 
     section('Subscription & Billing', [{type: 'doc', id: 'subscription', label: 'Subscription & Billing'}]),
