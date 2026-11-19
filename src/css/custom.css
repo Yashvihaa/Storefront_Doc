@@ -605,6 +605,36 @@ body {
   color: var(--sf-link);
 }
 
+/* ---------- Tenant / super admin view (src/audience.ts) ---------- */
+
+/* Super-admin menu items and <SuperAdminOnly> blocks: hidden unless the reader is a super admin. */
+html:not([data-audience='super-admin']) .sf-super-admin {
+  display: none !important;
+}
+
+/* A super-admin page opened by a tenant: the notice replaces the page content. */
+.sf-audience-notice {
+  display: none;
+}
+
+html:not([data-audience='super-admin']) .sf-super-admin-page .sf-audience-notice {
+  display: block;
+}
+
+html:not([data-audience='super-admin']) .sf-super-admin-page :is(
+    .theme-doc-breadcrumbs,
+    .theme-doc-markdown,
+    .theme-doc-toc-desktop,
+    .theme-doc-toc-mobile,
+    .pagination-nav,
+    .theme-doc-footer,
+    [class*='generatedIndexPage'] > header,
+    [class*='generatedIndexPage'] > article,
+    [class*='generatedIndexPage'] > footer
+  ) {
+  display: none !important;
+}
+
 /* ---------- On this page ---------- */
 
 .theme-doc-toc-desktop::before {

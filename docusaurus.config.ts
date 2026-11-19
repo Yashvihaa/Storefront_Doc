@@ -1,4 +1,13 @@
 import {themes as prismThemes} from 'prism-react-renderer';
+
+// The docs-access key and IV (see src/plugins/audience.ts) live in .env.local or .env, never in git.
+for (const file of ['.env.local', '.env']) {
+  try {
+    process.loadEnvFile(file);
+  } catch {
+    // The file is optional.
+  }
+}
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
@@ -49,6 +58,9 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+
+  // Tenants see only their admin menu's pages; super admins see everything (src/audience.ts).
+  plugins: ['./src/plugins/audience.ts'],
 
   // Offline search: the index is built from the docs at build time, no external service.
   themes: [

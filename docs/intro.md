@@ -89,9 +89,16 @@ After your first sign-in, work through these pages in order:
 | 3 | Add users and give each one a role and a store | [User Management](./roles-permission/user-management.md) |
 | 4 | Assign user licences to your team | [Subscription & Billing](./subscription.md#users--licences) |
 | 5 | Set metal rates, tax, margins and price display | [Settings](/settings) |
-| 6 | Set up the master data your products use (shapes, stones, metals, sizes) | [Masters](/product-management/masters) |
-| 7 | Choose the options each configurator offers | [Configurators](/configurators) |
-| 8 | Add your products | [Product Management](/product-management) |
+| 6 | Choose the options each configurator offers | [Configurators](/configurators) |
+| 7 | Add your products | [Product Management](/product-management) |
+
+<SuperAdminOnly>
+
+:::note[Super admins]
+The master data products use (shapes, stones, metals, sizes) is shared by every store and is set up by TCC Tech in [Masters](/product-management/masters).
+:::
+
+</SuperAdminOnly>
 
 ---
 
@@ -135,15 +142,31 @@ The guide follows the admin panel's side menu.
 | ------- | ------ |
 | [Dashboard](./dashboard.md) | Orders, website visitors, revenue, best sellers and store health at a glance. |
 | [Analytics](./analytics.md) | Catalog, customer and sales insights, grouped into tabs. |
-| [Orders Management](/order-management) | Orders, the manufacturing comparison, manufacturer charge templates and, for TCC Tech, the [Enquiry](./enquiry.md) page of requests clients send to TCC Tech. |
-| [Product Management](/product-management) | Products, masters, configurator products (including birthstone products), diamond prices and offers. |
+| [Orders Management](/order-management) | Orders, the manufacturing comparison and manufacturer charge templates. |
+| [Product Management](/product-management) | Products, configurator products (including birthstone products), diamond prices and offers. |
 | [Customer Management](/customer-management) | Customer accounts and customer reports. |
 | [Cart & Wishlist Management](/sales-funnel) | Products customers have added to their carts and wishlists. |
 | [Roles & Permission](/roles-permission) | Roles, users and stores. |
 | [Configurators](/configurators) | The options customers can choose in each configurator. |
-| [Settings](/settings) | Margin rules, metal rates, currency, tax, SKU builder, email and invoice templates, the audit log and, for TCC Tech, [Error Logs](./error-logs.md). |
+| [Settings](/settings) | Margin rules, metal rates, currency and tax. |
 | [Subscription & Billing](./subscription.md) | Your plan, enabled configurators, user licences and billing history. |
 | [Front End Setting](./settings/front-end-setting.md) | Website design, gift charges, price display and company info. |
+
+<SuperAdminOnly>
+
+**Super admin pages.** These pages are only in the TCC Tech super admin portal:
+
+| Page | Covers |
+| ---- | ------ |
+| [Enquiry](./enquiry.md) | CAD orders, manufacturer orders and price requests clients send to TCC Tech. |
+| [Masters](/product-management/masters) | The shared master data products are built from: metals, shapes, stones, sizes, settings and tags. |
+| [Labour Management](./settings/margin-cost-center/labour-management.md) | Labour charges for each metal and karat. |
+| [SKU Builder](./settings/sku-builder.md) | The SKU format used by every store. |
+| [Email Template](./settings/email-template.md) and [Invoice Template](./settings/invoice-template.md) | The emails and invoices every store sends. |
+| [Audit Log](./settings/audit-log.md) | Who changed what, and when. |
+| [Error Logs](./error-logs.md) | Every failed request across all clients. |
+
+</SuperAdminOnly>
 
 ### How Each Page Is Laid Out
 
@@ -158,10 +181,6 @@ Every module page has the same five sections:
 | **Edge Cases / Notes** | Limits and rules that are easy to miss. |
 
 **Note** and **Tip** boxes highlight rules that are easy to miss.
-
-:::note[TCC Tech pages]
-[Enquiry](./enquiry.md) and [Error Logs](./error-logs.md) are platform pages for TCC Tech's super admins. They do not appear in a client's admin panel.
-:::
 
 :::tip
 Several admin screens have a **View Documentation** button that opens the matching page of this guide in a new tab.

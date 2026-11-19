@@ -1,7 +1,16 @@
 import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
+import {SUPER_ADMIN_CLASS} from './src/audience';
 
 // Mirrors the admin panel's side menu: one heading per menu section, with the same groups and page names.
 // Doc ids are folder path + the `id` in each page's front matter.
+
+// Menu items only TCC Tech super admins have (is_for_super_admin = 1): hidden from tenants.
+// Keep in step with SUPER_ADMIN_PATHS in src/audience.ts.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const superAdmin = (item: Record<string, any>) => ({
+  ...item,
+  className: [item.className, SUPER_ADMIN_CLASS].filter(Boolean).join(' '),
+});
 
 const section = (label: string, items: NonNullable<SidebarsConfig[string]>, slug?: string, description?: string) => ({
   type: 'category' as const,
@@ -22,11 +31,11 @@ const sidebars: SidebarsConfig = {
       'Orders Management',
       [
         {type: 'doc', id: 'order-management/orders', label: 'Orders'},
-        {type: 'doc', id: 'enquiry', label: 'Enquiry'},
+        superAdmin({type: 'doc', id: 'enquiry', label: 'Enquiry'}),
         {type: 'doc', id: 'order-management/manufacturer-charges', label: 'Manufacturer Charges'},
       ],
       'order-management',
-      'View orders, track their status, follow the requests sent to TCC Tech and manage manufacturer charge templates.',
+      'View orders, track their status and manage manufacturer charge templates.',
     ),
 
     section(
@@ -47,18 +56,18 @@ const sidebars: SidebarsConfig = {
             {type: 'doc', id: 'product-management/configurator-products/bracelet-configurator', label: 'Bracelet Configurator'},
             {type: 'doc', id: 'product-management/configurator-products/stud-configurator', label: 'Stud Configurator'},
             {type: 'doc', id: 'product-management/configurator-products/pendant-configurator', label: 'Pendant Configurator'},
-            {
+            superAdmin({
               type: 'link',
               label: 'Add Birthstone Products',
               href: '/product-management/configurator-products/birthstone-products#add-a-new-birthstone-product',
-            },
+            }),
             {type: 'doc', id: 'product-management/configurator-products/birthstone-products', label: 'All Birthstone Products'},
           ],
         },
         {type: 'doc', id: 'product-management/offers-discounts', label: 'Offers / Coupon code'},
         {type: 'doc', id: 'product-management/diamond-group-master', label: 'Diamond Group Master'},
         {type: 'doc', id: 'product-management/all-products', label: 'All Products'},
-        {
+        superAdmin({
           type: 'category',
           label: 'Masters',
           link: {
@@ -99,7 +108,7 @@ const sidebars: SidebarsConfig = {
             'product-management/masters/item-length-master',
             'product-management/masters/tags',
           ],
-        },
+        }),
       ],
       'product-management',
       'Manage products, configurator products, diamond group pricing and offers.',
@@ -182,20 +191,20 @@ const sidebars: SidebarsConfig = {
             {type: 'doc', id: 'settings/margin-cost-center/diamond-margin', label: 'Diamond Margin'},
             {type: 'doc', id: 'settings/margin-cost-center/product-margin', label: 'Product Margin'},
             {type: 'doc', id: 'settings/margin-cost-center/duty-and-tariff', label: 'Duty & Tariff'},
-            {type: 'doc', id: 'settings/margin-cost-center/labour-management', label: 'Labour Management'},
+            superAdmin({type: 'doc', id: 'settings/margin-cost-center/labour-management', label: 'Labour Management'}),
           ],
         },
         {type: 'doc', id: 'settings/metal-rate-setting', label: 'Metal Rate Settings'},
         {type: 'doc', id: 'settings/multi-currency', label: 'Multi Currency'},
         {type: 'doc', id: 'settings/tax-master', label: 'Tax Master'},
-        {type: 'doc', id: 'settings/sku-builder', label: 'SKU Builder'},
-        {type: 'doc', id: 'settings/email-template', label: 'Email Template'},
-        {type: 'doc', id: 'settings/invoice-template', label: 'Invoice Template'},
-        {type: 'doc', id: 'settings/audit-log', label: 'Audit Log'},
-        {type: 'doc', id: 'error-logs', label: 'Error Logs'},
+        superAdmin({type: 'doc', id: 'settings/sku-builder', label: 'SKU Builder'}),
+        superAdmin({type: 'doc', id: 'settings/email-template', label: 'Email Template'}),
+        superAdmin({type: 'doc', id: 'settings/invoice-template', label: 'Invoice Template'}),
+        superAdmin({type: 'doc', id: 'settings/audit-log', label: 'Audit Log'}),
+        superAdmin({type: 'doc', id: 'error-logs', label: 'Error Logs'}),
       ],
       'settings',
-      'Store-wide settings for margins, metal rates, tax, currency, SKU format, the audit log and error logs.',
+      'Store-wide settings for margins, metal rates, tax and currency.',
     ),
 
     section('Subscription & Billing', [{type: 'doc', id: 'subscription', label: 'Subscription & Billing'}]),
