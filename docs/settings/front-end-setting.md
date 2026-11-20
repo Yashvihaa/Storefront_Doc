@@ -123,7 +123,7 @@ Each section saves on its own. Switching to another section or tab discards chan
 1. Open **Configurator Design**.
 2. Click the preview image of a card to look at it full screen, if you want.
 3. Click the card you want.
-4. Click **Save**. The message returned by the system confirms it.
+4. Click **Save**. A confirmation message appears.
 
 ### Steps to Change Pricing (TCC Tech only)
 
@@ -135,7 +135,7 @@ Each section saves on its own. Switching to another section or tab discards chan
 
 1. In the super admin portal, open **General Setting**, then **Web Settings**.
 2. Change the fields. Click the eye icon to check a hidden value.
-3. Click **Save**. The message returned by the system confirms it and the values reload.
+3. Click **Save**. A confirmation message appears and the values reload.
 
 ### Loading and Error States
 

@@ -59,7 +59,7 @@ When your store uses **TCC_TECH Pricing + Margin** on the [Price Display](../../
 
 ### Bulk Upload Errors
 
-When the server rejects rows in a **Bulk Edit** file, a table appears above the list:
+When some rows in a **Bulk Edit** file are rejected, a table appears above the list:
 
 | Column | Description |
 | ------ | ----------- |
@@ -155,9 +155,9 @@ TCC Tech owns the pendant catalog and adds new pendants to it. Every store sees 
 1. Click **Export Excel** to get the current products by email, or click the **Download** icon to get an empty sample file.
 2. Fill in or change the rows, keeping the headings from the sample.
 3. Click **Bulk Edit** and select the file.
-4. When the file is accepted, the server's success message appears and the list reloads.
+4. When the file is accepted, a success message appears and the list reloads.
 
-If the file is rejected, an error message appears. When the server lists the failed rows, the [Bulk Upload Errors](#bulk-upload-errors) table appears above the list. Correct those rows and upload the file again. The table is cleared after the next successful bulk edit.
+If the file is rejected, an error message appears. When particular rows failed, the [Bulk Upload Errors](#bulk-upload-errors) table appears above the list. Correct those rows and upload the file again. The table is cleared after the next successful bulk edit.
 
 Bulk Edit is refused unless your store uses **Own Pricing + Margin** on [Price Display](../../settings/price-display.md).
 
@@ -282,5 +282,5 @@ Set the options before downloading. The PDF shows the stone, color, clarity, cut
 - **The PDF has no rounding line.** Its **Final Retail Price** is the price before rounding.
 - **Side Stone Color & Clarity.** The field label reads **Side Stone Color & Clarity**, while the box inside it reads **Side Diamond Color & Clarity**. They are the same field.
 - **Sorting is limited.** Only **Product SKU** sorts the list.
-- **Bulk Edit and No Pricing Display.** With **No Pricing Display**, the page is not locked, but the server still refuses **Bulk Edit** because labour charges come from TCC Tech.
+- **Bulk Edit and No Pricing Display.** With **No Pricing Display**, the page is not locked, but **Bulk Edit** is still refused because labour charges come from TCC Tech.
 - **Export by email.** Neither export downloads a file in the browser. Check the inbox of the email address you sign in with.

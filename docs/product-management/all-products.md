@@ -123,7 +123,7 @@ Each margin line is labelled **Margin** or **Markup** according to the pricing t
 - **Filter** boxes only narrow the rows already on the current page.
 - Products are listed newest first, 50 per page by default. Click the **Name**, **Parent SKU**, **SKU**, **Product Type**, **Category Name** or **Is Trending** header to sort; the whole list is re-sorted, not just the current page. **Image**, **Pricing**, the two **Status** columns and **Arrival Status** cannot be sorted.
 - The page number and rows per page are kept in the page address.
-- After a switch is changed, the message **Successfully updated** appears and the list reloads. After a delete, bulk action or tag change, the server's message appears and the list reloads.
+- After a switch is changed, the message **Successfully updated** appears and the list reloads. After a delete, bulk action or tag change, a confirmation message appears and the list reloads.
 
 ### Steps to Apply the New Arrival Tag
 
@@ -266,7 +266,7 @@ The differences from the Variant Product form are:
 
 ### Saving a Product
 
-In every product form, if a required field is missing when you click **Submit**, the form shows the error under the field and scrolls to the first field with an error. If the server rejects the product, its message appears as a notification and you stay on the form.
+In every product form, if a required field is missing when you click **Submit**, the form shows the error under the field and scrolls to the first field with an error. If the product cannot be saved, the reason appears as a notification and you stay on the form.
 
 ### Pricing Lock
 
@@ -285,7 +285,7 @@ Switch to **Own Pricing + Margin** on [Price Display](../settings/price-display.
 | Loading the list | The table shows a loading indicator. |
 | No products match | **No records to display** |
 | Loading a product form | A loading spinner fills the page. |
-| A list action fails | The server's message, or a general error message, appears as a notification. |
+| A list action fails | An error message appears as a notification. |
 
 ---
 

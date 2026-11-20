@@ -117,7 +117,7 @@ Under each field, a sample line (*Handcrafted Diamond Rings in 14K & 18K Gold, f
 
 1. Open the **Color** section.
 2. For each colour, type a hex code, click a swatch, or open the custom picker.
-3. Click **Save**. The message returned by the system confirms it.
+3. Click **Save**. A confirmation message appears.
 
 The admin dashboard and header pick up the new colours straight away.
 

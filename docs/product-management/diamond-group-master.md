@@ -119,7 +119,7 @@ After a revert or reset, a green bar names the action and summarises how many di
 3. Enter a **Natural Price**, a **Lab Grown Price** or both, and the **Min Carat** and **Max Carat**.
 4. Click **Add Diamond**. Click **Cancel** to close without saving.
 
-To change a record, click its **Edit** icon, change the fields and click **Save Diamond**. The server's message appears and the list reloads.
+To change a record, click its **Edit** icon, change the fields and click **Save Diamond**. A confirmation message appears and the list reloads.
 
 The save is refused when:
 
@@ -141,7 +141,7 @@ If you change the stone to a gemstone, the **Color** and **Clarity** fields disa
 
 The export includes only active diamonds that belong to the configurators your store has bought. The file uses the same columns as the upload, so you can edit it and upload it again.
 
-While the file is processed the progress line stops at 99%. When the server finishes, the line fills to 100%, **Uploaded. Waiting for server** is shown briefly and the server's success message appears. If processing takes longer than about 15 seconds, the red message **Upload failed at 99%. Please try again.** appears under the buttons. If rows are rejected, the [Upload Errors Popup](#upload-errors-popup) opens; correct those rows and upload the file again.
+While the file is processed the progress line stops at 99%. When processing finishes, the line fills to 100%, **Uploaded. Waiting for server** is shown briefly and a success message appears. If processing takes longer than about 15 seconds, the red message **Upload failed at 99%. Please try again.** appears under the buttons. If rows are rejected, the [Upload Errors Popup](#upload-errors-popup) opens; correct those rows and upload the file again.
 
 ### Revert and Reset
 
@@ -169,7 +169,7 @@ Click **Filter** in the row to apply the selection. The button is enabled once a
 | Loading the list | The table shows a loading indicator. |
 | No records match | **No records to display** |
 | Upload sent but not processed in time | **Upload failed at 99%. Please try again.** in red under the buttons. |
-| A save, delete or status change fails | The server's message appears as a notification. |
+| A save, delete or status change fails | An error message appears as a notification. |
 
 ---
 
@@ -212,7 +212,7 @@ Click **Filter** in the row to apply the selection. The button is enabled once a
 - **Search and the origin switch only cover the current page.** Use **Filter** to search across every record.
 - **Delete is blocked for linked records.** A record used by a birthstone product's stone row cannot be deleted. The message reads *This item is currently linked to other modules, Please remove or update the related records before attempting to delete it.*
 - **Edit and Delete icons.** They are not switched off by role permissions. They are disabled only while pricing is locked.
-- **No Pricing Display.** With **No Pricing Display**, the list also shows TCC Tech's diamonds and the server refuses changes, but the page does not show the lock notice.
+- **No Pricing Display.** With **No Pricing Display**, the list also shows TCC Tech's diamonds and changes are refused, but the page does not show the lock notice.
 - **Custom export adds master values.** A color, clarity or cut name typed in **Add Custom** that does not exist yet is created in the master, for every store.
 - **Status flips.** Confirming the status popup switches the record to the other status.
 - **Changes are logged.** Adding, editing, deleting and changing the status of a record are recorded in the [Audit Log](../settings/audit-log.md).

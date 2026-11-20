@@ -58,11 +58,11 @@ When your store uses **TCC_TECH Pricing + Margin** on the [Price Display](../../
 
 ### Bulk Upload Errors
 
-When the server rejects rows in a **Bulk Edit** file, a table appears above the list:
+When some rows in a **Bulk Edit** file are rejected, a table appears above the list:
 
 | Column | Description |
 | ------ | ----------- |
-| **Row Id / Product Style No.** | The failed record, shown as **Row Id**, **Head No**, **Shank No** or **Band No**, depending on what the server returns. |
+| **Row Id / Product Style No.** | The failed record, shown as **Row Id**, **Head No**, **Shank No** or **Band No**, whichever applies to the row. |
 | **Error Message** | Why the record could not be saved. |
 
 ### Configuration Options
@@ -154,9 +154,9 @@ TCC Tech owns the eternity band catalog and adds new bands to it. Every store se
 1. Click **Export Excel** to get the current products by email, or click the **Download** icon to get an empty sample file.
 2. Fill in or change the rows, keeping the headings from the sample.
 3. Click **Bulk Edit** and select the file.
-4. When the file is accepted, the server's success message appears and the list reloads.
+4. When the file is accepted, a success message appears and the list reloads.
 
-If the file is rejected, an error message appears. When the server lists the failed rows, the [Bulk Upload Errors](#bulk-upload-errors) table appears above the list. Correct those rows and upload the file again. The table is cleared after the next successful bulk edit.
+If the file is rejected, an error message appears. When particular rows failed, the [Bulk Upload Errors](#bulk-upload-errors) table appears above the list. Correct those rows and upload the file again. The table is cleared after the next successful bulk edit.
 
 Bulk Edit is refused unless your store uses **Own Pricing + Margin** on [Price Display](../../settings/price-display.md).
 
@@ -279,5 +279,5 @@ Set the options before downloading. The PDF shows the stones currently selected.
 - **The PDF has no rounding line.** Its **Final Retail Price** is the price before rounding.
 - **Metal Tone does not change the price.** It is shown on the detail page but not used in the calculation.
 - **Side diamond options depend on the band.** **Side Cut** and **Side Diamond Color & Clarity** appear only when you open a band that has side diamonds from the list.
-- **Bulk Edit and No Pricing Display.** With **No Pricing Display**, the page is not locked, but the server still refuses **Bulk Edit** because labour charges come from TCC Tech.
+- **Bulk Edit and No Pricing Display.** With **No Pricing Display**, the page is not locked, but **Bulk Edit** is still refused because labour charges come from TCC Tech.
 - **Export by email.** **Export Excel** does not download a file in the browser. Check the inbox of the email address you sign in with.

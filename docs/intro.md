@@ -27,7 +27,7 @@ Storefront is built for **configure-to-order** jewelry. Most of what you sell is
 
 | Feature | What it means for you |
 | ------- | --------------------- |
-| **Your own brand** | The website shows your logo, your brand colors and your own web address. Customers see your business, not TCC. |
+| **Your own brand** | The website shows your logo, your brand colors and your own web address. Customers see your business. |
 | **Configurators** | Step-by-step design tools for each type of jewelry, such as rings, earrings, pendants, bracelets and eternity bands. You choose which configurators to subscribe to and which options each one offers. |
 | **Calculated pricing** | Prices are worked out from the metal rates, diamond prices, margins, rounding and tax you set in the admin panel. When a rate changes, prices follow without editing each product. |
 | **Several stores** | One account covers all of your store locations. |

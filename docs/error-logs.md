@@ -8,7 +8,7 @@ sidebar_label: Error Logs
 
 ## Overview
 
-**Error Logs** lists every failed request the Storefront platform has recorded, for every client together. Each log shows the error message, the status code, the client it belongs to, the user who made the request and when it happened. One click opens the full details, including the request that was sent and the response that came back.
+**Error Logs** lists every failed action the Storefront platform has recorded, for every client together. Each log shows the error message, the status code, the client it belongs to, the user who did the action and when it happened. One click opens the full details, including what was sent and the answer that came back.
 
 The page is read-only. You can search, filter and read logs, but you cannot add, edit, resolve or delete them. Use it to find out why something failed for a client, for example why a product would not save or why an order could not be placed, without asking the client to repeat the steps.
 
@@ -78,7 +78,7 @@ The page is made up of these cards:
 
 | Card | What it shows |
 | ---- | ------------- |
-| **Error** | The error message in large text (or *No message was logged*), the status code badge with its name, and the client tag. Below them: **Log ID**, **Status code**, **Error type** (the kind of error, for example *Error* or *SequelizeDatabaseError*) and **Created date**. |
+| **Error** | The error message in large text (or *No message was logged*), the status code badge with its name, and the client tag. Below them: **Log ID**, **Status code**, **Error type** (the kind of error, for example *Error*) and **Created date**. |
 | **Validation errors** | Shown only when the error lists problems with individual fields. One row per problem with **#**, **Message**, **Location** (where the value was sent, for example *body*) and **Value** (the value that was sent, or **-**). The header shows the number of items. |
 | **Logged by** | The user's initials, name (or *Unknown user*) and role, then **User ID** and **Client (company ID)**. |
 | **Response** | The response the request got, with its status code badge. |
@@ -98,21 +98,21 @@ A folded object or list shows how many keys or items it holds, for example **3 k
 
 ## How It Works
 
-### Where Logs Come From
+### When a Log Is Added
 
-A log is written automatically each time a request to the Storefront API fails. This covers both the admin panel and the storefront website. A request counts as failed when the API answers with anything other than success, or when something goes wrong while handling it. Nobody creates logs by hand.
+A log is added automatically each time an action fails, in the admin panel or on the storefront website. For example, a save that cannot be completed or a page whose data cannot be loaded. Nobody creates logs by hand.
 
-Each log records:
+Each log keeps:
 
-- the error as it happened, including its message, type and code
-- the request: the data sent, the values in the web address and the path values
-- the response sent back
-- the client and the signed-in user, taken from the user's verified sign-in. A client ID sent in the request itself is never used.
+- the error, with its message, type and code
+- what was sent for the action (shown in the **Request** card)
+- the answer that came back (shown in the **Response** card)
+- the client and the signed-in user who did the action
 - the date and time
 
 ### How Each Column Is Filled
 
-| Column | Where the value comes from |
+| Column | What it shows |
 | ------ | -------------------------- |
 | **Error Message** | The error's own message. If it has none, the message in the response. If that is missing too, the error type. |
 | **Status Code** | The status of the response. If there is none, the error's code. |
@@ -120,11 +120,11 @@ Each log records:
 | **Created By** | The user's business name. If none is set, the contact person of the user's company. If that is missing too, the username. |
 | **Role** (in **Logged by**) | **admin** for a client's main administrator, otherwise the name of the user's role as set on the [Roles](./roles-permission/roles.md) page. |
 
-The client, user name and role are looked up when you open the page, not stored with the log. If a user or role is renamed later, older logs show the new name.
+The client, user name and role always show their current names. If a user or role is renamed later, older logs show the new name.
 
 ### Hidden Sensitive Values
 
-Before a log is shown, values in fields whose names suggest secrets are replaced with `******`. This includes fields named like a password, PIN, OTP, token, secret, authorization, API key, card, CVV or CVC. The masking happens on the request, the response and the error details.
+Values that look secret are shown as `******`. This covers fields named like a password, PIN, OTP, token, secret, authorization, key, card, CVV or CVC, in the **Request**, the **Response** and the error details.
 
 ### Search, Filters and Paging
 
@@ -149,11 +149,11 @@ Before a log is shown, values in fields whose names suggest secrets are replaced
 
 | Module | How Error Logs uses it |
 | ------ | ---------------------- |
-| **Every admin and storefront feature** | Any failed request from any page, configurator or storefront action creates a log. A change that makes a feature fail more often shows up here as more logs. |
-| [User Management](./roles-permission/user-management.md) | Supplies the name shown in **Created By** and **Logged by**. |
-| [Roles](./roles-permission/roles.md) | Supplies the role shown in **Logged by**. Renaming a role changes it on old logs too. |
+| **Every admin and storefront feature** | Any failed action on any page, configurator or the storefront adds a log. A change that makes a feature fail more often shows up here as more logs. |
+| [User Management](./roles-permission/user-management.md) | The user's name is shown in **Created By** and **Logged by**. |
+| [Roles](./roles-permission/roles.md) | The user's role is shown in **Logged by**. Renaming a role changes it on old logs too. |
 | Client companies (super admin client management) | The **All Tenants** list shows every client company by name. When a company has no name, its key is shown instead. |
-| Sign-in | The client and user are taken from the signed-in session. Requests without a signed-in user have no client and no **Created By**. |
+| Sign-in | The client and user are those of the person signed in. Actions done without signing in have no client and no **Created By**. |
 
 ### Modules That Depend On It
 
@@ -172,11 +172,11 @@ None. No other page reads error logs, and nothing in the admin panel or on the s
 
 ## Edge Cases / Notes
 
-- **Logs without a client.** Requests made without a signed-in client user, such as storefront visitors, failed sign-ins and payment webhooks, are logged with no client. They appear under **All Tenants** with **-** in **Client** and **Created By**. You cannot pick them on their own with the tenant filter.
-- **Not every failure is logged.** Only requests that reach the part of the API that does the work are logged. A request turned away earlier, for example by a sign-in or permission check or by a check on the values sent, does not create a log.
+- **Logs without a client.** Failures with no signed-in client user, such as storefront visitors, failed sign-ins and payment updates, are logged with no client. They appear under **All Tenants** with **-** in **Client** and **Created By**. You cannot pick them on their own with the tenant filter.
+- **Not every failure is logged.** An action stopped early, for example because the user is not signed in, lacks permission or entered invalid values, does not add a log.
 - **The tenant list shows every client.** The **All Tenants** list includes every client company, not only those that have logged errors. Picking a client with no logs shows **No records to display**.
 - **Masking goes by field name.** Any field whose name contains one of the masked words is hidden, even if it is not secret. For example, a field such as `shipping_method` contains "pin", so its value shows as `******`.
-- **Copy as JSON copies more than the page shows.** The copied text also holds the API path and method of the request, the error's stack trace (when one was logged) and the signed-in user's access token. Treat it as sensitive and share it only with people who need it.
+- **Copy as JSON copies more than the page shows.** The copied text also holds technical details that the page does not show, including the signed-in user's sign-in token. Treat it as sensitive and share it only with people who need it.
 - **Status codes that are not numbers.** Some errors carry a text code instead of a number. It is shown as it is, with a grey badge.
 - **Date range.** The list cannot be filtered by date on this page. Use paging, or narrow the logs with search and the filters.
 

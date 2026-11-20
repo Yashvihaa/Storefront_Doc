@@ -90,7 +90,7 @@ The list opens with the most recent **Last Activity** first. Clicking any column
 
 - The search covers every customer you can see, not just the current page. It matches the name, email or phone number, ignoring case.
 - The **Filter** boxes under the column headings only narrow the rows already on the current page.
-- Changing the page size or page loads that page from the server.
+- Changing the page or the page size loads that page again.
 
 ### Loading, Empty and Error States
 

@@ -133,7 +133,7 @@ None. No other page reads audit logs, and nothing in the admin panel or on the s
 - **Sign-in and OTP activity is hidden.** Sign-ins, OTP checks and similar account security events are not listed.
 - **Template changes are not listed.** Changes to [Email Template](./email-template.md) and [Invoice Template](./invoice-template.md) are shared by every client and are not shown here.
 - **No search box.** You cannot search by text. Narrow the list with the dates, then use the **Filter** boxes on the current page.
-- **Values are shown as saved.** Field names are made readable, but values come from the stored record, so some appear as system values, for example *percentage* or *RING_CONFIGURATOR*.
+- **Values are shown as saved.** Field names are made readable, but values are shown exactly as saved, so some appear as system values, for example *percentage* or *RING_CONFIGURATOR*.
 
 :::tip
 When a client says a change did not save, look for it here first. If there is no record, a TCC super admin can check [Error Logs](../error-logs.md) for the failed request and the reason it failed.

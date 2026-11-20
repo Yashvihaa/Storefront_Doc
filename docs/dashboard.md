@@ -11,7 +11,7 @@ sidebar_label: Dashboard
 
 The **Dashboard** is the first page you see after signing in. Under the heading **DASHBOARD OVERVIEW** it gives a one-screen summary of order flow, revenue, store health and your latest orders for the period you choose.
 
-Below the heading you see a welcome line such as *Welcome back, Your Company Admin. Here's how your store is doing this month.* The company name comes from your [Company Info](./settings/company-info.md). If none is set, only **Admin** is shown. The end of the sentence changes with the period you pick (*today*, *this week*, *this month* or *this year*). Under it, the line *All displayed prices are in USD* reminds you how amounts are shown.
+Below the heading you see a welcome line such as *Welcome back, Your Company Admin. Here's how your store is doing this month.* It shows your company name as set in [Company Info](./settings/company-info.md). If no name is set, it shows only **Admin**. The end of the sentence changes with the period you pick (*today*, *this week*, *this month* or *this year*). Under it, the line *All displayed prices are in USD* reminds you how amounts are shown.
 
 The Dashboard is read-only. It shows figures from your orders but does not change anything.
 
@@ -86,11 +86,11 @@ The comparison note depends on the period:
 
 ### Web Analytics
 
-A bar chart of website visitors titled **Web analytics**, with the line *Total number of website visitors is …*. At present the Dashboard does not receive visitor data, so this card shows a total of **0** and an empty chart. Use [Analytics](./analytics.md) for traffic and behaviour insights.
+A bar chart of website visitors titled **Web analytics**, with the line *Total number of website visitors is …*. Visitor figures are not shown here yet, so this card shows a total of **0** and an empty chart. Use [Analytics](./analytics.md) for traffic and behaviour insights.
 
 ### Store Health
 
-Shows whether the services behind your store are working.
+Shows whether your store is up and running.
 
 | Check | Healthy when the status reads |
 | ----- | ----------------------------- |
@@ -102,9 +102,9 @@ Shows whether the services behind your store are working.
 | Status color | Meaning | Example |
 | ------------ | ------- | ------- |
 | Grey dash | The check is still running | **—** |
-| Green | The service is healthy | **Up**, **Ready** |
-| Orange | The service reported a problem | **Degraded**, **Down**, **Not Ready** |
-| Orange | The service could not be reached | **Unreachable** |
+| Green | Working normally | **Up**, **Ready** |
+| Orange | There is a problem | **Degraded**, **Down**, **Not Ready** |
+| Orange | The check could not be completed | **Unreachable** |
 
 A **View Store Health** link sits under the checks. It does not open another page.
 
@@ -138,7 +138,7 @@ Amounts on the vertical axis are shortened (for example **$800**, **$45K**, **$1
 | **SKU** | Product SKU code |
 | **Orders** | Number of orders that included the product |
 
-At present the Dashboard does not receive top-selling data, so the card shows **Data Not Available**.
+Top-selling figures are not shown here yet, so the card shows **Data Not Available**.
 
 ### Recent Orders
 
@@ -203,8 +203,8 @@ An order belongs to a period by its order date. The summary cards, the revenue c
 
 | State | What you see |
 | ----- | ------------ |
-| First load | Each summary card shows a small placeholder instead of a number. Until the figures arrive, **Revenue Analytics** shows **$0.00** and **Recent Orders** shows **Data Not Available**. |
-| Changing the period | The figures are reloaded. The previous figures stay on screen until the new ones arrive, instead of going blank. |
+| First load | Each summary card shows a small placeholder instead of a number. Until the figures load, **Revenue Analytics** shows **$0.00** and **Recent Orders** shows **Data Not Available**. |
+| Changing the period | The figures are reloaded. The previous figures stay on screen until the new ones load, instead of going blank. |
 | A health check is running | A grey dash beside the check. |
 | No orders in the selected tab | **Data Not Available** |
 | No top-selling data | **Data Not Available** |
@@ -220,16 +220,16 @@ The health checks run once when you open the Dashboard. Refresh the page to run 
 | Module | How the Dashboard uses it |
 | ------ | ------------------------- |
 | [Orders](./order-management/orders.md) | Every order card, the revenue chart and Recent Orders are worked out from your orders, their status, date and total. |
-| [Stores](./roles-permission/stores.md) | Decides which orders a user can see. Supplies the store name shown in **Customer** when an order has no customer name. |
+| [Stores](./roles-permission/stores.md) | Decides which orders a user can see. The store name is shown in **Customer** when an order has no customer name. |
 | [User Management](./roles-permission/user-management.md) | A user's store and the orders assigned to them decide which orders they see. |
 | [Roles](./roles-permission/roles.md) | Controls **View all orders**, the product row click and the quick action shortcuts. |
-| [Company Info](./settings/company-info.md) | Supplies the company name in the welcome line. |
+| [Company Info](./settings/company-info.md) | The company name set there is shown in the welcome line. |
 | [All Products](./product-management/all-products.md) | Opened by **Add New Product** and by a top-selling product row. |
 | [Offers & Discounts](./product-management/offers-discounts.md) | Opened by **Create Discount**. |
 
 ### Modules That Depend On It
 
-None. The Dashboard only reads data. No other page uses its figures.
+None. The Dashboard only shows figures. No other page uses them.
 
 ### What Changes If…
 
@@ -251,8 +251,8 @@ None. The Dashboard only reads data. No other page uses its figures.
 - **Confirmed has no tab of its own.** Confirmed orders appear under **Processing** in Recent Orders.
 - **Pending has no card of its own.** Pending orders are counted only in **Total Orders**.
 - **Amounts always show a $ sign.** Gross sales and order amounts are shown with **$**, as the header line *All displayed prices are in USD* says.
-- **The period follows the server's clock.** Today starts at midnight on the server, which may differ from your own time zone.
-- **Web analytics and Top Selling Products are empty.** These cards do not receive data yet.
+- **Today may not start at your midnight.** The periods follow the platform's time zone, which may differ from your own.
+- **Web analytics and Top Selling Products are empty.** These cards do not show figures yet.
 
 :::tip
 The Dashboard lists only the latest 10 orders. Click **View all orders** to search, filter and open any order. See [Orders](./order-management/orders.md).

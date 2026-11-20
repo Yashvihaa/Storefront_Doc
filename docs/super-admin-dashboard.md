@@ -95,7 +95,7 @@ Only some figures follow the period:
 
 When you switch periods, the old figures stay on screen until the new ones arrive.
 
-### Where the Figures Come From
+### What the Figures Count
 
 | Figure | Rule |
 | ------ | ---- |

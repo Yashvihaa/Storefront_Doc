@@ -183,9 +183,9 @@ Every period is a rolling range that ends today, the same as on the [Dashboard](
 4. Click another tab, for example **Customer Insights**, to see where visitors leave the journey.
 5. Hover over any chart for exact values.
 
-### Where the Figures Come From
+### What the Figures Count
 
-| Source | What counts |
+| Figures based on | What counts |
 | ------ | ----------- |
 | **Orders** | Your orders by order date. Revenue leaves out **Returned**, **Failed** and **Cancelled** orders, the same rule as the Dashboard. |
 | **Selections** | What customers picked: each option change in a configurator, plus items in carts, wishlists and orders. An ordered item is not counted again for the cart it left. Each selection is matched to its category, diamond shape, setting (head, else side setting), metal and stone. |
@@ -261,4 +261,4 @@ None. Analytics only reads data. No other page uses its figures.
 - **Visitors must be signed in.** Activity from storefront visitors who never identified themselves is not counted as a visitor, so conversion figures can look low.
 - **Cart and wishlist items ignore store rules.** Every user sees them for the whole company.
 - **Percentages are cut, not rounded.** Shares such as *57.14%* drop extra decimals.
-- **The period follows the server's clock.** Today starts at midnight on the server, which may differ from your own time zone.
+- **Today may not start at your midnight.** The periods follow the platform's time zone, which may differ from your own.

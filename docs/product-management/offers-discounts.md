@@ -160,7 +160,7 @@ Available every **1** week on **Monday**, **Tuesday** and **Wednesday**, between
 2. Complete the cards from top to bottom: [Offer Information](#offer-information), [Amount of products](#amount-of-products), [Discount on](#discount-on), [Discount type](#discount-type), [Usage limit](#usage-limit), [User Selection](#user-selection) and [Duration Scheduler](#duration-scheduler).
 3. Click **Save** at the top right. When you scroll down, **Save** stays pinned at the top of the page.
 
-After a successful save the message **Discount created successfully** appears and you are taken back to the Discount List. If a required field is missing or invalid, the page scrolls to the first field with an error. If the server rejects the offer, its message appears and you stay on the page.
+After a successful save the message **Discount created successfully** appears and you are taken back to the Discount List. If a required field is missing or invalid, the page scrolls to the first field with an error. If the offer cannot be saved, the reason appears and you stay on the page.
 
 There is no **Back** button on the Add and Edit pages. Use your browser's back button to leave without saving.
 
@@ -193,8 +193,8 @@ When you add a new offer and change the **Discount on** option, the discount typ
 | ----- | ------------ |
 | Loading the list | The table shows a loading indicator. |
 | No offers match | **No records to display** |
-| **Generate random code** fails | **Failed to generate random code**, or the server's message. |
-| Saving fails | The server's message appears and you stay on the form. |
+| **Generate random code** fails | **Failed to generate random code**, or another error message. |
+| Saving fails | An error message appears and you stay on the form. |
 
 ---
 
@@ -231,12 +231,12 @@ When you add a new offer and change the **Discount on** option, the discount typ
 
 ## Edge Cases / Notes
 
-- **Started offers cannot be saved with their old start.** The form lets you open and save an offer whose start has passed, but the server checks that the start date and time are in the future when you add **and** when you edit. Move the start to a future date and time before saving, or the save is refused with *The start date-time must be in the future.*
-- **End after start.** The form does not check that the end is after the start, but the server refuses the save with *End date-time must be after start date-time.*
+- **Started offers cannot be saved with their old start.** The form lets you open and save an offer whose start has passed, but saving checks that the start date and time are in the future when you add **and** when you edit. Move the start to a future date and time before saving, or the save is refused with *The start date-time must be in the future.*
+- **End after start.** The form does not check that the end is after the start, but the save is refused with *End date-time must be after start date-time.*
 - **Unique codes.** A discount code can be used by only one offer in your store. A repeated code is refused with *this coupon code already exist!!*.
 - **Code characters.** Codes may contain only capital letters A to Z and digits. Lower-case letters, spaces and symbols are refused.
 - **Price range of 0.** Leaving **Min. range amount** and **Max. range amount** at 0 means the offer applies at every price.
 - **No check on max versus min.** The form does not check that **Max. range amount** is higher than **Min. range amount**.
 - **Recurring schedule days.** The form does not check that at least one day is selected.
-- **Sorting.** Clicking a column header does not re-sort the list. Offers are listed in the order the server returns them.
+- **Sorting.** Clicking a column header does not re-sort the list. Offers always stay in their default order.
 - **Product types are not filtered.** All seven configurator types are listed in **Select product type**, even ones your store does not sell.

@@ -67,7 +67,7 @@ The list is sorted with the newest tax first, 50 taxes per page by default. Clic
 | Tax rate must be at least 0% | The rate is below 0. |
 | Tax rate cannot exceed 100% | The rate is above 100. |
 
-Other messages from the server:
+Other messages you may see:
 
 | Message | When it appears |
 | ------- | --------------- |

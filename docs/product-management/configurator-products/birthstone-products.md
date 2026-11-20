@@ -62,7 +62,7 @@ When the store's [Price Display](../../settings/price-display.md) is set to **TC
 
 ### Bulk Edit Errors
 
-When the server returns row errors, an error table appears at the top of the list:
+When some rows are rejected, an error table appears at the top of the list:
 
 | Column | Description |
 | ------ | ----------- |
@@ -193,7 +193,7 @@ Click the **View** icon to open the product in read-only mode. Text and number f
 2. Fill in one product per group of rows using the sample file's columns. Each product is matched by its SKU.
 3. Click **Bulk Edit** and select the file.
 
-When the file is accepted, a success message appears and the list reloads. If the file is rejected, an error message appears, and when the server returns row errors the [Bulk Edit Errors](#bulk-edit-errors) table is shown. Correct those rows and upload the file again. A file with any error saves nothing.
+When the file is accepted, a success message appears and the list reloads. If the file is rejected, an error message appears, and when particular rows are rejected the [Bulk Edit Errors](#bulk-edit-errors) table is shown. Correct those rows and upload the file again. A file with any error saves nothing.
 
 What a bulk edit changes depends on who uploads it:
 
@@ -222,7 +222,7 @@ When a product is switched off, it is removed from the customer carts and wishli
 | ----- | ------------ |
 | Loading the list | Placeholder rows. |
 | No products match | **No records to display** |
-| A save, delete or bulk edit fails | The server's message appears as a notification. |
+| A save, delete or bulk edit fails | An error message appears as a notification. |
 
 ---
 

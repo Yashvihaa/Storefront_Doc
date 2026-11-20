@@ -233,7 +233,7 @@ When **Order Now** is available:
 | The manufacturer has no valid email address | *No valid email address is configured for the selected provider.* |
 | The same CAD request was sent less than 5 minutes ago | *This order request was already sent to the selected provider in the last 5 minutes.* |
 | The email could not be sent | *The order email could not be sent. Please try again.* |
-| The server does not answer in time | *The server took too long to respond. Check this order before trying again; it may already be placed.* Check the order before trying again, to avoid ordering twice. |
+| Placing the order takes too long | *The server took too long to respond. Check this order before trying again; it may already be placed.* Check the order before trying again, to avoid ordering twice. |
 
 Orders sent to a **BENCHMARK** manufacturer and CAD requests are TCC Tech's work. They appear for TCC Tech on its [Enquiry](../enquiry.md) page.
 
