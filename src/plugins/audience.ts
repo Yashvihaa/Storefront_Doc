@@ -7,8 +7,7 @@ import {ACCESS_STORAGE_KEY, SUPER_ADMIN_PATHS} from '../audience';
  *
  * - A script in <head> sets <html data-audience="tenant"> straight away, then
  *   decrypts the link's bare `?<token>` query (or the token kept from an earlier link) and
- *   switches to "super-admin" only when the token decrypts, is unexpired and
- *   says so. The token is removed from the address bar so it is not shared.
+ *   switches to "super-admin" only when the token decrypts and says so. The token is removed from the address bar so it is not shared.
  * - A <style> built from SUPER_ADMIN_PATHS hides links to super-admin pages in
  *   the previous / next buttons, on category card pages and in the footer.
  * - Search results for super-admin pages are dropped for tenants, by swapping
@@ -40,7 +39,7 @@ crypto.subtle.importKey('raw',bytes(keyHex),{name:'AES-CBC'},false,['decrypt'])
   .then(function(key){return crypto.subtle.decrypt({name:'AES-CBC',iv:bytes(ivHex)},key,unbase64(token));})
   .then(function(plain){
     var data=JSON.parse(new TextDecoder().decode(plain));
-    if(data&&typeof data.exp==='number'&&data.exp>Date.now()&&(data.audience==='super-admin'||data.audience==='tenant')){d.setAttribute('data-audience',data.audience);}
+    if(data&&(data.audience==='super-admin'||data.audience==='tenant')){d.setAttribute('data-audience',data.audience);}
     else{forget();}
   })
   .catch(forget)

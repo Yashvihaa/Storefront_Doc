@@ -2,11 +2,10 @@
  * Who is reading the docs: a client's admin ("tenant") or a TCC Tech super admin.
  *
  * The admin panel's View Documentation button adds the token as the link's bare
- * query (`/dashboard?<token>`): `{ audience, exp }` encrypted (AES-CBC) with the admin's
+ * query (`/dashboard?<token>`): `{ audience }` encrypted (AES-CBC) with the admin's
  * NEXT_PUBLIC_ENCRYPT_DECRYPT_KEY / _IV. A script in the page head (see
  * src/plugins/audience.ts) decrypts it with the same key and IV, read from this
- * repo's env file, and sets `<html data-audience="…">`. A missing, wrong or
- * expired token means tenant.
+ * repo's env file, and sets `<html data-audience="…">`. A missing or wrong token means tenant.
  */
 
 export type Audience = 'tenant' | 'super-admin';
@@ -14,7 +13,7 @@ export type Audience = 'tenant' | 'super-admin';
 /**
  * Where the encrypted token is kept (localStorage), so the view holds across pages and in new tabs
  * (for example Ctrl+click on a sidebar link). It is decrypted again on every page load, so editing it
- * cannot unlock anything. Each View Documentation click replaces it; it stops working when it expires.
+ * cannot unlock anything. Each View Documentation click replaces it; it has no expiry.
  */
 export const ACCESS_STORAGE_KEY = 'sf-docs-access';
 /** Class that hides an element unless the reader is a super admin. */
