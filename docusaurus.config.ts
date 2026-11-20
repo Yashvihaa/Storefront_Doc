@@ -16,7 +16,10 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Storefront Docs',
   tagline: 'Guides for the Storefront admin panel',
-  favicon: 'img/logo.png',
+  favicon: 'Images/logo.png',
+
+  // Files in public/ (images) and static/ are served from the site root, e.g. public/Images/logo.png -> /Images/logo.png.
+  staticDirectories: ['public', 'static'],
 
   future: {
     v4: true,
@@ -81,7 +84,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/logo.png',
+    image: 'Images/logo.png',
     metadata: [
       {name: 'keywords', content: 'storefront, admin panel, jewelry configurator, documentation'},
       {name: 'theme-color', content: '#000000'},
@@ -104,7 +107,7 @@ const config: Config = {
       title: 'Storefront Docs',
       logo: {
         alt: 'TCC Store logo',
-        src: 'img/logo.png',
+        src: 'Images/logo.png',
         width: 32,
         height: 32,
       },
@@ -149,7 +152,7 @@ const config: Config = {
       style: 'dark',
       logo: {
         alt: 'TCC Store logo',
-        src: 'img/logo.png',
+        src: 'Images/logo.png',
         href: '/',
         width: 56,
         height: 56,

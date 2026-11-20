@@ -12,13 +12,16 @@
 export type Audience = 'tenant' | 'super-admin';
 
 /**
- * Where the token is kept (sessionStorage) so the view holds while the reader moves between pages
- * in that tab. Each View Documentation click opens a new tab with a new token; closing the tab forgets it.
+ * Where the encrypted token is kept (localStorage), so the view holds across pages and in new tabs
+ * (for example Ctrl+click on a sidebar link). It is decrypted again on every page load, so editing it
+ * cannot unlock anything. Each View Documentation click replaces it; it stops working when it expires.
  */
 export const ACCESS_STORAGE_KEY = 'sf-docs-access';
-
 /** Class that hides an element unless the reader is a super admin. */
 export const SUPER_ADMIN_CLASS = 'sf-super-admin';
+
+/** Class that hides an element from super admins, for a tenant page with its own super-admin version. */
+export const TENANT_ONLY_CLASS = 'sf-tenant-only';
 
 /**
  * Pages that appear only in the super admin portal's menu
@@ -27,6 +30,7 @@ export const SUPER_ADMIN_CLASS = 'sf-super-admin';
  * Keep this in step with the `superAdmin(...)` items in sidebars.ts.
  */
 export const SUPER_ADMIN_PATHS = [
+  '/super-admin-dashboard',
   '/enquiry',
   '/error-logs',
   '/product-management/masters',

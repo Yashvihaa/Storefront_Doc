@@ -1,5 +1,5 @@
 import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
-import {SUPER_ADMIN_CLASS} from './src/audience';
+import {SUPER_ADMIN_CLASS, TENANT_ONLY_CLASS} from './src/audience';
 
 // Mirrors the admin panel's side menu: one heading per menu section, with the same groups and page names.
 // Doc ids are folder path + the `id` in each page's front matter.
@@ -10,6 +10,13 @@ import {SUPER_ADMIN_CLASS} from './src/audience';
 const superAdmin = (item: Record<string, any>) => ({
   ...item,
   className: [item.className, SUPER_ADMIN_CLASS].filter(Boolean).join(' '),
+});
+
+// Tenant pages that super admins see a super-admin version of instead (the Dashboard).
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const tenantOnly = (item: Record<string, any>) => ({
+  ...item,
+  className: [item.className, TENANT_ONLY_CLASS].filter(Boolean).join(' '),
 });
 
 const section = (label: string, items: NonNullable<SidebarsConfig[string]>, slug?: string, description?: string) => ({
@@ -24,14 +31,17 @@ const section = (label: string, items: NonNullable<SidebarsConfig[string]>, slug
 const sidebars: SidebarsConfig = {
   docsSidebar: [
     'intro',
-    'dashboard',
+    // Tenants see the store Dashboard; super admins see the Super Admin Dashboard in its place.
+    tenantOnly({type: 'doc', id: 'dashboard', label: 'Dashboard'}),
+    superAdmin({type: 'doc', id: 'super-admin-dashboard', label: 'Dashboard'}),
     'analytics',
+    // Directly under Analytics, as in the admin menu (super admins only).
+    superAdmin({type: 'doc', id: 'enquiry', label: 'Enquiry'}),
 
     section(
       'Orders Management',
       [
         {type: 'doc', id: 'order-management/orders', label: 'Orders'},
-        superAdmin({type: 'doc', id: 'enquiry', label: 'Enquiry'}),
         {type: 'doc', id: 'order-management/manufacturer-charges', label: 'Manufacturer Charges'},
       ],
       'order-management',

@@ -158,6 +158,7 @@ The guide follows the admin panel's side menu.
 
 | Page | Covers |
 | ---- | ------ |
+| [Super Admin Dashboard](./super-admin-dashboard.md) | Platform-wide clients, subscriptions, revenue, licences and what needs action. |
 | [Enquiry](./enquiry.md) | CAD orders, manufacturer orders and price requests clients send to TCC Tech. |
 | [Masters](/product-management/masters) | The shared master data products are built from: metals, shapes, stones, sizes, settings and tags. |
 | [Labour Management](./settings/margin-cost-center/labour-management.md) | Labour charges for each metal and karat. |

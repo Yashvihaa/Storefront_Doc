@@ -612,13 +612,254 @@ html:not([data-audience='super-admin']) .sf-super-admin {
   display: none !important;
 }
 
-/* A super-admin page opened by a tenant: the notice replaces the page content. */
+/* Tenant pages that super admins see a super-admin version of instead (the Dashboard). */
+html[data-audience='super-admin'] .sf-tenant-only {
+  display: none !important;
+}
+
+/* A super-admin page opened by a tenant: the same 404 as an unknown address replaces the page,
+   with only the header left (no sidebar, no footer). Nothing shows while a code is still being checked. */
 .sf-audience-notice {
   display: none;
 }
 
-html:not([data-audience='super-admin']) .sf-super-admin-page .sf-audience-notice {
+html:not([data-audience='super-admin']):not([data-audience-pending]) .sf-super-admin-page .sf-audience-notice {
   display: block;
+}
+
+html:not([data-audience='super-admin']) body:has(.sf-super-admin-page) :is(.theme-doc-sidebar-container, .footer),
+html.sf-404-page .footer {
+  display: none !important;
+}
+
+html:not([data-audience='super-admin']) body:has(.sf-super-admin-page) main[class*='docMainContainer'] {
+  max-width: 100%;
+}
+
+/* ---------- 404 ---------- */
+
+.sf-not-found-page {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  padding: 3rem var(--ifm-spacing-horizontal) 4rem;
+}
+
+.sf-audience-notice .sf-not-found {
+  margin: 1rem auto 3rem;
+}
+
+.sf-not-found {
+  width: 100%;
+  max-width: 56rem;
+}
+
+/* The hero: a bordered panel with a faint dot grid that fades out, like the section cards. */
+.sf-not-found__hero {
+  position: relative;
+  overflow: hidden;
+  padding: 3.5rem 1.5rem 3rem;
+  border: 1px solid var(--sf-border);
+  border-radius: 16px;
+  background: var(--ifm-background-color);
+  box-shadow: var(--sf-shadow-md);
+  text-align: center;
+}
+
+/* Dot grid across the whole panel, strongest in the middle and fading towards the edges. */
+.sf-not-found__hero {
+  --sf-dot: rgba(0, 0, 0, 0.16);
+}
+
+[data-theme='dark'] .sf-not-found__hero {
+  --sf-dot: rgba(255, 255, 255, 0.16);
+}
+
+.sf-not-found__hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--sf-dot) 1.2px, transparent 1.6px);
+  background-position: center;
+  background-size: 20px 20px;
+  -webkit-mask-image: radial-gradient(ellipse 85% 90% at center, #000 35%, transparent 100%);
+  mask-image: radial-gradient(ellipse 85% 90% at center, #000 35%, transparent 100%);
+  pointer-events: none;
+}
+
+.sf-not-found__hero > * {
+  position: relative;
+}
+
+.sf-not-found__badge {
+  display: inline-block;
+  padding: 0.3rem 0.85rem;
+  border: 1px solid var(--sf-border-strong);
+  border-radius: 999px;
+  background: var(--sf-surface);
+  color: var(--sf-text-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.sf-not-found__code {
+  margin: 1.25rem 0 0;
+  background: linear-gradient(180deg, var(--ifm-heading-color) 30%, var(--sf-border-strong) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(5.5rem, 18vw, 9.5rem);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  line-height: 0.95;
+}
+
+.sf-not-found__title {
+  margin: 1rem 0 0.75rem;
+  font-size: clamp(1.4rem, 3vw, 1.85rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.sf-not-found__text {
+  max-width: 34rem;
+  margin: 0 auto 2rem;
+  color: var(--sf-text-muted);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.sf-not-found__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.sf-not-found__button {
+  padding: 0.65rem 1.4rem;
+  border: 1px solid var(--sf-border-strong);
+  border-radius: 999px;
+  background: var(--ifm-background-color);
+  color: var(--ifm-heading-color);
+  font-size: 0.925rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+}
+
+.sf-not-found__button:hover {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-heading-color);
+  box-shadow: var(--sf-shadow-sm);
+  transform: translateY(-1px);
+}
+
+.sf-not-found__button--primary,
+.sf-not-found__button--primary:hover {
+  border-color: var(--sf-accent);
+  background: var(--sf-accent);
+  color: var(--sf-on-accent);
+}
+
+.sf-not-found__hint {
+  margin: 1.5rem 0 0;
+  color: var(--sf-text-muted);
+  font-size: 0.85rem;
+}
+
+.sf-not-found__hint kbd {
+  padding: 0.1rem 0.4rem;
+  border: 1px solid var(--sf-border-strong);
+  border-radius: 4px;
+  background: var(--ifm-background-color);
+  box-shadow: none;
+  color: var(--ifm-heading-color);
+  font-size: 0.72rem;
+}
+
+/* Popular pages: the same card look as the section index pages. */
+.sf-not-found__links {
+  margin-top: 2.5rem;
+}
+
+.sf-not-found__label {
+  margin-bottom: 0.9rem;
+  color: var(--sf-text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.sf-not-found__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.sf-not-found__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.1rem 1.15rem 1.2rem;
+  border: 1px solid var(--sf-border);
+  border-radius: 12px;
+  background: var(--ifm-background-color);
+  color: inherit;
+  text-decoration: none !important;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.sf-not-found__card:hover {
+  border-color: var(--ifm-color-primary);
+  color: inherit;
+  box-shadow: var(--sf-shadow-md);
+  transform: translateY(-2px);
+}
+
+.sf-not-found__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-bottom: 0.35rem;
+  border: 1px solid var(--sf-border);
+  border-radius: 10px;
+  background: var(--sf-surface);
+  color: var(--ifm-heading-color);
+}
+
+.sf-not-found__card-title {
+  color: var(--ifm-heading-color);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.sf-not-found__card-text {
+  color: var(--sf-text-muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 996px) {
+  .sf-not-found__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .sf-not-found__hero {
+    padding: 2.5rem 1rem 2.25rem;
+  }
+
+  .sf-not-found__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 html:not([data-audience='super-admin']) .sf-super-admin-page :is(

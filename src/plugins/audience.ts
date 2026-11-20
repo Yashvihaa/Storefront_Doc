@@ -10,7 +10,7 @@ import {ACCESS_STORAGE_KEY, SUPER_ADMIN_PATHS} from '../audience';
  *   switches to "super-admin" only when the token decrypts, is unexpired and
  *   says so. The token is removed from the address bar so it is not shared.
  * - A <style> built from SUPER_ADMIN_PATHS hides links to super-admin pages in
- *   the previous / next buttons and on category card pages.
+ *   the previous / next buttons, on category card pages and in the footer.
  * - Search results for super-admin pages are dropped for tenants, by swapping
  *   the search plugin's worker client for src/search/searchByWorker.js.
  *
@@ -23,17 +23,19 @@ const accessScript = (keyHex: string, ivHex: string) => `(function(){
 var d=document.documentElement;d.setAttribute('data-audience','tenant');
 var K='${ACCESS_STORAGE_KEY}',token=null;
 try{
-  try{localStorage.removeItem(K);localStorage.removeItem('sf-docs-audience');}catch(e){}
+  try{sessionStorage.removeItem(K);localStorage.removeItem('sf-docs-audience');localStorage.removeItem('sf-docs-access-decrypted');}catch(e){}
   var l=window.location,parts=l.search?l.search.slice(1).split('&'):[],rest=[],p=null;
   for(var i=0;i<parts.length;i++){if(!p&&parts[i]&&parts[i].indexOf('=')<0){p=decodeURIComponent(parts[i]);}else if(parts[i]){rest.push(parts[i]);}}
-  if(p){sessionStorage.setItem(K,p);history.replaceState(history.state,'',l.pathname+(rest.length?'?'+rest.join('&'):'')+l.hash);}
-  token=sessionStorage.getItem(K);
+  if(p){localStorage.setItem(K,p);history.replaceState(history.state,'',l.pathname+(rest.length?'?'+rest.join('&'):'')+l.hash);}
+  token=localStorage.getItem(K);
 }catch(e){}
 var keyHex='${keyHex}',ivHex='${ivHex}';
 if(!token||!keyHex||!ivHex||!window.crypto||!window.crypto.subtle)return;
+d.setAttribute('data-audience-pending','');
+function done(){d.removeAttribute('data-audience-pending');}
 function bytes(h){var a=new Uint8Array(h.length/2);for(var i=0;i<a.length;i++)a[i]=parseInt(h.substr(i*2,2),16);return a;}
 function unbase64(s){var b=atob(s),a=new Uint8Array(b.length);for(var i=0;i<b.length;i++)a[i]=b.charCodeAt(i);return a;}
-function forget(){try{sessionStorage.removeItem(K);}catch(e){}}
+function forget(){try{localStorage.removeItem(K);}catch(e){}}
 crypto.subtle.importKey('raw',bytes(keyHex),{name:'AES-CBC'},false,['decrypt'])
   .then(function(key){return crypto.subtle.decrypt({name:'AES-CBC',iv:bytes(ivHex)},key,unbase64(token));})
   .then(function(plain){
@@ -41,7 +43,8 @@ crypto.subtle.importKey('raw',bytes(keyHex),{name:'AES-CBC'},false,['decrypt'])
     if(data&&typeof data.exp==='number'&&data.exp>Date.now()&&(data.audience==='super-admin'||data.audience==='tenant')){d.setAttribute('data-audience',data.audience);}
     else{forget();}
   })
-  .catch(forget);
+  .catch(forget)
+  .then(done,done);
 })();`;
 
 const TENANT = `html:not([data-audience='super-admin'])`;
@@ -49,7 +52,11 @@ const TENANT = `html:not([data-audience='super-admin'])`;
 const linkSelectors = (prefix: string) => [`[href="${prefix}"]`, `[href^="${prefix}#"]`, `[href^="${prefix}/"]`];
 
 const AUDIENCE_STYLE = SUPER_ADMIN_PATHS.flatMap(linkSelectors)
-  .flatMap(href => [`${TENANT} .pagination-nav__link${href}`, `${TENANT} article:has(> a.card${href})`])
+  .flatMap(href => [
+    `${TENANT} .pagination-nav__link${href}`,
+    `${TENANT} article:has(> a.card${href})`,
+    `${TENANT} .footer__item:has(> a${href})`,
+  ])
   .join(',\n')
   .concat(' {\n  display: none !important;\n}');
 

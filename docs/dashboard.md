@@ -29,9 +29,13 @@ Every admin user sees the Dashboard. Some parts depend on the user's role:
 To change what a user can access, update their role under [Roles](./roles-permission/roles.md).
 :::
 
+<SuperAdminOnly>
+
 :::info[Super admin dashboard]
-A **Super Admin** of the TCC Tech company, signed in through the super admin portal, sees a different page here: the **SUPER ADMIN DASHBOARD**, with platform figures such as clients, subscriptions and payments. This page describes the store Dashboard that every client admin sees.
+A **Super Admin** of the TCC Tech company, signed in through the super admin portal, sees a different page here: the **SUPER ADMIN DASHBOARD**, with platform figures such as clients, subscriptions and payments. See [Super Admin Dashboard](./super-admin-dashboard.md). This page describes the store Dashboard that every client admin sees.
 :::
+
+</SuperAdminOnly>
 
 ---
 
